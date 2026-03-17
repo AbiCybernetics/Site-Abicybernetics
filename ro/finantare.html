@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="ro">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Finanțare – AbiCybernetics</title>
+<meta content="Opțiuni prietenoase de finanțare pentru exoscheletul AbiCybernetics: strângere de fonduri prin ONG, leasing comercial și Programul Partener (plată în timp)." name="description"/>
+<link href="https://abicybernetics.com/ro/finantare.html" rel="canonical"/>
+<link href="https://abicybernetics.com/ro/finantare.html" hreflang="ro" rel="alternate"/>
+<link href="https://abicybernetics.com/en/finance.html" hreflang="en" rel="alternate"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Poppins:wght@600&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root{--text:#000;--muted:#666;--border:#e5e5e5;--bg:#fff;--accent:#000;--highlight:#ffbf47}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
+
+    /* Header (shared) */
+    header.site-header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid var(--border);position:relative;z-index:100}
+    .site-header .logo-link{display:flex;align-items:center}
+    .nav-desktop{margin-left:auto;display:flex;align-items:center;gap:16px}
+    .nav-desktop a{margin:0 4px;text-decoration:none;color:#333;font-weight:600}
+    .lang-switch{margin-left:16px;display:flex;align-items:center;gap:8px;font-weight:600}
+    .lang-switch a{color:#333;text-decoration:none;padding:6px 10px;border:1px solid #ddd;border-radius:10px}
+    .lang-switch a.active-lang{background:#000;color:#fff;border-color:#000}
+
+    /* Mobile nav */
+    .nav-toggle{display:none;margin-left:auto;background:none;border:none;width:40px;height:40px;position:relative;cursor:pointer}
+    .nav-toggle span{position:absolute;left:8px;right:8px;height:2px;background:#111;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+    .nav-toggle span:nth-child(1){top:12px}
+    .nav-toggle span:nth-child(2){top:19px}
+    .nav-toggle span:nth-child(3){top:26px}
+    .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+    .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .nav-drawer{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid #eee;box-shadow:0 6px 20px rgba(0,0,0,.08);display:none;justify-content:center}
+    .nav-mobile{display:flex;flex-direction:column;padding:10px 16px;gap:8px;align-items:center;text-align:center}
+    .nav-mobile a{text-decoration:none;color:#333;font-weight:600;padding:10px 6px;border-radius:8px;width:100%;max-width:240px;text-align:center}
+    .nav-mobile a:hover{background:#f7f7f7}
+    .lang-switch.mobile{margin:8px 0 6px 0;display:flex;justify-content:center}
+    @media (max-width: 900px){.nav-desktop{display:none}.nav-toggle{display:block}}
+
+    /* HERO  — white background, black text */
+    .hero{background:#fff;color:#000;text-align:center;padding:60px 20px}
+    .hero-inner{max-width:900px;margin:0 auto}
+    .hero h1{font-family:'Poppins',sans-serif;font-size:2.2rem;letter-spacing:-.5px;margin:0 0 10px}
+    .hero p{max-width:900px;margin:0 auto;line-height:1.55}
+
+    /* Sections */
+    .section{padding:50px 20px;max-width:1100px;margin:auto}
+    .section h2{font-family:'Poppins',sans-serif;margin:0 0 16px}
+    .muted{color:var(--muted);font-size:.95rem}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{border:1px solid var(--border);border-radius:12px;padding:18px;background:#fff}
+    .card h3{font-family:'Poppins',sans-serif;margin:0 0 8px;font-size:1.1rem}
+    
+
+    .grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:start}
+    @media (max-width: 900px){.grid-2{grid-template-columns:1fr} .grid-3{grid-template-columns:1fr}}
+
+    /* Calculator */
+    .calc{border:1px solid var(--border);border-radius:12px;padding:18px;background:#fff}
+    .calc h3{font-family:'Poppins',sans-serif;margin:0 0 8px}
+    .calc .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .calc .row + .row{margin-top:12px}
+    label{font-weight:600;font-size:.95rem}
+    input, select{width:100%;margin-top:6px;padding:12px;border:1px solid #ccc;border-radius:8px;font-size:1rem}
+    .kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+    .kpi .item{border:1px dashed #ddd;border-radius:10px;padding:12px;background:#fafafa}
+    .kpi .item strong{display:block;margin-top:4px;font-size:1.1rem}
+
+    /* CTA */
+    .cta{display:flex;flex-direction:column;align-items:center;text-align:center;padding:56px 20px;background:#f7f7f7}
+    .cta p{font-size:1.2rem;margin-bottom:18px;font-weight:600}
+    .btn{display:inline-block;padding:12px 26px;background:var(--accent);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;position:relative;overflow:hidden}
+    @keyframes highlight-line{0%{transform:translateX(-100%);}50%{transform:translateX(0);}100%{transform:translateX(100%);}}
+    .btn::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:3px;background:linear-gradient(90deg,transparent 0%,var(--highlight) 35%,var(--highlight) 65%,transparent 100%);animation:highlight-line 2.5s cubic-bezier(.4,0,.2,1) infinite}
+
+    footer{background:#fff;text-align:center;padding:20px;color:var(--muted);font-size:.9em;border-top:1px solid var(--border)}
+  
+/* === Desktop card style to match 'produs' === */
+@media (min-width: 901px){
+  .card{
+    box-shadow: 0 6px 20px rgba(0,0,0,.08);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.12);
+  }
+}
+
+html, body { overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+.site-header img { max-height: 50px; width: auto; }
+.hero { background-size: cover; background-position: center; overflow-x: hidden; }
+</style>
+</head>
+<body>
+<header class="site-header">
+<a class="logo-link" href="index.html"><img alt="AbiCybernetics Logo" src="Logo abicybernetics.png" style="height:50px"/></a>
+<button aria-expanded="false" aria-label="Deschide meniul" class="nav-toggle"><span></span><span></span><span></span></button>
+<nav aria-label="Navigație principală" class="nav-desktop">
+<a href="index.html">Acasă</a>
+<a href="produs.html">Produs</a>
+<a class="active" href="finantare.html">Finanțare</a>
+<a href="investitori.html">Investitori</a>
+<a href="partener.html">Partener</a>
+<a href="contact.html">Contact</a>
+</nav>
+<div aria-label="Selectare limbă" class="lang-switch nav-desktop">
+<a href="../en/finance.html">EN</a>
+<a class="active-lang" href="finantare.html">RO</a>
+</div>
+<div class="nav-drawer" hidden="">
+<nav aria-label="Meniu mobil" class="nav-mobile">
+<a href="index.html">Acasă</a>
+<a href="produs.html">Produs</a>
+<a href="finantare.html">Finanțare</a>
+<a href="investitori.html">Investitori</a>
+<a href="partener.html">Partener</a>
+<a href="contact.html">Contact</a>
+<div class="lang-switch mobile">
+<a href="../en/finance.html">EN</a>
+<a class="active-lang" href="finantare.html">RO</a>
+</div>
+</nav>
+</div>
+</header>
+<section aria-label="Finanțare prietenoasă" class="hero" role="banner">
+<div class="hero-inner">
+<h1>Îți aducem exoscheletul mai aproape — chiar dacă bugetul este încă pe drum.</h1>
+<p>Știm că investiția e serioasă. De aceea am pregătit trei căi simple: <strong>ajutor prin ONG</strong>, <strong>leasing comercial</strong> și <strong>Programul Partener</strong> (plată în timp).</p>
+</div>
+</section>
+<main>
+<section class="section" id="ong">
+<div>
+<h2>Ajutor prin ONG – cum te sprijinim</h2>
+<p>Îți punem la dispoziție o <strong>strategie de campanie</strong>: descriere proiect, imagini, buget orientativ, parteneriat prin ONG și tot ce ai nevoie pentru a achiziționa exoscheletul tău personal.</p>
+<ul style="margin:10px 0 0 18px; line-height:1.7">
+<li>Poveste + pagină de campanie (text &amp; vizualuri)</li>
+<li>Scrisori pentru sponsori/donatori &amp; media pack</li>
+<li>Infrastructuă ONG</li>
+<li>Ghid de transparență: raportare, update‑uri, Q&amp;A</li>
+</ul>
+<div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+<a class="btn" href="contact.html#ong">Cere sprijin</a>
+</div>
+</div>
+</section><section class="section" id="program-partener">
+<div class="card">
+<h2 style="font-family:'Poppins',sans-serif;margin:0 0 6px">Programul Partener</h2>
+<p>Plătești o parte acum și restul în rate clare. Pentru persoane fizice sau juridice (în funcție de eligibilitate). Decizie rapidă, pași simpli.</p>
+<ul style="margin:10px 0 0 18px; line-height:1.7">
+<li>Contract clar, timeline ferm</li>
+<li>Costuri transparente</li>
+<li>Suport tehnic și post‑vânzare</li>
+</ul>
+<div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+<a class="btn" href="order.html#program-partener">Aplică la Program</a>
+<a class="btn" href="contact.html#program-partener" style="background:#333">Vorbește cu un consultant</a>
+</div>
+</div>
+</section><section class="section" id="calculator">
+<div aria-label="Calculator de rate" class="calc" role="region">
+<h2>Calculator orientativ</h2>
+<div class="row">
+<div>
+<label for="price">Preț dispozitiv (EUR)</label>
+<input id="price" min="0" type="number" value="32000"/>
+</div>
+<div>
+<label for="upfront">Avans (%)</label>
+<input id="upfront" max="90" min="0" type="number" value="50"/>
+</div>
+</div>
+<div class="row" style="margin-top:8px">
+<div>
+<label for="months">Perioadă (luni)</label>
+<select id="months">
+<option>12</option>
+<option selected="">24</option>
+<option>36</option>
+<option>48</option>
+<option>60</option>
+</select>
+</div>
+<div>
+<label for="apr">Dobândă anuală (%)</label>
+<input id="apr" min="0" step="0.1" type="number" value="0"/>
+</div>
+</div>
+<div class="kpi">
+<div class="item"><span>Total avans</span><strong id="kUpfront">—</strong></div>
+<div class="item"><span>Rată lunară</span><strong id="kMonthly">—</strong></div>
+<div class="item"><span>Total de plată</span><strong id="kTotal">—</strong></div>
+</div>
+<p class="muted" style="margin-top:8px">Rezultatele sunt <strong>orientative</strong> și nu reprezintă o ofertă fermă. Sumele finale pot varia în funcție de eligibilitate și de condițiile contractuale.</p>
+</div>
+</section><section class="section" id="leasing">
+<div>
+<h2>Leasing comercial</h2>
+<p>Colaborăm cu finanțatori pentru soluții de leasing adaptate profilului companiei tale. Perioadă tipică: <strong>12–60 luni</strong>. Avansul și costul total depind de bonitate și documentație.</p>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px">
+<div class="card"><strong>1.</strong> Cerere &amp; documente</div>
+<div class="card"><strong>2.</strong> Ofertă &amp; pre‑aprobare</div>
+<div class="card"><strong>3.</strong> Semnare &amp; livrare</div>
+</div>
+<div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+<a class="btn" href="contact.html#leasing">Solicită ofertă</a>
+<a class="btn" href="#calculator" style="background:#333">Calculează ratele</a>
+</div>
+</div>
+</section></main>
+<section class="cta">
+<p>Hai să găsim împreună soluția potrivită pentru tine.</p>
+<a class="btn" href="contact.html">Programează un call</a>
+</section>
+<footer>
+  © AbiCybernetics – Trademark  |  <a href="/ro/privacy-policy.html" style="color:#999;text-decoration:none;">Privacy Policy</a>
+</footer>
+<!-- Mobile nav toggle -->
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var drawer = document.querySelector('.nav-drawer');
+    if(!btn || !drawer) return;
+    function setOpen(open){
+      btn.setAttribute('aria-expanded', String(open));
+      drawer.style.display = open ? 'flex' : 'none';
+      if(open) drawer.removeAttribute('hidden'); else drawer.setAttribute('hidden','');
+    }
+    setOpen(false);
+    btn.addEventListener('click', function(){
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      setOpen(!expanded);
+    });
+    drawer.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        setOpen(false);
+      }
+    });
+  })();
+</script>
+<!-- Rate calculator logic -->
+<script>
+  (function(){
+    const fmt = (n)=> new Intl.NumberFormat('ro-RO',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n);
+    const el = (id)=> document.getElementById(id);
+    function compute(){
+      const price = Math.max(0, Number(el('price').value)||0);
+      const avansPct = Math.min(90, Math.max(0, Number(el('upfront').value)||0));
+      const months = Number(el('months').value)||24;
+      const apr = Math.max(0, Number(el('apr').value)||0) / 100;
+      const upfront = price * avansPct/100;
+      const principal = Math.max(0, price - upfront);
+      let monthly, total;
+      if(apr>0){
+        const r = apr/12;
+        monthly = principal * (r*Math.pow(1+r,months)) / (Math.pow(1+r,months)-1);
+        total = upfront + monthly*months;
+      } else {
+        monthly = months>0 ? principal / months : principal;
+        total = upfront + principal;
+      }
+      el('kUpfront').textContent = fmt(upfront);
+      el('kMonthly').textContent = fmt(monthly);
+      el('kTotal').textContent = fmt(total);
+    }
+    ['price','upfront','months','apr'].forEach(id=>{
+      const e = document.getElementById(id);
+      if(e){ e.addEventListener('input', compute); e.addEventListener('change', compute); }
+    });
+    compute();
+  })();
+</script>
+</body>
+</html>

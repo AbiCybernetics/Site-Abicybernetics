@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parteneri – AbiCybernetics</title>
+  <meta name="description" content="Devino partener AbiCybernetics: colaboratori, integratori, revânzători și contributori la dezvoltarea și customizarea exoscheletului.">
+  <link rel="canonical" href="https://abicybernetics.com/ro/partener.html"/>
+  <link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/partener.html"/>
+  <link rel="alternate" hreflang="en" href="https://abicybernetics.com/en/partners.html"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{--text:#000;--muted:#666;--border:#e5e5e5;--bg:#fff;--accent:#000;--highlight:#ffbf47}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text)}
+    header.site-header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid var(--border);position:relative;z-index:100}
+    .site-header .logo-link{display:flex;align-items:center}
+    .nav-desktop{margin-left:auto;display:flex;align-items:center;gap:16px}
+    .nav-desktop a{margin:0 4px;text-decoration:none;color:#333;font-weight:600}
+    .lang-switch{margin-left:16px;display:flex;align-items:center;gap:8px;font-weight:600}
+    .lang-switch a{color:#333;text-decoration:none;padding:6px 10px;border:1px solid #ddd;border-radius:10px}
+    .lang-switch a.active-lang{background:#000;color:#fff;border-color:#000}
+
+    .nav-toggle{display:none;margin-left:auto;background:none;border:none;width:40px;height:40px;position:relative;cursor:pointer}
+    .nav-toggle span{position:absolute;left:8px;right:8px;height:2px;background:#111;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+    .nav-toggle span:nth-child(1){top:12px}
+    .nav-toggle span:nth-child(2){top:19px}
+    .nav-toggle span:nth-child(3){top:26px}
+    .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+    .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .nav-drawer{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid #eee;box-shadow:0 6px 20px rgba(0,0,0,.08);display:none;justify-content:center}
+    .nav-mobile{display:flex;flex-direction:column;padding:10px 16px;gap:8px;align-items:center;text-align:center}
+    .nav-mobile a{text-decoration:none;color:#333;font-weight:600;padding:10px 6px;border-radius:8px;width:100%;max-width:240px;text-align:center}
+    .nav-mobile a:hover{background:#f7f7f7}
+    .lang-switch.mobile{margin:8px 0 6px 0;display:flex;justify-content:center}
+    @media (max-width: 900px){.nav-desktop{display:none}.nav-toggle{display:block}}
+
+    .hero{background:#fff;color:#000;text-align:center;padding:60px 20px}
+    .hero-inner{max-width:900px;margin:0 auto}
+    .hero h1{font-family:'Poppins',sans-serif;font-size:2.2rem;letter-spacing:-.5px;margin:0 0 10px}
+    .hero p{max-width:900px;margin:0 auto;line-height:1.55}
+
+    .section{padding:50px 20px;max-width:1100px;margin:auto}
+    .section h2{font-family:'Poppins',sans-serif;margin:0 0 16px}
+    .muted{color:var(--muted);font-size:.95rem}
+    .lead{font-size:1.1rem}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:start}
+    @media (max-width: 900px){.grid-2{grid-template-columns:1fr} .grid-3{grid-template-columns:1fr}}
+    .card{border:1px solid var(--border);border-radius:12px;padding:18px;background:#fff}
+    .card h3{font-family:'Poppins',sans-serif;margin:0 0 8px;font-size:1.1rem}
+    .card p{line-height:1.6}
+    .badge{display:inline-block;font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:999px;letter-spacing:.3px;margin-top:10px;background:#f6f7f7;color:#444;border:1px solid #e6e7e9}
+
+    .cta{display:flex;flex-direction:column;align-items:center;text-align:center;padding:56px 20px;background:#f7f7f7}
+    .cta p{font-size:1.2rem;margin-bottom:18px;font-weight:600}
+    .btn{display:inline-block;padding:12px 26px;background:#000;color:#fff;text-decoration:none;border-radius:10px;font-weight:600;position:relative;overflow:hidden}
+    @keyframes highlight-line{0%{transform:translateX(-100%);}50%{transform:translateX(0);}100%{transform:translateX(100%);}}
+    .btn::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:3px;background:linear-gradient(90deg,transparent 0%,var(--highlight) 35%,var(--highlight) 65%,transparent 100%);animation:highlight-line 2.5s cubic-bezier(.4,0,.2,1) infinite}
+
+    footer{background:#fff;text-align:center;padding:20px;color:var(--muted);font-size:.9em;border-top:1px solid var(--border)}
+  
+/* === Desktop card style to match 'produs' === */
+@media (min-width: 901px){
+  .card{
+    box-shadow: 0 6px 20px rgba(0,0,0,.08);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.12);
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="logo-link"><img src="Logo abicybernetics.png" alt="AbiCybernetics Logo" style="height:50px"></a>
+  <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav-desktop" aria-label="Navigație principală">
+    <a href="index.html">Acasă</a>
+    <a href="produs.html">Produs</a>
+    <a href="finantare.html">Finanțare</a>
+    <a href="investitori.html">Investitori</a>
+    <a href="partener.html" class="active">Partener</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="lang-switch nav-desktop" aria-label="Selectare limbă">
+    <a href="../en/partners.html">EN</a>
+    <a href="partener.html" class="active-lang">RO</a>
+  </div>
+  <div class="nav-drawer" hidden>
+    <nav class="nav-mobile" aria-label="Meniu mobil">
+      <a href="index.html">Acasă</a>
+      <a href="produs.html">Produs</a>
+      <a href="finantare.html">Finanțare</a>
+      <a href="investitori.html">Investitori</a>
+      <a href="partener.html">Partener</a>
+      <a href="contact.html">Contact</a>
+      <div class="lang-switch mobile">
+        <a href="../en/partners.html">EN</a>
+        <a href="partener.html" class="active-lang">RO</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" role="banner" aria-label="Devino partener AbiCybernetics">
+  <div class="hero-inner">
+    <h1>Devino partener AbiCybernetics</h1>
+    <p>Colaboratori, integratori, revânzători și contributori tehnici care vor să ducă exoscheletul mai departe – împreună.</p>
+  </div>
+</section>
+
+<main>
+  <section class="section">
+    <h2>Cine e potrivit pentru program</h2>
+    <p class="lead">Căutăm oameni și organizații cu inițiativă, rețea și expertiză. Dacă te regăsești în una dintre categoriile de mai jos, hai să vorbim.</p>
+    <div class="grid-3" style="margin-top:14px">
+      <article class="card">
+        <h3>Revânzători</h3>
+        <p>Pentru companii sau persoane cu acces la clienți finali (clinici, centre de reabilitare, universități, laboratoare).</p>
+        <span class="badge">Discount & comision</span>
+      </article>
+      <article class="card">
+        <h3>Integratori & Custom</h3>
+        <p>Implementatori hardware/software care pot adapta sistemul la nevoi specifice (senzori, control, mecanică, UI).</p>
+        <span class="badge">Proiecte pe brief</span>
+      </article>
+      <article class="card">
+        <h3>Dezvoltatori</h3>
+        <p>Contributori la cod, controlere, algoritmi, UX sau documentație. Ideal cu experiență C#/.NET, CANopen, control motoare.</p>
+        <span class="badge">Open-core + licențe</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid-2">
+      <div class="card">
+        <h2>Ce oferim partenerilor</h2>
+        <ul style="margin:10px 0 0 18px; line-height:1.8">
+          <li>Listare pe site ca partener oficial</li>
+          <li>Acces la materiale de vânzare (media kit, demo scripts)</li>
+          <li>Training tehnic/produse (remote & on-site)</li>
+          <li>Discounturi progresive și comisioane clare</li>
+          <li>Suport tehnic prioritar pe ticketing</li>
+          <li>Roadmap în avans & changelog</li>
+          <li>Kit demo (opțional) pe bază de contract</li>
+          <li>Documentație dev & API (CANopen, telemetrie)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Ce așteptăm</h2>
+        <ul style="margin:10px 0 0 18px; line-height:1.8">
+          <li>Respectarea brandului și a mesajelor-cheie</li>
+          <li>Transparență în ofertare și livrare</li>
+          <li>Feedback constant din piață</li>
+          <li>Confidențialitate (NDA) unde este cazul</li>
+          <li>Raportări periodice asupra lead-urilor</li>
+          <li>Respectarea normelor locale (fiscal/marketing)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Modele de colaborare</h2>
+    <div class="grid-3" style="margin-top:14px">
+      <div class="card">
+        <h3>Affiliate / Introducer</h3>
+        <p>Recomanzi clienți și primești comision la vânzare. Fără obligații de suport.</p>
+      </div>
+      <div class="card">
+        <h3>Reseller autorizat</h3>
+        <p>Cumperi pentru revânzare, gestionezi oferta și relația cu clientul.</p>
+      </div>
+      <div class="card">
+        <h3>Integrator</h3>
+        <p>Preiei proiecte custom și livrezi soluții la cheie (hardware + software).</p>
+      </div>
+    </div>
+    <div class="grid-3" style="margin-top:14px">
+      <div class="card">
+        <h3>Dev Contributor</h3>
+        <p>Contribui la cod (C#/.NET, control EPOS4, UI) sau documentație. Posibilități de grant/contract.</p>
+      </div>
+      <div class="card">
+        <h3>Ambasador ONG</h3>
+        <p>Coordonezi campanii locale de strângere de fonduri pentru beneficiari eligibili.</p>
+      </div>
+      <div class="card">
+        <h3>Partener R&D</h3>
+        <p>Laboratoare/universități pentru testare, prototipare, validare.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid-2">
+      <div class="card">
+        <h2>Pașii de onboard</h2>
+        <ol style="margin-left:18px; line-height:1.8">
+          <li>Completezi formularul de intenție</li>
+          <li>Call scurt (30 min) pentru potrivire</li>
+          <li>NDA & acord cadru (după caz)</li>
+          <li>Training & materiale</li>
+          <li>Start colaborare / primele lead-uri</li>
+        </ol>
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn" href="contact.html#partener">Aplică pentru Parteneriat</a>
+          <a class="btn" href="/ro/nda-model.pdf" style="background:#333">Model NDA (PDF)</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Beneficii pe nivel</h2>
+        <ul style="line-height:1.8; margin-left:18px">
+          <li><strong>Starter:</strong> comision standard, listare pe site</li>
+          <li><strong>Pro:</strong> discount suplimentar, lead-uri distribuite</li>
+          <li><strong>Elite:</strong> teritoriu dedicat, acces early la roadmap</li>
+        </ul>
+        <p class="muted" style="margin-top:8px">Detaliile comerciale (procente/condiții) se stabilesc contractual în funcție de volum și responsabilități.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="cta">
+  <p>Ești pregătit să pornim?</p>
+  <a href="contact.html#partener" class="btn">Programează un call</a>
+</section>
+
+<footer>
+  © AbiCybernetics – Trademark&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/ro/privacy-policy.html" style="color:#999;text-decoration:none;">Privacy Policy</a>
+</footer>
+
+<!-- Mobile nav toggle -->
+<script>
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var drawer = document.querySelector('.nav-drawer');
+    if(!btn || !drawer) return;
+    function setOpen(open){
+      btn.setAttribute('aria-expanded', String(open));
+      drawer.style.display = open ? 'flex' : 'none';
+      if(open) drawer.removeAttribute('hidden'); else drawer.setAttribute('hidden','');
+    }
+    setOpen(false);
+    btn.addEventListener('click', function(){
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      setOpen(!expanded);
+    });
+    drawer.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        setOpen(false);
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>

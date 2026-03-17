@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Investitori | AbiCybernetics</title>
+  <meta name="description" content="Informații pentru investitori: puncte forte, oportunitatea de piață, noutăți, prezentări și contact.>
+  <link rel="canonical" href="https://abicybernetics.com/ro/investors.html"/>
+  <link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/investors.html"/>
+  <link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/investitori.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root{--text:#000;--muted:#666;--border:#ddd;--bg:#fff;--accent:#000;--highlight:#ffbf47;}
+    *{box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);margin:0}
+    header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid var(--border)}
+    .logo-link img{height:50px}
+    nav{margin-left:auto}
+    nav a{margin:0 10px;text-decoration:none;color:#333;font-weight:600}
+    .lang-switch{margin-left:16px; display:flex; align-items:center; gap:8px; font-weight:600}
+    .lang-switch a{color:#333; text-decoration:none; padding:6px 10px; border:1px solid #ddd; border-radius:10px}
+    .lang-switch a.active-lang{background:#000; color:#fff; border-color:#000}
+
+    /* HERO: reuse video for visual consistency */
+    .hero{position:relative;min-height:360px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+    .hero video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:0;object-fit:cover}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.35));z-index:1}
+    .hero-inner{position:relative;z-index:2;padding:0 16px}
+    .hero h1{font-family:'Poppins',sans-serif;font-size:2.2rem;letter-spacing:-.3px;margin:0 0 8px}
+    .hero p{max-width:900px;margin:0 auto;line-height:1.55}
+
+    .section{padding:48px 20px;max-width:1100px;margin:auto}
+    .section h2{font-family:'Poppins',sans-serif;margin:0 0 14px}
+    .muted{color:var(--muted)}
+
+    .highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{border:1px solid var(--border);border-radius:12px;padding:16px;background:#fff}
+    .card h3{font-family:'Poppins',sans-serif;margin:0 0 8px;font-size:1.1rem}
+
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+    .list{border:1px solid var(--border);border-radius:12px;padding:14px}
+    .list ul{margin:8px 0 0 16px}
+    .list li{margin:6px 0}
+
+    .cta{display:flex;flex-direction:column;align-items:center;text-align:center;padding:42px 20px;background:#f7f7f7}
+    .btn{display:inline-block;padding:12px 24px;background:#000;color:#fff;text-decoration:none;border-radius:10px;font-weight:600}
+
+    footer{background:#fff;text-align:center;padding:20px;color:var(--muted);font-size:.9em;border-top:1px solid var(--border)}
+
+    @media (max-width:900px){
+      .highlights{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+    }
+  </style>
+
+<style id="shared-header-style">
+  header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid #e5e5e5;position:relative;z-index:100}
+  header .logo-link{display:flex;align-items:center}
+  header nav{margin-left:auto;display:flex;align-items:center;gap:16px}
+  header nav a{margin:0 4px;text-decoration:none;color:#333;font-weight:600}
+  .lang-switch{margin-left:16px;display:flex;align-items:center;gap:8px;font-weight:600}
+  .lang-switch a{color:#333;text-decoration:none;padding:6px 10px;border:1px solid #ddd;border-radius:10px}
+  .lang-switch a.active-lang{background:#000;color:#fff;border-color:#000}
+</style>
+
+
+<style id="mobile-nav-global-ro">
+  /* Base header */
+  .site-header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid #e5e5e5;position:relative;z-index:100}
+  .site-header .logo-link{display:flex;align-items:center}
+  .nav-desktop{margin-left:auto;display:flex;align-items:center;gap:16px}
+  .nav-desktop a{margin:0 4px;text-decoration:none;color:#333;font-weight:600}
+  .lang-switch{margin-left:16px;display:flex;align-items:center;gap:8px;font-weight:600}
+  .lang-switch a{color:#333;text-decoration:none;padding:6px 10px;border:1px solid #ddd;border-radius:10px}
+  .lang-switch a.active-lang{background:#000;color:#fff;border-color:#000}
+
+  /* Hamburger */
+  .nav-toggle{display:none;margin-left:auto;background:none;border:none;width:40px;height:40px;position:relative;cursor:pointer}
+  .nav-toggle span{position:absolute;left:8px;right:8px;height:2px;background:#111;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+  .nav-toggle span:nth-child(1){top:12px}
+  .nav-toggle span:nth-child(2){top:19px}
+  .nav-toggle span:nth-child(3){top:26px}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* Drawer */
+  .nav-drawer{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid #eee;box-shadow:0 6px 20px rgba(0,0,0,.08)}
+  .nav-mobile{display:flex;flex-direction:column;padding:10px 16px;gap:8px}
+  .nav-mobile a{text-decoration:none;color:#333;font-weight:600;padding:10px 6px;border-radius:8px}
+  .nav-mobile a:hover{background:#f7f7f7}
+  .lang-switch.mobile{margin:8px 0 6px 0}
+
+  /* Responsive */
+  @media (max-width: 900px){
+    .nav-desktop{display:none}
+    .nav-toggle{display:block}
+  }
+</style>
+
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="logo-link"><img src="Logo abicybernetics.png" alt="AbiCybernetics Logo" style="height:50px"></a>
+
+  
+  <!-- Mobile hamburger -->
+  <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- Desktop nav -->
+  <nav class="nav-desktop" aria-label="Navigație principală">
+    <a href="index.html">Acasă</a>
+    <a href="produs.html">Produs</a>
+    <a href="finantare.html">Finanțare</a>
+    <a href="investitori.html">Investitori</a>
+    <a href="partener.html">Partener</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Desktop language switch -->
+  <div class="lang-switch nav-desktop" aria-label="Selectare limbă">
+    <a href="../en/index.html">EN</a>
+    <a href="index.html" class="active-lang">RO</a>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div class="nav-drawer" hidden>
+    <nav class="nav-mobile" aria-label="Meniu mobil">
+      <a href="index.html">Acasă</a>
+      <a href="produs.html">Produs</a>
+      <a href="finantare.html">Finanțare</a>
+      <a href="investitori.html">Investitori</a>
+      <a href="partener.html">Partener</a>
+      <a href="contact.html">Contact</a>
+      <div class="lang-switch mobile">
+        <a href="../en/index.html">EN</a>
+        <a href="index.html" class="active-lang">RO</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+
+<section class="hero" role="banner" aria-label="Investitori">
+  <video autoplay muted loop playsinline webkit-playsinline preload="metadata">
+    <source src="/ro/video%20mers%20exterior.mp4#t=0.1" type="video/mp4">
+  </video>
+  <div class="hero-inner">
+    <h1>Investitori</h1>
+    <p>AbiCybernetics construiește o platformă modulară de exoschelet pentru mobilitate asistată și augmentare umană — o piață cu cerere medicală și industrială în creștere.</p>
+  </div>
+</section>
+
+
+<main>
+  <section class="section" id="highlights">
+    <h2>Puncte forte pentru investiție</h2>
+    <div class="highlights">
+      <div class="card">
+        <h3>Technică de ultimă generație</h3>
+        <p class="muted">Roboți purtabili pentru reabilitare și mobilitate — cu potențial de extindere către asistență de forță industrială.</p>
+      </div>
+      <div class="card">
+        <h3>Platformă modulară a senzoristicii</h3>
+        <p class="muted">Explorăm limitele în senzorizarea exoscheletelor.</p>
+      </div>
+      <div class="card">
+        <h3>Inginerie premium</h3>
+        <p class="muted">Moto-ul nostru este calitatea care asigură satisfacția clientului.</p>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:8px">* Platformă în stadiu de concept; nu este un dispozitiv medical certificat. Această pagină nu constituie o ofertă de vânzare de valori mobiliare.</p>
+  </section>
+
+  <section class="section" id="market">
+    <h2>Oportunitatea de piață</h2>
+    <div class="grid-2">
+      <div class="list">
+        <h3>Reabilitare medicală</h3>
+        <ul>
+          <li>Leziuni de măduvă spinării (SCI) — antrenament asistat la stat în picioare și mers</li>
+          <li>Accident vascular cerebral & leziuni cerebrale — suport pentru neuroreabilitare</li>
+          <li>SM și alte tulburări de mobilitate — asistență pentru postură și mers</li>
+        </ul>
+      </div>
+      <div class="list">
+        <h3>Industrial & augmentare</h3>
+        <ul>
+          <li>Asistență de forță pentru sarcini repetitive sau grele</li>
+          <li>Reducerea riscului de accidentare și creșterea productivității</li>
+          <li>Augmentare pentru operațiuni specializate pe teren</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="news">
+    <h2>Noutăți & Actualizări</h2>
+    <div class="grid-2">
+      <div class="list">
+        <h3>Comunicate de presă</h3>
+        <ul>
+         coming soon.
+        </ul>
+      </div>
+      <div class="list">
+        <h3>Prezentări & Evenimente</h3>
+        <ul>
+        coming soon.
+        </ul>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:8px">Pentru referință privind structura obișnuită a secțiunilor IR, consultați site-ul IR al Ekso Bionics cu comunicate, prezentări, rapoarte financiare și depuneri. </p>
+  </section>
+</main>
+
+<section class="cta">
+  <p>Dorești să afli mai multe despre parteneriat sau investiție?</p>
+  <a href="/ro/contact.html" class="btn">Contactează echipa</a>
+</section>
+
+<footer>
+  © AbiCybernetics – Trademark&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/ro/privacy-policy.html" style="color:#999;text-decoration:none;">Politica de confidențialitate</a>
+</footer>
+
+<script id="mobile-nav-script-ro">
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var drawer = document.querySelector('.nav-drawer');
+    if(!btn || !drawer) return;
+    btn.addEventListener('click', function(){
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !expanded);
+      if(expanded){
+        drawer.setAttribute('hidden', '');
+      } else {
+        drawer.removeAttribute('hidden');
+      }
+    });
+    // Close drawer on link click
+    drawer.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        btn.setAttribute('aria-expanded','false');
+        drawer.setAttribute('hidden','');
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
