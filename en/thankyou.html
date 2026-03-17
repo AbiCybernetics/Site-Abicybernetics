@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank you – AbiCybernetics</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#222;
+      --muted:#666;
+      --line:#e6e6e6;
+      --accent:#000; /* primary black from your brand */
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    }
+    header{
+      display:flex; align-items:center; gap:18px;
+      padding:14px 20px; border-bottom:1px solid var(--line); background:#fff;
+    }
+    header img{height:54px}
+    header .sep{height:28px;width:1px;background:var(--line)}
+    header .tag{font-size:.95rem;color:var(--muted)}
+    main{
+      max-width:980px; margin:36px auto; padding:0 20px;
+    }
+    .panel{
+      border:1px solid var(--line); border-radius:var(--radius); background:#fff;
+      padding:28px; box-shadow:0 2px 24px rgba(0,0,0,.03);
+    }
+    h1{font-size:1.8rem; margin:4px 0 8px}
+    p{line-height:1.6}
+    .lead{font-size:1.05rem; color:var(--muted)}
+    .divider{height:1px;background:var(--line); margin:20px 0}
+    .grid{display:grid; grid-template-columns:1.2fr .8fr; gap:24px}
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+    a.button, button.button{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:12px 16px; border-radius:12px; text-decoration:none; font-weight:600;
+      border:1px solid var(--text); background:var(--text); color:#fff; cursor:pointer;
+    }
+    a.button.secondary{
+      background:#fff; color:var(--text); border:1px solid var(--line);
+    }
+    .card{
+      border:1px dashed var(--line); border-radius:14px; padding:16px; background:#fafafa;
+    }
+    .muted{color:var(--muted); font-size:.95rem}
+    .label{display:inline-block; font-size:.78rem; font-weight:700; letter-spacing:.2px;
+      padding:6px 10px; border-radius:999px; background:#f5f5f5; border:1px solid var(--line); margin-bottom:8px}
+    .contact-list{list-style:none; padding:0; margin:10px 0 0}
+    .contact-list li{margin:8px 0}
+    .contact-list a{color:var(--text); text-decoration:underline}
+    footer{max-width:980px; margin:18px auto 36px; padding:0 20px; color:var(--muted); font-size:.9rem}
+    @media (max-width:900px){ .grid{grid-template-columns:1fr} }
+  
+    .lang-switch{margin-left:16px; display:flex; align-items:center; gap:8px; font-weight:600}
+    .lang-switch a{color:#333; text-decoration:none; padding:6px 10px; border:1px solid #ddd; border-radius:10px}
+    .lang-switch a.active-lang{background:#000; color:#fff; border-color:#000}
+    @media(max-width:600px){ .lang-switch a{padding:6px 8px;font-size:.9rem} }
+    
+</style>
+
+  <!-- Optional: Facebook Pixel base code (replace PIXEL_ID) -->
+  <script>
+    // If fbq isn't already initialized globally on your site, you can initialize here.
+    (function(){
+      if(typeof fbq === 'undefined'){
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        // TODO: Replace with your Pixel ID or remove this init if you include it globally elsewhere.
+        fbq('init', 'PIXEL_ID');
+      }
+    })();
+  </script>
+
+<link rel="alternate" hreflang="en" href="https://abicybernetics.com/en/thankyou.html"/>
+<link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/thankyou.html"/>
+
+<style id="shared-header-style">
+  header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid #e5e5e5;position:relative;z-index:100}
+  header .logo-link{display:flex;align-items:center}
+  header nav{margin-left:auto;display:flex;align-items:center;gap:16px}
+  header nav a{margin:0 4px;text-decoration:none;color:#333;font-weight:600}
+  .lang-switch{margin-left:16px;display:flex;align-items:center;gap:8px;font-weight:600}
+  .lang-switch a{color:#333;text-decoration:none;padding:6px 10px;border:1px solid #ddd;border-radius:10px}
+  .lang-switch a.active-lang{background:#000;color:#fff;border-color:#000}
+</style>
+
+
+<style id="mobile-nav-global">
+  /* Base header */
+  .site-header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid #e5e5e5;position:relative;z-index:100}
+  .site-header .logo-link{display:flex;align-items:center}
+  .nav-desktop{margin-left:auto;display:flex;align-items:center;gap:16px}
+  .nav-desktop a{margin:0 4px;text-decoration:none;color:#333;font-weight:600}
+  .lang-switch{margin-left:16px;display:flex;align-items:center;gap:8px;font-weight:600}
+  .lang-switch a{color:#333;text-decoration:none;padding:6px 10px;border:1px solid #ddd;border-radius:10px}
+  .lang-switch a.active-lang{background:#000;color:#fff;border-color:#000}
+
+  /* Hamburger */
+  .nav-toggle{display:none;margin-left:auto;background:none;border:none;width:40px;height:40px;position:relative;cursor:pointer}
+  .nav-toggle span{position:absolute;left:8px;right:8px;height:2px;background:#111;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+  .nav-toggle span:nth-child(1){top:12px}
+  .nav-toggle span:nth-child(2){top:19px}
+  .nav-toggle span:nth-child(3){top:26px}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* Drawer */
+  .nav-drawer{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid #eee;box-shadow:0 6px 20px rgba(0,0,0,.08)}
+  .nav-mobile{display:flex;flex-direction:column;padding:10px 16px;gap:8px}
+  .nav-mobile a{text-decoration:none;color:#333;font-weight:600;padding:10px 6px;border-radius:8px}
+  .nav-mobile a:hover{background:#f7f7f7}
+  .lang-switch.mobile{margin:8px 0 6px 0}
+
+  /* Responsive */
+  @media (max-width: 900px){
+    .nav-desktop{display:none}
+    .nav-toggle{display:block}
+  }
+</style>
+
+</head>
+<body>
+  <header class="site-header">
+  <a href="index.html" class="logo-link"><img src="Logo abicybernetics.png" alt="AbiCybernetics Logo" style="height:50px"></a>
+
+  <!-- Mobile hamburger -->
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- Desktop nav -->
+  <nav class="nav-desktop" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="product.html">Product</a>
+    <a href="investors.html">Investors</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Desktop language switch -->
+  <div class="lang-switch nav-desktop" aria-label="Language">
+    <a href="./thankyou.html" class="active-lang">EN</a>
+    <a href="../ro/thankyou.html">RO</a>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div class="nav-drawer" hidden>
+    <nav class="nav-mobile" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="product.html">Product</a>
+      <a href="investors.html">Investors</a>
+      <a href="contact.html">Contact</a>
+      <div class="lang-switch mobile">
+        <a href="./thankyou.html" class="active-lang">EN</a>
+        <a href="../ro/thankyou.html">RO</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <div class="panel">
+      <div class="grid">
+        <section>
+          <span class="label">Confirmation</span>
+          <h1>We’ve got your request<span id="userNameSpan"></span>.</h1>
+          <p class="lead">We’ll reach out within 1–2 business days to confirm availability, shipping, and your final quote.</p>
+          <div class="divider"></div>
+          <p class="muted">If your inquiry is urgent, we’re happy to hear from you directly:</p>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:office@abicybernetics.com">office@abicybernetics.com</a></li>
+            <!-- Uncomment and edit if you want to show a phone number -->
+            <!-- <li><strong>Phone:</strong> <a href="tel:+40XXXXXXXXX">+40 XXX XXX XXX</a></li> -->
+          </ul>
+
+          <div class="cta-row">
+            <a class="button" href="index.html" aria-label="Back to homepage">Back to homepage</a>
+            <a class="button secondary" href="order.html" aria-label="Return to order page">Return to order page</a>
+          </div>
+        </section>
+
+        <aside>
+          <div class="card">
+            <strong>What’s next?</strong>
+            <p class="muted" style="margin-top:8px">
+              A team member will review your details and email you soon. If you shared configuration preferences,
+              we’ll use them to tailor the discussion
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="divider"></div>
+    <p>We’ll confirm everything during our follow‑up call.</p>
+  </footer>
+
+  <!-- Fire the conversion event -->
+  <script>
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Lead'); // or use a custom event name as desired
+    }
+  </script>
+
+  <!-- Optional: personalize headline if ?name=Alex is appended -->
+  <script>
+    (function(){
+      const params = new URLSearchParams(location.search);
+      const name = params.get('name');
+      if(name){
+        const span = document.getElementById('userNameSpan');
+        span.textContent = ', ' + name;
+      }
+    })();
+  </script>
+
+<script id="mobile-nav-script">
+  (function(){
+    var btn = document.querySelector('.nav-toggle');
+    var drawer = document.querySelector('.nav-drawer');
+    if(!btn || !drawer) return;
+    btn.addEventListener('click', function(){
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !expanded);
+      if(expanded){
+        drawer.setAttribute('hidden', '');
+      } else {
+        drawer.removeAttribute('hidden');
+      }
+    });
+    // Close drawer on link click
+    drawer.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        btn.setAttribute('aria-expanded','false');
+        drawer.setAttribute('hidden','');
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
