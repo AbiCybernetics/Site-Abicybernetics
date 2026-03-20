@@ -39,7 +39,7 @@
   fbq('init', '1271705848068144');
   fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1271705848068144&ev=PageView&noscript=1"/></noscript>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1271705848068144&ev=PageView&noscript=1" alt=""/></noscript>
   <script>
     window.addEventListener('load', function () {
       (function(h,o,t,j,a,r){
@@ -57,7 +57,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="/assets/video/banner-poster.jpg" fetchpriority="high">
   <link rel="preload" as="video" href="/assets/video/banner%20main.MOV" type="video/mp4">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles/luxury-home.css">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -67,236 +68,11 @@
       "logo": "https://abicybernetics.com/assets/icons/Logo%20abicybernetics.png"
     }
   </script>
-  <style>
-    :root{
-      --bg:#07111f;
-      --bg-2:#0b1830;
-      --panel:rgba(12,24,45,.72);
-      --panel-solid:#0d1a31;
-      --panel-border:rgba(255,255,255,.1);
-      --text:#e9f2ff;
-      --muted:#98a8c7;
-      --accent:#6ee7ff;
-      --accent-2:#8b5cf6;
-      --accent-3:#22c55e;
-      --shadow:0 24px 80px rgba(0,0,0,.35);
-      --radius:24px;
-      --container:min(1180px, calc(100vw - 40px));
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:'Inter',sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(110,231,255,.16), transparent 25%),
-        radial-gradient(circle at 80% 10%, rgba(139,92,246,.18), transparent 24%),
-        linear-gradient(180deg, #08111e 0%, #091325 38%, #050a14 100%);
-      min-height:100vh;
-      overflow-x:hidden;
-    }
-    body::before{
-      content:'';
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      background-image:linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-      background-size:72px 72px;
-      mask-image:linear-gradient(180deg, rgba(0,0,0,.45), transparent 85%);
-      opacity:.28;
-    }
-    a{color:inherit}
-    img{max-width:100%;display:block}
-    .site-shell{position:relative;z-index:1}
-    .site-header{
-      width:var(--container);
-      margin:20px auto 0;
-      padding:16px 20px;
-      display:flex;
-      align-items:center;
-      gap:18px;
-      position:sticky;
-      top:12px;
-      z-index:100;
-      border:1px solid var(--panel-border);
-      border-radius:999px;
-      background:rgba(7,17,31,.72);
-      backdrop-filter:blur(18px);
-      box-shadow:0 16px 50px rgba(0,0,0,.24);
-    }
-    .logo-link img{height:46px;width:auto}
-    .brand-note{display:flex;flex-direction:column;gap:2px}
-    .brand-note strong{font-family:'Manrope',sans-serif;font-size:1rem;letter-spacing:.04em;text-transform:uppercase}
-    .brand-note span{font-size:.78rem;color:var(--muted)}
-    .nav-desktop,.lang-switch{display:flex;align-items:center;gap:10px}
-    .nav-desktop{margin-left:auto}
-    .nav-desktop a,.lang-switch a,.nav-mobile a{
-      text-decoration:none;
-      font-weight:600;
-      font-size:.95rem;
-      color:var(--muted);
-      padding:10px 14px;
-      border-radius:999px;
-      transition:all .25s ease;
-    }
-    .nav-desktop a:hover,.lang-switch a:hover,.nav-mobile a:hover{color:var(--text);background:rgba(255,255,255,.08)}
-    .lang-switch a{border:1px solid rgba(255,255,255,.08)}
-    .lang-switch .active-lang{background:linear-gradient(135deg, rgba(110,231,255,.18), rgba(139,92,246,.22)); color:#fff; border-color:rgba(110,231,255,.3)}
-    .nav-toggle{display:none;margin-left:auto;background:none;border:0;width:44px;height:44px;position:relative;cursor:pointer}
-    .nav-toggle span{position:absolute;left:10px;right:10px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
-    .nav-toggle span:nth-child(1){top:14px}
-    .nav-toggle span:nth-child(2){top:21px}
-    .nav-toggle span:nth-child(3){top:28px}
-    .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-    .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
-    .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-    .nav-drawer{
-      position:absolute;
-      top:calc(100% + 12px);
-      left:0;
-      right:0;
-      padding:14px;
-      border-radius:28px;
-      background:rgba(7,17,31,.96);
-      border:1px solid var(--panel-border);
-      box-shadow:var(--shadow);
-    }
-    .nav-mobile{display:flex;flex-direction:column;gap:8px}
-    .lang-switch.mobile{margin-top:6px}
-    main{padding-bottom:80px}
-    .hero{
-      width:var(--container);
-      margin:28px auto 0;
-      display:grid;
-      grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);
-      gap:28px;
-      align-items:stretch;
-    }
-    .hero-copy,.hero-media,.section-card,.info-card,.feature-card,.story-card,.cta-card,.simple-cookie-banner{
-      border:1px solid var(--panel-border);
-      background:var(--panel);
-      backdrop-filter:blur(18px);
-      box-shadow:var(--shadow);
-    }
-    .hero-copy{
-      border-radius:36px;
-      padding:40px;
-      position:relative;
-      overflow:hidden;
-    }
-    .hero-copy::before{
-      content:'';
-      position:absolute;
-      inset:auto auto -80px -30px;
-      width:220px;
-      height:220px;
-      border-radius:50%;
-      background:radial-gradient(circle, rgba(110,231,255,.25), transparent 65%);
-      filter:blur(6px);
-    }
-    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.06);color:#d7e7ff;font-size:.78rem;text-transform:uppercase;letter-spacing:.14em}
-    .eyebrow::before{content:'';width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 0 18px rgba(110,231,255,.65)}
-    h1,h2,h3{font-family:'Manrope',sans-serif;line-height:.98;letter-spacing:-.04em}
-    h1{font-size:clamp(3rem, 8vw, 5.8rem);margin:22px 0 18px;max-width:10ch}
-    .hero-copy p{font-size:1.08rem;line-height:1.7;color:var(--muted);max-width:58ch}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
-    .order-btn,.ghost-btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      min-width:170px;padding:15px 22px;border-radius:999px;text-decoration:none;font-weight:700;
-      transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
-    }
-    .order-btn{background:linear-gradient(135deg, var(--accent), #4f8cff 48%, var(--accent-2));color:#06101d;box-shadow:0 18px 45px rgba(97,168,255,.34)}
-    .ghost-btn{background:rgba(255,255,255,.05);color:#fff;border:1px solid rgba(255,255,255,.12)}
-    .order-btn:hover,.ghost-btn:hover{transform:translateY(-2px)}
-    .hero-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px}
-    .metric{padding:18px;border-radius:22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
-    .metric strong{display:block;font-size:1.65rem;font-family:'Manrope',sans-serif}
-    .metric span{display:block;margin-top:8px;font-size:.88rem;color:var(--muted);line-height:1.45}
-    .hero-media{border-radius:36px;padding:18px;position:relative;overflow:hidden;min-height:620px}
-    .hero-media video{width:100%;height:100%;min-height:584px;object-fit:cover;border-radius:26px;filter:saturate(1.08) contrast(1.05)}
-    .hero-media::after{content:'';position:absolute;inset:18px;border-radius:26px;background:linear-gradient(180deg, rgba(7,17,31,.12), rgba(7,17,31,.58) 84%)}
-    .hero-floating{position:absolute;left:36px;right:36px;bottom:36px;display:flex;justify-content:space-between;gap:14px;z-index:2}
-    .floating-card{padding:16px 18px;border-radius:22px;background:rgba(7,17,31,.72);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);max-width:220px}
-    .floating-card strong{display:block;font-size:1rem;margin-bottom:6px}
-    .floating-card span{font-size:.9rem;color:#d0ddf7;line-height:1.45}
-    .section{width:var(--container);margin:28px auto 0}
-    .section-card{padding:28px;border-radius:32px}
-    .section-heading{display:flex;justify-content:space-between;gap:18px;align-items:end;margin-bottom:24px}
-    .section-heading p{max-width:60ch;color:var(--muted);line-height:1.7}
-    .pill-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
-    .pill{padding:12px 16px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#dce8ff;font-weight:600}
-    .grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
-    .story-card{padding:26px;border-radius:28px}
-    .story-card p,.story-card li{color:var(--muted);line-height:1.7}
-    .story-card ul{padding-left:20px;margin-top:18px;display:grid;gap:10px}
-    .feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
-    .feature-card{border-radius:30px;overflow:hidden}
-    .feature-card img{width:100%;height:270px;object-fit:cover}
-    .feature-card .copy{padding:24px}
-    .feature-card p{margin-top:10px;color:var(--muted);line-height:1.7}
-    .info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .info-card{padding:24px;border-radius:26px}
-    .info-card span{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(110,231,255,.1);color:var(--accent);font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
-    .info-card h3{margin:14px 0 10px;font-size:1.4rem}
-    .info-card p{color:var(--muted);line-height:1.7}
-    .journey{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:8px}
-    .journey-step{position:relative;padding:20px;border-radius:24px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
-    .journey-step strong{display:flex;align-items:center;gap:10px;font-size:1rem}
-    .journey-step strong::before{content:attr(data-step);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#06101d;font-size:.82rem}
-    .journey-step p{margin-top:12px;color:var(--muted);line-height:1.65;font-size:.95rem}
-    .cta-card{padding:32px;border-radius:34px;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;background:linear-gradient(135deg, rgba(110,231,255,.12), rgba(139,92,246,.15), rgba(34,197,94,.12))}
-    .cta-card p{color:#d9e6ff;line-height:1.7;max-width:55ch}
-    footer{width:var(--container);margin:28px auto 24px;padding:20px 12px 0;text-align:center;color:var(--muted);font-size:.92rem}
-    footer a{color:#dfe9ff;text-decoration:none}
-    .simple-cookie-banner{
-      position:fixed;left:20px;right:20px;bottom:20px;z-index:9999;
-      display:flex;flex-wrap:wrap;align-items:center;gap:14px;
-      padding:18px 20px;border-radius:24px;
-    }
-    .simple-cookie-banner p{flex:1 1 280px;color:#d8e5ff;line-height:1.6}
-    .simple-cookie-banner button{background:#fff;color:#07111f;border:0;padding:12px 18px;border-radius:999px;font-weight:800;cursor:pointer}
-    @media (max-width: 1080px){
-      .hero,.grid-2,.cta-card{grid-template-columns:1fr}
-      .info-grid,.journey{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .hero-media{min-height:unset}
-      .hero-media video{min-height:420px}
-    }
-    @media (max-width: 900px){
-      .site-header{border-radius:28px;padding:14px 16px}
-      .brand-note{display:none}
-      .nav-desktop,.lang-switch.nav-desktop{display:none}
-      .nav-toggle{display:block}
-      h1{max-width:11ch}
-      .hero-copy,.hero-media,.section-card,.cta-card{border-radius:28px}
-      .hero-copy{padding:28px}
-      .hero-floating{left:28px;right:28px;bottom:28px;flex-direction:column}
-      .feature-grid,.info-grid,.journey,.hero-metrics{grid-template-columns:1fr}
-      .feature-card img{height:220px}
-    }
-    @media (max-width: 640px){
-      :root{--container:min(100vw - 24px, 1180px)}
-      .site-header{top:8px;margin-top:12px}
-      .hero{margin-top:18px}
-      .hero-copy,.hero-media,.section-card,.story-card,.feature-card,.info-card,.cta-card{padding:22px}
-      .hero-copy{padding:24px}
-      .hero-media{padding:12px}
-      .hero-media video{min-height:320px}
-      .hero-floating{left:20px;right:20px;bottom:20px}
-      .floating-card{max-width:none}
-      .section-heading{flex-direction:column;align-items:flex-start}
-      .order-btn,.ghost-btn{width:100%}
-      .simple-cookie-banner{left:12px;right:12px;bottom:12px;padding:16px}
-    }
-    @media (prefers-reduced-motion: reduce){
-      *,*::before,*::after{scroll-behavior:auto;transition:none !important;animation:none !important}
-    }
-  </style>
 </head>
 <body>
 <div class="site-shell">
 <header class="site-header">
-  <a href="index.html" class="logo-link"><img src="/assets/icons/Logo abicybernetics.png" alt="AbiCybernetics Logo" decoding="async"></a>
-  <div class="brand-note"><strong>AbiCybernetics</strong><span>Inginerie premium pentru mobilitate asistată</span></div>
+  <a href="index.html" class="logo-link"><img src="/assets/icons/Logo abicybernetics.png" alt="AbiCybernetics Logo" decoding="async"><span class="brand-note"><strong>AbiCybernetics</strong><span>Mobilitate avansată, exprimată clar</span></span></a>
   <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false"><span></span><span></span><span></span></button>
   <nav class="nav-desktop" aria-label="Navigație principală">
     <a href="index.html">Acasă</a>
@@ -327,136 +103,169 @@
 </header>
 <main>
   <section class="hero">
-    <div class="hero-copy">
-      <div class="eyebrow">Platforma Abi Gen-3</div>
-      <h1>Mișcare cu încrederea unui sistem premium de mobilitate.</h1>
-      <p>AbiCybernetics combină biomecanica, electronica modulară și integrarea de senzori într-o experiență rafinată de exoschelet, creată pentru early adopters, clinici și echipe de inovare care vor mai mult decât un simplu prototip.</p>
-      <div class="hero-actions">
-        <a href="order.html" class="order-btn">Rezervă sistemul</a>
-        <a href="#platform" class="ghost-btn">Explorează platforma</a>
-      </div>
-      <div class="hero-metrics">
-        <div class="metric"><strong>150–190 cm</strong><span>Interval ergonomic proiectat pentru o potrivire sigură și confortabilă.</span></div>
-        <div class="metric"><strong>Până la 5 ore</strong><span>Autonomie flexibilă cu baterie interschimbabilă între sesiuni.</span></div>
-        <div class="metric"><strong>12 săptămâni</strong><span>Termen tipic de livrare cu onboarding ghidat și setup la distanță.</span></div>
-      </div>
-    </div>
     <div class="hero-media">
       <video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="/assets/video/banner-poster.jpg">
         <source src="/assets/video/banner%20main.MOV" type="video/mp4">
         Browserul tău nu suportă redarea video.
       </video>
-      <div class="hero-floating">
-        <div class="floating-card"><strong>Mișcare naturală</strong><span>Suport echilibrat, aliniere controlată și o purtare intuitivă.</span></div>
-        <div class="floating-card"><strong>Inteligență modulară</strong><span>Integrare EEG, EMG, forță, giroscop și alte configurații experimentale.</span></div>
-      </div>
     </div>
-  </section>
-
-  <section class="section" id="platform">
-    <div class="section-card grid-2">
-      <div class="story-card">
-        <div class="eyebrow">Creat pentru pionieri</div>
-        <h2 style="margin-top:18px;">O experiență mai clară, mai elegantă și mai premium pentru mobilitate asistată.</h2>
-        <p style="margin-top:16px;">Abi este mai mult decât hardware. Este un ecosistem complet de mobilitate, cu mecanică configurabilă, senzori inteligenți și suport direct de inginerie care te ajută să treci de la primele reglaje la mers cu încredere.</p>
-        <div class="pill-row">
-          <span class="pill">Design industrial premium</span>
-          <span class="pill">Arhitectură modulară full-body</span>
-          <span class="pill">Onboarding asistat la distanță</span>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="section-kicker">Platforma Abi Gen-3</div>
+        <h1 class="hero-title">Mai fluid. Mai clar. Mai aproape de un produs premium real.</h1>
+        <p>Am simplificat homepage-ul AbiCybernetics într-o direcție mai aerisită, fără blocuri grele de conținut, cu accent pe imagine, ritm și o paletă modernă de negru, gri și alb care lasă produsul să respire.</p>
+        <div class="hero-actions">
+          <a href="order.html" class="order-btn">Rezervă sistemul</a>
+          <a href="#experienta" class="ghost-btn">Descoperă experiența</a>
+        </div>
+        <div class="hero-bottom">
+          <div class="hero-stat"><strong>150–190 cm</strong><span>Interval ergonomic gândit pentru aliniere sigură și confort susținut.</span></div>
+          <div class="hero-stat"><strong>Până la 5 ore</strong><span>Autonomie flexibilă cu baterie interschimbabilă între sesiuni.</span></div>
+          <div class="hero-stat"><strong>Global</strong><span>Livrare internațională și onboarding direct cu echipa Abi.</span></div>
         </div>
       </div>
-      <div class="story-card">
-        <h3>De ce se simte premium</h3>
-        <ul>
-          <li>Reglaje mecanice fine pentru aliniere personalizată și confort susținut.</li>
-          <li>Echipare rapidă, fără unelte și fără cabluri inutile, potrivită pentru acasă, clinică sau laborator.</li>
-          <li>Arhitectură deschisă care se adaptează fluxurilor personalizate, analizelor și experimentelor.</li>
-          <li>Colaborare directă cu echipa AbiCybernetics pe toată durata livrării și configurării.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-card">
-      <div class="section-heading">
-        <div>
-          <div class="eyebrow">Capabilități cheie</div>
-          <h2 style="margin-top:18px;">Patru motive pentru care platforma pare deja din viitor.</h2>
+      <aside class="hero-side">
+        <div class="hero-rail">
+          <article class="rail-card highlight">
+            <div class="mini-label">Direcție vizuală</div>
+            <strong>O pagină care curge, nu una împărțită în cutii.</strong>
+            <p>Structura nouă păstrează contrastul și claritatea, dar mută accentul dinspre „carduri” spre un parcurs continuu și elegant.</p>
+          </article>
+          <article class="rail-card">
+            <div class="mini-label">Arhitectură deschisă</div>
+            <strong>EEG, EMG, senzori de forță, giroscop și integrări custom.</strong>
+            <p>Produsul rămâne tehnic și credibil, însă este prezentat într-o formă mai calmă și mai matură.</p>
+          </article>
         </div>
-        <p>Noul homepage pune accent pe contrast, ierarhie vizuală și argumente clare, pentru ca Abi să fie perceput ca un produs tehnologic premium, nu doar ca un concept experimental.</p>
-      </div>
-      <div class="feature-grid">
-        <article class="feature-card">
-          <img src="/assets/images/Exoskeleton detail 4.png" alt="Detaliu AbiCybernetics cu platformă integrată de senzori" loading="lazy" decoding="async">
-          <div class="copy">
-            <h3>Nucleu inteligent de senzori</h3>
-            <p>Suportul pentru EEG, EMG, forță, giroscop, laser și alte integrări oferă o bază solidă pentru cercetare, analiză și scenarii de utilizare în continuă evoluție.</p>
-          </div>
-        </article>
-        <article class="feature-card">
-          <img src="/assets/images/Exoskeleton detail 3.png" alt="Detaliu AbiCybernetics care evidențiază mecanica modulară" loading="lazy" decoding="async">
-          <div class="copy">
-            <h3>Montare modulară rapidă</h3>
-            <p>Fiecare componentă se fixează repede, reducând timpul dintre transport, ajustare și momentul în care utilizatorul începe să se miște.</p>
-          </div>
-        </article>
-        <article class="feature-card">
-          <img src="/assets/images/Exoskeleton detail 2.png" alt="Detaliu AbiCybernetics orientat spre suportul utilizatorului" loading="lazy" decoding="async">
-          <div class="copy">
-            <h3>Flexibilitate pentru toată ziua</h3>
-            <p>Până la 2 ore de utilizare continuă sau până la 5 ore cu pauze, plus schimbarea rapidă a bateriei, transformă performanța în utilitate reală.</p>
-          </div>
-        </article>
-        <article class="feature-card">
-          <img src="/assets/images/Exoskelton detail 1.png" alt="Detaliu AbiCybernetics despre reglajele ergonomice" loading="lazy" decoding="async">
-          <div class="copy">
-            <h3>Precizie ergonomică</h3>
-            <p>Reglajele fine ale articulațiilor, segmentelor și unghiurilor de aliniere susțin o potrivire sigură și eficientă biomecanic pentru mulți utilizatori.</p>
-          </div>
-        </article>
-      </div>
+      </aside>
     </div>
   </section>
 
-  <section class="section">
-    <div class="info-grid">
-      <article class="info-card"><span>Suport</span><h3>Inginer dedicat</h3><p>Fiecare client primește ghidare directă, actualizări în timp real și onboarding la distanță pentru o experiență premium cap-coadă.</p></article>
-      <article class="info-card"><span>Software</span><h3>Firmware &amp; SDK deschise</h3><p>Poți construi experimente, interfețe sau extensii pe o platformă creată să evolueze împreună cu utilizatorii ei.</p></article>
-      <article class="info-card"><span>Livrare</span><h3>Expediere globală</h3><p>Abi livrează internațional și oferă suport virtual pentru instalare, fără a depinde de o vizită locală în centru.</p></article>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-card">
-      <div class="section-heading">
-        <div>
-          <div class="eyebrow">Parcursul clientului</div>
-          <h2 style="margin-top:18px;">Cum arată onboarding-ul premium cu Abi.</h2>
-        </div>
-        <p>Am repoziționat homepage-ul în jurul unui parcurs mai luxos și mai clar: rezervare, configurare, onboarding și mișcare, cu suport transparent în fiecare etapă.</p>
-      </div>
-      <div class="journey">
-        <div class="journey-step"><strong data-step="01">Rezervi</strong><p>Completezi comanda și ne spui obiectivele, mediul de utilizare și preferințele de configurare.</p></div>
-        <div class="journey-step"><strong data-step="02">Configurezi</strong><p>Echipa Abi rafinează împreună cu tine potrivirea, accesoriile și integrările dorite.</p></div>
-        <div class="journey-step"><strong data-step="03">Te pregătești</strong><p>Primești asistență la distanță, explicații practice și actualizări clare despre progres.</p></div>
-        <div class="journey-step"><strong data-step="04">Te miști</strong><p>Începi să folosești un sistem gândit să fie avansat, adaptabil și susținător din prima zi.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="cta-card">
+  <section class="section" id="experienta">
+    <div class="overview-strip">
       <div>
-        <div class="eyebrow">Notă importantă</div>
-        <h2 style="margin-top:18px;">Creat pentru utilizatori ambițioși, cercetători și early adopters.</h2>
-        <p style="margin-top:16px;">Abi nu este un dispozitiv medical certificat. Este o platformă deschisă și în continuă dezvoltare pentru cei care vor să exploreze tehnologia avansată de mobilitate și să contribuie la următoarea etapă a produsului.</p>
+        <div class="section-kicker">Noua atmosferă</div>
+        <h2 class="section-title">Negru, gri, alb. Mai puțin decor, mai multă prezență.</h2>
+        <p class="section-copy">Am eliminat senzația de homepage construit din panouri separate și am trecut la o prezentare mai fluidă, apropiată de un produs high-end: suprafețe discrete, tipografie mare, mult spațiu negativ și tranziții vizuale mai curate.</p>
+      </div>
+      <div class="spec-grid">
+        <article class="spec-item"><div class="spec-label">Paletă</div><strong>Monocrom modern</strong><p>Negru profund, griuri reci și alb controlat pentru un look mai contemporan.</p></article>
+        <article class="spec-item"><div class="spec-label">Flux</div><strong>Conținut fluid</strong><p>Secțiunile citesc mai natural, fără senzația de grilă rigidă sau „patrate” repetitive.</p></article>
+        <article class="spec-item"><div class="spec-label">Mesaj</div><strong>Produsul în prim-plan</strong><p>Mai puțin ornament, mai multă atenție pe exoschelet și pe capabilitățile reale.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="editorial-grid">
+      <div class="editorial-visual">
+        <img src="/assets/images/exo_black.png" alt="Exoschelet AbiCybernetics în finisaj negru" loading="eager" decoding="async">
+        <div class="spotlight-meta">
+          <span>Design industrial premium</span>
+          <span>Arhitectură modulară</span>
+          <span>Pregătit pentru senzori avansați</span>
+        </div>
+      </div>
+      <div class="editorial-panel">
+        <div class="editorial-body">
+          <div class="editorial-label">Prezentare flagship</div>
+          <h2 class="editorial-title">Un homepage care se simte mai apropiat de un launch premium decât de o broșură tehnică.</h2>
+          <p>Noul ritm vizual pune accent pe imagine, contrast și încredere. Informația rămâne clară, dar nu mai este împinsă în carduri grele; în schimb, este distribuită mai natural, într-o experiență care respiră.</p>
+          <div class="editorial-points">
+            <div class="editorial-point"><strong>Mai multă fluență</strong><p>Blocurile sunt mai puțin închise, iar pagina se parcurge mai ușor, fără întreruperi vizuale dure.</p></div>
+            <div class="editorial-point"><strong>Percepție mai matură</strong><p>Paleta monocromă și suprafețele discrete fac produsul să pară mai serios, mai scump și mai actual.</p></div>
+            <div class="editorial-point"><strong>Autenticitate păstrată</strong><p>Imaginile și materialele reale Abi rămân centrale, doar că sunt susținute de o direcție mai rafinată.</p></div>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="contact.html" class="outline-btn">Vorbește cu echipa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="gallery-layout">
+      <article class="gallery-card tall">
+        <img src="/assets/images/Exoskeleton detail 4.png" alt="Detaliu al exoscheletului Abi" loading="lazy" decoding="async">
+        <div class="gallery-caption">
+          <div class="card-label">Detalii de precizie</div>
+          <h3>Suprafață, structură, proporție.</h3>
+          <p>Fiecare detaliu mecanic este pus în valoare mai curat, fără rame vizuale care să fragmenteze prezentarea.</p>
+        </div>
+      </article>
+      <div class="gallery-stack">
+        <article class="gallery-card">
+          <img src="/assets/images/Exoskeleton detail 2.png" alt="Detaliu ergonomic al exoscheletului Abi" loading="lazy" decoding="async">
+          <div class="gallery-caption">
+            <div class="card-label">Inginerie pentru confort</div>
+            <h3>Biomecanică explicată cu mai mult calm.</h3>
+            <p>Potrivirea, sprijinul și reglajele ergonomice sunt prezentate într-un ritm vizual mai sobru și mai clar.</p>
+          </div>
+        </article>
+        <article class="gallery-card">
+          <img src="/assets/images/Exoskeleton detail 3.png" alt="Detaliu despre structura modulară Abi" loading="lazy" decoding="async">
+          <div class="gallery-caption">
+            <div class="card-label">Nucleu modular</div>
+            <h3>Pregătit pentru cercetare, sub o prezentare mai curată.</h3>
+            <p>Direcția nouă comunică mai întâi încredere și calitate, apoi susține mesajul prin flexibilitatea platformei.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="capability-grid">
+      <article class="capability-card">
+        <div class="card-label">Experiență</div>
+        <h3>Onboarding ghidat</h3>
+        <p>Comanda, configurarea și setarea sunt prezentate ca un parcurs asistat, clar și premium, nu ca un simplu flow tranzacțional.</p>
+      </article>
+      <article class="capability-card">
+        <div class="card-label">Tehnologie</div>
+        <h3>Backbone de senzori deschis</h3>
+        <p>EEG, EMG, forță, laser și giroscop rămân parte din poveste, însă într-o exprimare vizuală mai elegantă.</p>
+      </article>
+      <article class="capability-card">
+        <div class="card-label">Poziționare</div>
+        <h3>Premium, dar credibil</h3>
+        <p>Tonul rămâne onest față de produs, însă identitatea vizuală transmite mai multă încredere și maturitate.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="timeline-wrap">
+      <div class="quote-card">
+        <div class="section-kicker">Intenția redesignului</div>
+        <blockquote>„Mai puține cutii. Mai mult produs. Mai multă eleganță.”</blockquote>
+        <p>Direcția aceasta repoziționează AbiCybernetics într-o zonă mai clară și mai premium, fără să piardă din substanța tehnică a platformei.</p>
+      </div>
+      <div class="timeline-card">
+        <div class="section-kicker">Parcursul clientului</div>
+        <h2 class="section-title">Un traseu mai fluid de la interes la comandă.</h2>
+        <div class="timeline-list">
+          <div class="timeline-item"><div class="timeline-index">01</div><div><strong>Intri în universul brandului</strong><p>Hero-ul deschide conversația mai cinematic și mai coerent, fără suprasolicitare vizuală.</p></div></div>
+          <div class="timeline-item"><div class="timeline-index">02</div><div><strong>Înțelegi produsul</strong><p>Secțiunile editoriale combină aspirația cu detaliile reale despre ergonomie, senzori și livrare.</p></div></div>
+          <div class="timeline-item"><div class="timeline-index">03</div><div><strong>Alegi pasul următor</strong><p>Call-to-action-urile sunt mai curate și mai deliberate, fără agresivitate comercială.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="cta-panel">
+      <div>
+        <div class="section-kicker">Notă importantă</div>
+        <h2 class="cta-title">Prezentare premium. Așteptări clare.</h2>
+        <p>Abi rămâne o platformă de exoschelet în evoluție și nu un dispozitiv medical certificat. Noul design ridică experiența vizuală, păstrând mesajul transparent pentru utilizatori ambițioși, cercetători și early adopters.</p>
       </div>
       <div>
-        <p>Ești gata să faci primul pas către o experiență de mobilitate mai capabilă?</p>
-        <div class="hero-actions" style="margin-top:20px;">
+        <p>Ești gata pentru o experiență de mobilitate prezentată mai clar, mai fluid și mai actual?</p>
+        <div class="hero-actions">
           <a href="order.html" class="order-btn">Comandă acum</a>
-          <a href="contact.html" class="ghost-btn">Vorbește cu echipa</a>
+          <a href="contact.html" class="ghost-btn">Programează o discuție</a>
         </div>
       </div>
     </div>
@@ -465,7 +274,7 @@
 
 <footer>© AbiCybernetics – Trademark&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html">Privacy&nbsp;Policy</a></footer>
 
-<div id="scb" class="simple-cookie-banner" role="alert">
+<div id="scb" class="cookie-banner" role="alert">
   <p>Continuând să folosești site-ul nostru, ești de acord cu utilizarea cookie-urilor pentru navigare mai bună, analiză și susținerea eforturilor noastre de marketing.</p>
   <button id="scb-btn">Accept</button>
 </div>
