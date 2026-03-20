@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AbiCybernetics | Exoschelet pentru mobilitate asistată</title>
+  <title>AbiCybernetics | Platformă premium de exoschelet pentru mobilitate</title>
   <meta name="description" content="AbiCybernetics dezvoltă tehnologie modulară de exoschelet pentru mers asistat, mers natural și integrare avansată de senzori."/>
   <meta name="robots" content="index,follow,max-image-preview:large"/>
   <link rel="canonical" href="https://abicybernetics.com/ro/index.html"/>
@@ -12,16 +11,15 @@
   <link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/index.html"/>
   <link rel="alternate" hreflang="x-default" href="https://abicybernetics.com/"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="AbiCybernetics | Exoschelet pentru mobilitate asistată"/>
-  <meta property="og:description" content="Descoperiți platforma AbiCybernetics pentru mobilitate asistată, mers natural și integrare modulară de senzori."/>
+  <meta property="og:title" content="AbiCybernetics | Platformă premium de exoschelet pentru mobilitate"/>
+  <meta property="og:description" content="Descoperă platforma AbiCybernetics pentru mobilitate asistată, mers natural și integrare modulară de senzori."/>
   <meta property="og:url" content="https://abicybernetics.com/ro/index.html"/>
   <meta property="og:image" content="https://abicybernetics.com/assets/video/banner-poster.jpg"/>
   <meta property="og:locale" content="ro_RO"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="AbiCybernetics | Exoschelet pentru mobilitate asistată"/>
-  <meta name="twitter:description" content="Descoperiți platforma AbiCybernetics pentru mobilitate asistată, mers natural și integrare modulară de senzori."/>
+  <meta name="twitter:title" content="AbiCybernetics | Platformă premium de exoschelet pentru mobilitate"/>
+  <meta name="twitter:description" content="Descoperă platforma AbiCybernetics pentru mobilitate asistată, mers natural și integrare modulară de senzori."/>
   <meta name="twitter:image" content="https://abicybernetics.com/assets/video/banner-poster.jpg"/>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H52JMWTFJM"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -29,8 +27,6 @@
     gtag('js', new Date());
     gtag('config', 'G-H52JMWTFJM');
   </script>
-
-  <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -39,13 +35,11 @@
   n.queue=[];t=b.createElement(e);t.async=!0;
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
+  'https://connect.facebook.net/ro_RO/fbevents.js');
   fbq('init', '1271705848068144');
   fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1271705848068144&ev=PageView&noscript=1"/></noscript>
-  <!-- End Meta Pixel Code -->
-
   <script>
     window.addEventListener('load', function () {
       (function(h,o,t,j,a,r){
@@ -58,13 +52,12 @@
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     });
   </script>
-
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="/assets/video/banner-poster.jpg" fetchpriority="high">
   <link rel="preload" as="video" href="/assets/video/banner%20main.MOV" type="video/mp4">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -74,193 +67,237 @@
       "logo": "https://abicybernetics.com/assets/icons/Logo%20abicybernetics.png"
     }
   </script>
-
   <style>
+    :root{
+      --bg:#07111f;
+      --bg-2:#0b1830;
+      --panel:rgba(12,24,45,.72);
+      --panel-solid:#0d1a31;
+      --panel-border:rgba(255,255,255,.1);
+      --text:#e9f2ff;
+      --muted:#98a8c7;
+      --accent:#6ee7ff;
+      --accent-2:#8b5cf6;
+      --accent-3:#22c55e;
+      --shadow:0 24px 80px rgba(0,0,0,.35);
+      --radius:24px;
+      --container:min(1180px, calc(100vw - 40px));
+    }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Inter',sans-serif;background:#fff;color:#000}
-
-    /* HEADER */
-    header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid #ccc;z-index:10}
-    .logo-link img{height:50px}
-    nav{margin-left:auto}
-    nav a{margin:0 10px;text-decoration:none;color:#333;font-weight:600}
-
-    /* HERO SLIDESHOW */
-    .slideshow-section{background:url('/assets/images/DSCN6670-2-scaled.jpg') center/cover no-repeat;padding:60px 0;display:flex;justify-content:center;align-items:center}
-    .slideshow-container{width:90%;max-width:800px;height:450px;position:relative;overflow:hidden;border-radius:8px}
-    .slideshow-container img{width:100%;height:100%;object-fit:cover;position:absolute;opacity:0;transition:opacity 1s}
-    .slideshow-container img.active{opacity:1}
-
-    /* INTRO & ORDER */
-    .content-section{background:#fff;padding:60px 20px}
-    .text-block{max-width:800px;margin:0 auto}
-    .text-block h2{margin-bottom:20px}
-    .text-block ul{margin-top:20px;padding-left:20px}
-    .order-btn{display:block;margin:25px auto 0;background:#555;color:#fff;padding:12px 25px;border-radius:6px;text-decoration:none;text-align:center}
-
-    /* FEATURE CARDS */
-    .features{background:#fff;padding:60px 20px}
-    .feature-item{display:flex;align-items:center;gap:30px;margin-bottom:50px;max-width:1000px;margin-inline:auto}
-    .feature-item:nth-child(even){flex-direction:row-reverse}
-    .feature-item img{width:50%;max-width:450px;border-radius:8px;object-fit:cover}
-    .feature-text{flex:1}
-    .feature-text h3{margin-bottom:15px}
-    .feature-text p{line-height:1.55}
-    @media(min-width:769px){.order-btn{width:220px}}
-    @media(max-width:768px){.feature-item{flex-direction:column!important}.feature-item img{width:100%}.feature-text{text-align:left}}
-
-    /* CTA */
-    /* Garden Divider */
-    .garden-divider{
-      width:100%;
-      height:120px;
-      background:url('/assets/images/DSCN6670-2-scaled.jpg') center/cover no-repeat;
-      border-radius:8px;
-      margin:40px 0;
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Inter',sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(110,231,255,.16), transparent 25%),
+        radial-gradient(circle at 80% 10%, rgba(139,92,246,.18), transparent 24%),
+        linear-gradient(180deg, #08111e 0%, #091325 38%, #050a14 100%);
+      min-height:100vh;
+      overflow-x:hidden;
     }
-    @media(max-width:768px){
-      .garden-divider{height:80px;margin:30px 0;}
+    body::before{
+      content:'';
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background-image:linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size:72px 72px;
+      mask-image:linear-gradient(180deg, rgba(0,0,0,.45), transparent 85%);
+      opacity:.28;
     }
-
-    .cta-section{background:#fff;padding:40px 20px;text-align:center}
-    .cta-msg{font-size:1.25em;font-weight:600;margin-bottom:20px}
-
-    /* WHY SECTION */
-    .why-section{background:#fff;padding:60px 20px}
-    .why-section>div{max-width:800px;margin:0 auto}
-    .why-section h2{margin-bottom:20px}
-
-    /* FOOTER */
-    footer{background:#fff;text-align:center;padding:20px;color:#666;font-size:.9em;border-top:1px solid #ccc}
-  
-h1, h2, h3, .hero-text, .slogan {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-}
-
-  
-/* Order button animation visibility fix */
-.order-btn::after{
-  bottom:2px;   /* move inside visible area */
-  z-index:1;    /* bring in front */
-}
-
-
-    .lang-switch{margin-left:16px; display:flex; align-items:center; gap:8px; font-weight:600}
-    .lang-switch a{color:#333; text-decoration:none; padding:6px 10px; border:1px solid #ddd; border-radius:10px}
-    .lang-switch a.active-lang{background:#000; color:#fff; border-color:#000}
-    @media(max-width:600px){ .lang-switch a{padding:6px 8px;font-size:.9rem} }
-    
-</style>
-
-<link rel="alternate" hreflang="en" href="https://abicybernetics.com/en/index.html"/>
-<link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/index.html"/>
-
-<style id="shared-header-style-ro">
-  header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid #e5e5e5;position:relative;z-index:100}
-  header .logo-link{display:flex;align-items:center}
-  header nav{margin-left:auto;display:flex;align-items:center;gap:16px}
-  header nav a{margin:0 4px;text-decoration:none;color:#333;font-weight:600}
-  .lang-switch{margin-left:16px;display:flex;align-items:center;gap:8px;font-weight:600}
-  .lang-switch a{color:#333;text-decoration:none;padding:6px 10px;border:1px solid #ddd;border-radius:10px}
-  .lang-switch a.active-lang{background:#000;color:#fff;border-color:#000}
-</style>
-
-
-<style id="remove-garden-bg-ro">
-  .slideshow-section, .hero, body {
-    background-image: none !important;
-    background: #fff !important;
-  }
-</style>
-
-
-<style id="mobile-nav-global-ro">
-  /* Base header */
-  .site-header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid #e5e5e5;position:relative;z-index:100}
-  .site-header .logo-link{display:flex;align-items:center}
-  .nav-desktop{margin-left:auto;display:flex;align-items:center;gap:16px}
-  .nav-desktop a{margin:0 4px;text-decoration:none;color:#333;font-weight:600}
-  .lang-switch{margin-left:16px;display:flex;align-items:center;gap:8px;font-weight:600}
-  .lang-switch a{color:#333;text-decoration:none;padding:6px 10px;border:1px solid #ddd;border-radius:10px}
-  .lang-switch a.active-lang{background:#000;color:#fff;border-color:#000}
-
-  /* Hamburger */
-  .nav-toggle{display:none;margin-left:auto;background:none;border:none;width:40px;height:40px;position:relative;cursor:pointer}
-  .nav-toggle span{position:absolute;left:8px;right:8px;height:2px;background:#111;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
-  .nav-toggle span:nth-child(1){top:12px}
-  .nav-toggle span:nth-child(2){top:19px}
-  .nav-toggle span:nth-child(3){top:26px}
-  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
-  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
-  /* Drawer */
-  .nav-drawer{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid #eee;box-shadow:0 6px 20px rgba(0,0,0,.08)}
-  .nav-mobile{display:flex;flex-direction:column;padding:10px 16px;gap:8px}
-  .nav-mobile a{text-decoration:none;color:#333;font-weight:600;padding:10px 6px;border-radius:8px}
-  .nav-mobile a:hover{background:#f7f7f7}
-  .lang-switch.mobile{margin:8px 0 6px 0}
-
-  /* Responsive */
-  @media (max-width: 900px){
-    .nav-desktop{display:none}
-    .nav-toggle{display:block}
-  }
-</style>
-
-
-<style id="banner-mov-responsive">
-  .banner-hero {
-    width: 100%;
-    height: 75vh;
-    max-height: 850px;
-    object-fit: cover;
-    display: block;
-  }
-  .overlay-text {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,.6);
-    padding: 0 12px;
-  }
-  .overlay-text .title {
-    font-size: 32px;
-    font-weight: 700;
-    font-family: Poppins,Arial,sans-serif;
-    line-height: 1.1;
-  }
-  .overlay-text .subtitle {
-    font-size: 24px;
-    font-weight: 500;
-    font-family: Poppins,Arial,sans-serif;
-    line-height: 1.1;
-  }
-  @media (max-width: 768px){
-    .banner-hero { height: 52vh; max-height: 520px; }
-    .overlay-text .title { font-size: 26px; }
-    .overlay-text .subtitle { font-size: 18px; }
-  }
-</style>
-
+    a{color:inherit}
+    img{max-width:100%;display:block}
+    .site-shell{position:relative;z-index:1}
+    .site-header{
+      width:var(--container);
+      margin:20px auto 0;
+      padding:16px 20px;
+      display:flex;
+      align-items:center;
+      gap:18px;
+      position:sticky;
+      top:12px;
+      z-index:100;
+      border:1px solid var(--panel-border);
+      border-radius:999px;
+      background:rgba(7,17,31,.72);
+      backdrop-filter:blur(18px);
+      box-shadow:0 16px 50px rgba(0,0,0,.24);
+    }
+    .logo-link img{height:46px;width:auto}
+    .brand-note{display:flex;flex-direction:column;gap:2px}
+    .brand-note strong{font-family:'Manrope',sans-serif;font-size:1rem;letter-spacing:.04em;text-transform:uppercase}
+    .brand-note span{font-size:.78rem;color:var(--muted)}
+    .nav-desktop,.lang-switch{display:flex;align-items:center;gap:10px}
+    .nav-desktop{margin-left:auto}
+    .nav-desktop a,.lang-switch a,.nav-mobile a{
+      text-decoration:none;
+      font-weight:600;
+      font-size:.95rem;
+      color:var(--muted);
+      padding:10px 14px;
+      border-radius:999px;
+      transition:all .25s ease;
+    }
+    .nav-desktop a:hover,.lang-switch a:hover,.nav-mobile a:hover{color:var(--text);background:rgba(255,255,255,.08)}
+    .lang-switch a{border:1px solid rgba(255,255,255,.08)}
+    .lang-switch .active-lang{background:linear-gradient(135deg, rgba(110,231,255,.18), rgba(139,92,246,.22)); color:#fff; border-color:rgba(110,231,255,.3)}
+    .nav-toggle{display:none;margin-left:auto;background:none;border:0;width:44px;height:44px;position:relative;cursor:pointer}
+    .nav-toggle span{position:absolute;left:10px;right:10px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+    .nav-toggle span:nth-child(1){top:14px}
+    .nav-toggle span:nth-child(2){top:21px}
+    .nav-toggle span:nth-child(3){top:28px}
+    .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+    .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .nav-drawer{
+      position:absolute;
+      top:calc(100% + 12px);
+      left:0;
+      right:0;
+      padding:14px;
+      border-radius:28px;
+      background:rgba(7,17,31,.96);
+      border:1px solid var(--panel-border);
+      box-shadow:var(--shadow);
+    }
+    .nav-mobile{display:flex;flex-direction:column;gap:8px}
+    .lang-switch.mobile{margin-top:6px}
+    main{padding-bottom:80px}
+    .hero{
+      width:var(--container);
+      margin:28px auto 0;
+      display:grid;
+      grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);
+      gap:28px;
+      align-items:stretch;
+    }
+    .hero-copy,.hero-media,.section-card,.info-card,.feature-card,.story-card,.cta-card,.simple-cookie-banner{
+      border:1px solid var(--panel-border);
+      background:var(--panel);
+      backdrop-filter:blur(18px);
+      box-shadow:var(--shadow);
+    }
+    .hero-copy{
+      border-radius:36px;
+      padding:40px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-copy::before{
+      content:'';
+      position:absolute;
+      inset:auto auto -80px -30px;
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(110,231,255,.25), transparent 65%);
+      filter:blur(6px);
+    }
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:9px 14px;border-radius:999px;background:rgba(255,255,255,.06);color:#d7e7ff;font-size:.78rem;text-transform:uppercase;letter-spacing:.14em}
+    .eyebrow::before{content:'';width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 0 18px rgba(110,231,255,.65)}
+    h1,h2,h3{font-family:'Manrope',sans-serif;line-height:.98;letter-spacing:-.04em}
+    h1{font-size:clamp(3rem, 8vw, 5.8rem);margin:22px 0 18px;max-width:10ch}
+    .hero-copy p{font-size:1.08rem;line-height:1.7;color:var(--muted);max-width:58ch}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+    .order-btn,.ghost-btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      min-width:170px;padding:15px 22px;border-radius:999px;text-decoration:none;font-weight:700;
+      transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    }
+    .order-btn{background:linear-gradient(135deg, var(--accent), #4f8cff 48%, var(--accent-2));color:#06101d;box-shadow:0 18px 45px rgba(97,168,255,.34)}
+    .ghost-btn{background:rgba(255,255,255,.05);color:#fff;border:1px solid rgba(255,255,255,.12)}
+    .order-btn:hover,.ghost-btn:hover{transform:translateY(-2px)}
+    .hero-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px}
+    .metric{padding:18px;border-radius:22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+    .metric strong{display:block;font-size:1.65rem;font-family:'Manrope',sans-serif}
+    .metric span{display:block;margin-top:8px;font-size:.88rem;color:var(--muted);line-height:1.45}
+    .hero-media{border-radius:36px;padding:18px;position:relative;overflow:hidden;min-height:620px}
+    .hero-media video{width:100%;height:100%;min-height:584px;object-fit:cover;border-radius:26px;filter:saturate(1.08) contrast(1.05)}
+    .hero-media::after{content:'';position:absolute;inset:18px;border-radius:26px;background:linear-gradient(180deg, rgba(7,17,31,.12), rgba(7,17,31,.58) 84%)}
+    .hero-floating{position:absolute;left:36px;right:36px;bottom:36px;display:flex;justify-content:space-between;gap:14px;z-index:2}
+    .floating-card{padding:16px 18px;border-radius:22px;background:rgba(7,17,31,.72);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);max-width:220px}
+    .floating-card strong{display:block;font-size:1rem;margin-bottom:6px}
+    .floating-card span{font-size:.9rem;color:#d0ddf7;line-height:1.45}
+    .section{width:var(--container);margin:28px auto 0}
+    .section-card{padding:28px;border-radius:32px}
+    .section-heading{display:flex;justify-content:space-between;gap:18px;align-items:end;margin-bottom:24px}
+    .section-heading p{max-width:60ch;color:var(--muted);line-height:1.7}
+    .pill-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+    .pill{padding:12px 16px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#dce8ff;font-weight:600}
+    .grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+    .story-card{padding:26px;border-radius:28px}
+    .story-card p,.story-card li{color:var(--muted);line-height:1.7}
+    .story-card ul{padding-left:20px;margin-top:18px;display:grid;gap:10px}
+    .feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .feature-card{border-radius:30px;overflow:hidden}
+    .feature-card img{width:100%;height:270px;object-fit:cover}
+    .feature-card .copy{padding:24px}
+    .feature-card p{margin-top:10px;color:var(--muted);line-height:1.7}
+    .info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .info-card{padding:24px;border-radius:26px}
+    .info-card span{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(110,231,255,.1);color:var(--accent);font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+    .info-card h3{margin:14px 0 10px;font-size:1.4rem}
+    .info-card p{color:var(--muted);line-height:1.7}
+    .journey{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:8px}
+    .journey-step{position:relative;padding:20px;border-radius:24px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+    .journey-step strong{display:flex;align-items:center;gap:10px;font-size:1rem}
+    .journey-step strong::before{content:attr(data-step);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#06101d;font-size:.82rem}
+    .journey-step p{margin-top:12px;color:var(--muted);line-height:1.65;font-size:.95rem}
+    .cta-card{padding:32px;border-radius:34px;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;background:linear-gradient(135deg, rgba(110,231,255,.12), rgba(139,92,246,.15), rgba(34,197,94,.12))}
+    .cta-card p{color:#d9e6ff;line-height:1.7;max-width:55ch}
+    footer{width:var(--container);margin:28px auto 24px;padding:20px 12px 0;text-align:center;color:var(--muted);font-size:.92rem}
+    footer a{color:#dfe9ff;text-decoration:none}
+    .simple-cookie-banner{
+      position:fixed;left:20px;right:20px;bottom:20px;z-index:9999;
+      display:flex;flex-wrap:wrap;align-items:center;gap:14px;
+      padding:18px 20px;border-radius:24px;
+    }
+    .simple-cookie-banner p{flex:1 1 280px;color:#d8e5ff;line-height:1.6}
+    .simple-cookie-banner button{background:#fff;color:#07111f;border:0;padding:12px 18px;border-radius:999px;font-weight:800;cursor:pointer}
+    @media (max-width: 1080px){
+      .hero,.grid-2,.cta-card{grid-template-columns:1fr}
+      .info-grid,.journey{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .hero-media{min-height:unset}
+      .hero-media video{min-height:420px}
+    }
+    @media (max-width: 900px){
+      .site-header{border-radius:28px;padding:14px 16px}
+      .brand-note{display:none}
+      .nav-desktop,.lang-switch.nav-desktop{display:none}
+      .nav-toggle{display:block}
+      h1{max-width:11ch}
+      .hero-copy,.hero-media,.section-card,.cta-card{border-radius:28px}
+      .hero-copy{padding:28px}
+      .hero-floating{left:28px;right:28px;bottom:28px;flex-direction:column}
+      .feature-grid,.info-grid,.journey,.hero-metrics{grid-template-columns:1fr}
+      .feature-card img{height:220px}
+    }
+    @media (max-width: 640px){
+      :root{--container:min(100vw - 24px, 1180px)}
+      .site-header{top:8px;margin-top:12px}
+      .hero{margin-top:18px}
+      .hero-copy,.hero-media,.section-card,.story-card,.feature-card,.info-card,.cta-card{padding:22px}
+      .hero-copy{padding:24px}
+      .hero-media{padding:12px}
+      .hero-media video{min-height:320px}
+      .hero-floating{left:20px;right:20px;bottom:20px}
+      .floating-card{max-width:none}
+      .section-heading{flex-direction:column;align-items:flex-start}
+      .order-btn,.ghost-btn{width:100%}
+      .simple-cookie-banner{left:12px;right:12px;bottom:12px;padding:16px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{scroll-behavior:auto;transition:none !important;animation:none !important}
+    }
+  </style>
 </head>
 <body>
-
+<div class="site-shell">
 <header class="site-header">
-  <a href="index.html" class="logo-link">
-    <img src="/assets/icons/Logo abicybernetics.png" alt="AbiCybernetics Logo" style="height:50px" decoding="async">
-  </a>
-
-  <!-- Mobile hamburger -->
-  <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-
-  <!-- Desktop nav -->
+  <a href="index.html" class="logo-link"><img src="/assets/icons/Logo abicybernetics.png" alt="AbiCybernetics Logo" decoding="async"></a>
+  <div class="brand-note"><strong>AbiCybernetics</strong><span>Inginerie premium pentru mobilitate asistată</span></div>
+  <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false"><span></span><span></span><span></span></button>
   <nav class="nav-desktop" aria-label="Navigație principală">
     <a href="index.html">Acasă</a>
     <a href="produs.html">Produs</a>
@@ -269,14 +306,10 @@ h1, h2, h3, .hero-text, .slogan {
     <a href="partener.html">Partener</a>
     <a href="contact.html">Contact</a>
   </nav>
-
-  <!-- Desktop language switch -->
   <div class="lang-switch nav-desktop" aria-label="Selectare limbă">
     <a href="../en/index.html">EN</a>
     <a href="index.html" class="active-lang">RO</a>
   </div>
-
-  <!-- Mobile drawer -->
   <div class="nav-drawer" hidden>
     <nav class="nav-mobile" aria-label="Meniu mobil">
       <a href="index.html">Acasă</a>
@@ -292,177 +325,148 @@ h1, h2, h3, .hero-text, .slogan {
     </nav>
   </div>
 </header>
-
-<section class="slideshow-section">
-  <div class="video-wrapper" style="position:relative;">
-    <video class="banner-hero" autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="/assets/video/banner-poster.jpg">
-      <source src="/assets/video/banner%20main.MOV" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.15),rgba(0,0,0,0.25));"></div>
-    <div class="overlay-text">
-      <h1 class="title">Walking</h1>
-      <p class="subtitle">Made Easy</p>
-    </div>
-  </div>
-</section>
-
-  <section class="content-section" style="padding-top:30px">
-    <div class="text-block">
-
-<section class="content-section">
-  <div class="text-block">
-    <h2>Exoscheletul Abi.</h2>
-    <p>
-      Mai mult decât tehnologie — credem în <strong>libertatea ta</strong>. Creat să se potrivească
-      corpului și viziunii tale, Abi este un exoschelet creat pentru cei care nu acceptă limitări.
-    </p>
-
-
-</ul>
-</ul>
-
-<a href="order.html" class="order-btn">Comandă acum</a>
-</div>
-  </section>
-
-  <section class="features">
-    <div class="feature-item">
-      <img src="/assets/images/Exoskeleton detail 4.png" alt="AbiCybernetics exoskeleton detail with integrated sensor platform" loading="lazy" decoding="async">
-      <div class="feature-text">
-        <h3>Nucleu Inteligent</h3>
-<p>Proiectat pentru versatilitate, sistemul suportă o gamă largă de integrări de senzori — EEG, EMG, forță, giroscop, laser și altele. Fie că monitorizezi activitatea neuronală, mișcarea sau feedback-ul de forță, platforma este pregătită pentru aceste nevoi. Arhitectura sa îți permite să personalizezi capabilitățile de detecție în funcție de nevoile individuale, obiectivele de cercetare sau scenariile de utilizare aflate în dezvoltare. Nu este doar inteligent — este construit pentru precizia de care ai nevoie.</p>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">Platforma Abi Gen-3</div>
+      <h1>Mișcare cu încrederea unui sistem premium de mobilitate.</h1>
+      <p>AbiCybernetics combină biomecanica, electronica modulară și integrarea de senzori într-o experiență rafinată de exoschelet, creată pentru early adopters, clinici și echipe de inovare care vor mai mult decât un simplu prototip.</p>
+      <div class="hero-actions">
+        <a href="order.html" class="order-btn">Rezervă sistemul</a>
+        <a href="#platform" class="ghost-btn">Explorează platforma</a>
+      </div>
+      <div class="hero-metrics">
+        <div class="metric"><strong>150–190 cm</strong><span>Interval ergonomic proiectat pentru o potrivire sigură și confortabilă.</span></div>
+        <div class="metric"><strong>Până la 5 ore</strong><span>Autonomie flexibilă cu baterie interschimbabilă între sesiuni.</span></div>
+        <div class="metric"><strong>12 săptămâni</strong><span>Termen tipic de livrare cu onboarding ghidat și setup la distanță.</span></div>
       </div>
     </div>
-    <div class="feature-item">
-      <img src="/assets/images/Exoskeleton detail 3.png" alt="AbiCybernetics exoskeleton detail showing modular mechanics" loading="lazy" decoding="async">
-      <div class="feature-text">
-       <h3>Creat pentru a fi rapid îmbrăcat.</h3>
-<p>Fiecare componentă a exoscheletului este proiectată să se fixeze ușor la locul ei — fără unelte, fără cabluri încâlcite. Designul modular face echiparea dispozitivului rapidă și intuitivă, fie că te pregătești pentru o sesiune de mișcare, utilizare clinică sau pentru un setup de cercetare. Ai la dispoziție un sistem complet pentru întregul corp, ușor de îmbrăcat și de ajustat.</p>
-
-      </div>
-    </div>
-    <div class="feature-item">
-      <img src="/assets/images/Exoskeleton detail 2.png" alt="AbiCybernetics exoskeleton detail focused on user-centered support" loading="lazy" decoding="async">
-      <div class="feature-text">
-        <h3>Puterea care ține pasul cu tine.</h3>
-<p>Bucură-te de autonomie extinsă a bateriei pentru utilizare pe tot parcursul zilei. Mergi timp de 2 ore continuu sau până la 5 ore cu pauze, iar atunci când este nevoie de reîncărcare, pur și simplu schimbă bateria în câteva secunde. Bateria de schimbă rapid cu zero întreruperi — doar schimbi și continui.</p>
-
-      </div>
-    </div>
-    <div class="feature-item">
-      <img src="/assets/images/Exoskelton detail 1.png" alt="Lifetime Support">
-      <div class="feature-text">
-      <h3> Precizie ergonomică.</h3>
-<p>Exoscheletul permite reglaje fine ale pozițiilor articulațiilor, lungimii segmentelor și unghiurilor de aliniere pentru a se adapta diferențelor anatomice individuale. Este conceput să ofere suport sigur și confortabil utilizatorilor cu înălțimi între 150 cm și 190 cm și greutăți corporale de până la 100 kg, asigurând o potrivire optimă, funcționalitate și eficiență biomecanică pentru o gamă largă de utilizatori.</p>
-
+    <div class="hero-media">
+      <video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="/assets/video/banner-poster.jpg">
+        <source src="/assets/video/banner%20main.MOV" type="video/mp4">
+        Browserul tău nu suportă redarea video.
+      </video>
+      <div class="hero-floating">
+        <div class="floating-card"><strong>Mișcare naturală</strong><span>Suport echilibrat, aliniere controlată și o purtare intuitivă.</span></div>
+        <div class="floating-card"><strong>Inteligență modulară</strong><span>Integrare EEG, EMG, forță, giroscop și alte configurații experimentale.</span></div>
       </div>
     </div>
   </section>
 
-  <div class="garden-divider"></div>
-
-<section class="why-section">
-    <div>
-      <h2>Mobilitatea înseamnă libertate</h2>
-<p style="font-size:1.1em;margin-bottom:15px">Credem în <strong>libertatea</strong> ta. Pentru prima dată poți comanda un exoschelet complet funcțional pentru membrele inferioare direct la tine acasă — clinică sau laborator.</p>
-<p style="font-size:1.1em;margin-bottom:15px">Echipa noastră va fi alături de tine la fiecare pas, oferindu-ți actualizări în timp real, asistență virtuală la instalare și răspunsuri clare la orice întrebare tehnică sau practică pe care o ai.</p>
-<p style="font-size:.8em;font-style:italic;color:#666;margin-top:10px">* Notă: Acesta nu este un dispozitiv medical certificat. Este un sistem deschis și în continuă dezvoltare pentru utilizare personală de către early adopters, pasionați de tehnologie și oricine dorește să facă parte din procesul de dezvoltare.</p>
-
-<ul style="margin-top:15px;padding-left:20px;line-height:1.6">
-  <li>Timp de livrare ~12 săptămâni de la comandă până la expediere</li>
-  <li>Inginer dedicat pentru fiecare client</li>
-  <li>Firmware open-source &amp; SDK pentru personalizare rapidă</li>
-  <li>Livrare globală și suport la instalare de la distanță</li>
-</ul>
-
-      </ul>
+  <section class="section" id="platform">
+    <div class="section-card grid-2">
+      <div class="story-card">
+        <div class="eyebrow">Creat pentru pionieri</div>
+        <h2 style="margin-top:18px;">O experiență mai clară, mai elegantă și mai premium pentru mobilitate asistată.</h2>
+        <p style="margin-top:16px;">Abi este mai mult decât hardware. Este un ecosistem complet de mobilitate, cu mecanică configurabilă, senzori inteligenți și suport direct de inginerie care te ajută să treci de la primele reglaje la mers cu încredere.</p>
+        <div class="pill-row">
+          <span class="pill">Design industrial premium</span>
+          <span class="pill">Arhitectură modulară full-body</span>
+          <span class="pill">Onboarding asistat la distanță</span>
+        </div>
+      </div>
+      <div class="story-card">
+        <h3>De ce se simte premium</h3>
+        <ul>
+          <li>Reglaje mecanice fine pentru aliniere personalizată și confort susținut.</li>
+          <li>Echipare rapidă, fără unelte și fără cabluri inutile, potrivită pentru acasă, clinică sau laborator.</li>
+          <li>Arhitectură deschisă care se adaptează fluxurilor personalizate, analizelor și experimentelor.</li>
+          <li>Colaborare directă cu echipa AbiCybernetics pe toată durata livrării și configurării.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-
-  <section class="cta-section">
-    <p class="cta-msg">Fă primul pas către un nou nivel de libertate.</p>
-    <a href="order.html" class="order-btn">Comandă-l azi</a>
+  <section class="section">
+    <div class="section-card">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Capabilități cheie</div>
+          <h2 style="margin-top:18px;">Patru motive pentru care platforma pare deja din viitor.</h2>
+        </div>
+        <p>Noul homepage pune accent pe contrast, ierarhie vizuală și argumente clare, pentru ca Abi să fie perceput ca un produs tehnologic premium, nu doar ca un concept experimental.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <img src="/assets/images/Exoskeleton detail 4.png" alt="Detaliu AbiCybernetics cu platformă integrată de senzori" loading="lazy" decoding="async">
+          <div class="copy">
+            <h3>Nucleu inteligent de senzori</h3>
+            <p>Suportul pentru EEG, EMG, forță, giroscop, laser și alte integrări oferă o bază solidă pentru cercetare, analiză și scenarii de utilizare în continuă evoluție.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <img src="/assets/images/Exoskeleton detail 3.png" alt="Detaliu AbiCybernetics care evidențiază mecanica modulară" loading="lazy" decoding="async">
+          <div class="copy">
+            <h3>Montare modulară rapidă</h3>
+            <p>Fiecare componentă se fixează repede, reducând timpul dintre transport, ajustare și momentul în care utilizatorul începe să se miște.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <img src="/assets/images/Exoskeleton detail 2.png" alt="Detaliu AbiCybernetics orientat spre suportul utilizatorului" loading="lazy" decoding="async">
+          <div class="copy">
+            <h3>Flexibilitate pentru toată ziua</h3>
+            <p>Până la 2 ore de utilizare continuă sau până la 5 ore cu pauze, plus schimbarea rapidă a bateriei, transformă performanța în utilitate reală.</p>
+          </div>
+        </article>
+        <article class="feature-card">
+          <img src="/assets/images/Exoskelton detail 1.png" alt="Detaliu AbiCybernetics despre reglajele ergonomice" loading="lazy" decoding="async">
+          <div class="copy">
+            <h3>Precizie ergonomică</h3>
+            <p>Reglajele fine ale articulațiilor, segmentelor și unghiurilor de aliniere susțin o potrivire sigură și eficientă biomecanic pentru mulți utilizatori.</p>
+          </div>
+        </article>
+      </div>
+    </div>
   </section>
 
+  <section class="section">
+    <div class="info-grid">
+      <article class="info-card"><span>Suport</span><h3>Inginer dedicat</h3><p>Fiecare client primește ghidare directă, actualizări în timp real și onboarding la distanță pentru o experiență premium cap-coadă.</p></article>
+      <article class="info-card"><span>Software</span><h3>Firmware &amp; SDK deschise</h3><p>Poți construi experimente, interfețe sau extensii pe o platformă creată să evolueze împreună cu utilizatorii ei.</p></article>
+      <article class="info-card"><span>Livrare</span><h3>Expediere globală</h3><p>Abi livrează internațional și oferă suport virtual pentru instalare, fără a depinde de o vizită locală în centru.</p></article>
+    </div>
+  </section>
 
-    <footer>© AbiCybernetics – Trademark&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html" style="color:#999;text-decoration:none;font-size:0.85em;">Privacy&nbsp;Policy</a></footer>
+  <section class="section">
+    <div class="section-card">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">Parcursul clientului</div>
+          <h2 style="margin-top:18px;">Cum arată onboarding-ul premium cu Abi.</h2>
+        </div>
+        <p>Am repoziționat homepage-ul în jurul unui parcurs mai luxos și mai clar: rezervare, configurare, onboarding și mișcare, cu suport transparent în fiecare etapă.</p>
+      </div>
+      <div class="journey">
+        <div class="journey-step"><strong data-step="01">Rezervi</strong><p>Completezi comanda și ne spui obiectivele, mediul de utilizare și preferințele de configurare.</p></div>
+        <div class="journey-step"><strong data-step="02">Configurezi</strong><p>Echipa Abi rafinează împreună cu tine potrivirea, accesoriile și integrările dorite.</p></div>
+        <div class="journey-step"><strong data-step="03">Te pregătești</strong><p>Primești asistență la distanță, explicații practice și actualizări clare despre progres.</p></div>
+        <div class="journey-step"><strong data-step="04">Te miști</strong><p>Începi să folosești un sistem gândit să fie avansat, adaptabil și susținător din prima zi.</p></div>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    const heroSlides = document.querySelectorAll('.slide');
-    let heroIndex = 0;
-    setInterval(() => {
-      heroSlides[heroIndex].classList.remove('active');
-      heroIndex = (heroIndex + 1) % heroSlides.length;
-      heroSlides[heroIndex].classList.add('active');
-    }, 3000);
-  </script>
-  <!-- Simple Cookie Banner START -->
-<style>
-  .simple-cookie-banner{
-    position:fixed;bottom:0;left:0;width:100%;
-    background:#222;color:#fff;font-family:Arial,Helvetica,sans-serif;
-    padding:12px 16px;display:flex;flex-wrap:wrap;align-items:center;
-    z-index:9999;box-shadow:0 -2px 8px rgba(0,0,0,.25);
-  }
-  .simple-cookie-banner p{margin:0 12px 8px 0;font-size:0.9rem;flex:1 1 220px}
-  .simple-cookie-banner button{
-    background:#0077cc;border:0;color:#fff;padding:8px 20px;
-    border-radius:4px;font-weight:bold;cursor:pointer;font-size:0.9rem;
-  }
-@media(max-width:500px){
-  .simple-cookie-banner{padding:12px}
-  .simple-cookie-banner p{margin-bottom:8px}
-}
+  <section class="section">
+    <div class="cta-card">
+      <div>
+        <div class="eyebrow">Notă importantă</div>
+        <h2 style="margin-top:18px;">Creat pentru utilizatori ambițioși, cercetători și early adopters.</h2>
+        <p style="margin-top:16px;">Abi nu este un dispozitiv medical certificat. Este o platformă deschisă și în continuă dezvoltare pentru cei care vor să exploreze tehnologia avansată de mobilitate și să contribuie la următoarea etapă a produsului.</p>
+      </div>
+      <div>
+        <p>Ești gata să faci primul pas către o experiență de mobilitate mai capabilă?</p>
+        <div class="hero-actions" style="margin-top:20px;">
+          <a href="order.html" class="order-btn">Comandă acum</a>
+          <a href="contact.html" class="ghost-btn">Vorbește cu echipa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-/* --- Animated highlight line ----------------------------- */
-@keyframes highlight-line{
-  0%   {transform:translateX(-100%);}
-  50%  {transform:translateX(0);}
-  100% {transform:translateX(100%);}
-}
-
-.order-btn{
-  position:relative;
-  overflow:hidden;
-}
-
-.order-btn::after{
-  content:'';
-  position:absolute;
-  left:0;
-  bottom:0;
-  width:100%;
-  height:3px;
-  background:linear-gradient(
-    90deg,
-    transparent 0%,
-    #ffbf47 35%,
-    #ffbf47 65%,
-    transparent 100%
-  );
-  animation:highlight-line 2.5s cubic-bezier(.4,0,.2,1) infinite;
-}
-
-@media (prefers-reduced-motion: reduce){
-  .order-btn::after{animation:none;}
-}
-
-
-/* Order button animation visibility fix */
-.order-btn::after{
-  bottom:2px;   /* move inside visible area */
-  z-index:1;    /* bring in front */
-}
-
-</style>
+<footer>© AbiCybernetics – Trademark&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html">Privacy&nbsp;Policy</a></footer>
 
 <div id="scb" class="simple-cookie-banner" role="alert">
-  <p>
-    By continuing to use our site, you agree to the use of cookies to enhance navigation,
-    analyze site usage, and support our marketing efforts.
-  </p>
+  <p>Continuând să folosești site-ul nostru, ești de acord cu utilizarea cookie-urilor pentru navigare mai bună, analiză și susținerea eforturilor noastre de marketing.</p>
   <button id="scb-btn">Accept</button>
 </div>
 
@@ -474,14 +478,9 @@ h1, h2, h3, .hero-text, .slogan {
     btn.addEventListener('click',()=>{
       localStorage.setItem('cookie_consent','accepted');
       banner.remove();
-      // ➜ load your analytics scripts here if needed
-      // window.loadAnalytics?.();
     });
   })();
 </script>
-<!-- Simple Cookie Banner END -->
-
-
 <script id="mobile-nav-script-ro">
   (function(){
     var btn = document.querySelector('.nav-toggle');
@@ -489,14 +488,10 @@ h1, h2, h3, .hero-text, .slogan {
     if(!btn || !drawer) return;
     btn.addEventListener('click', function(){
       var expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', !expanded);
-      if(expanded){
-        drawer.setAttribute('hidden', '');
-      } else {
-        drawer.removeAttribute('hidden');
-      }
+      btn.setAttribute('aria-expanded', String(!expanded));
+      if(expanded){ drawer.setAttribute('hidden', ''); }
+      else { drawer.removeAttribute('hidden'); }
     });
-    // Close drawer on link click
     drawer.addEventListener('click', function(e){
       if(e.target.tagName === 'A'){
         btn.setAttribute('aria-expanded','false');
@@ -505,6 +500,6 @@ h1, h2, h3, .hero-text, .slogan {
     });
   })();
 </script>
-
+</div>
 </body>
 </html>
