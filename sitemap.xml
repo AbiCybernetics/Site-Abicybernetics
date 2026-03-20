@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://abicybernetics.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abicybernetics.com/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://abicybernetics.com/" />
+  </url>
+  <url>
+    <loc>https://abicybernetics.com/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abicybernetics.com/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/index.html" />
+  </url>
+  <url>
+    <loc>https://abicybernetics.com/ro/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abicybernetics.com/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/index.html" />
+  </url>
+  <url>
+    <loc>https://abicybernetics.com/en/product.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abicybernetics.com/en/product.html" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/produs.html" />
+  </url>
+  <url>
+    <loc>https://abicybernetics.com/ro/produs.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abicybernetics.com/en/product.html" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/produs.html" />
+  </url>
+  <url>
+    <loc>https://abicybernetics.com/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abicybernetics.com/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/contact.html" />
+  </url>
+  <url>
+    <loc>https://abicybernetics.com/ro/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://abicybernetics.com/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/contact.html" />
+  </url>
+</urlset>
