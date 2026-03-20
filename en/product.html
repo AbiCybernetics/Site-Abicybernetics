@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="/assets/video/banner-poster.jpg" fetchpriority="high">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -37,181 +37,109 @@
     }
   </script>
   <style>
-    :root{--text:#000;--muted:#666;--border:#ccc;--bg:#fff;--accent:#000;--highlight:#ffbf47;}
+    :root{
+      --page-bg:#050505;
+      --page-bg-soft:#111111;
+      --surface:#f3f3f1;
+      --surface-alt:#ffffff;
+      --surface-muted:#e8e8e5;
+      --text:#0f0f0f;
+      --muted:#4a4a4a;
+      --line:#d4d4cf;
+      --white:#ffffff;
+      --max:1180px;
+    }
     *{box-sizing:border-box}
-    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);margin:0}
-    header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid var(--border)}
-    .logo-link img{height:50px}
-    nav{margin-left:auto}
-    nav a{margin:0 10px;text-decoration:none;color:#333;font-weight:600}
-    .lang-switch{margin-left:16px; display:flex; align-items:center; gap:8px; font-weight:600}
-    .lang-switch a{color:#333; text-decoration:none; padding:6px 10px; border:1px solid #ddd; border-radius:10px}
-    .lang-switch a.active-lang{background:#000; color:#fff; border-color:#000}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Inter',sans-serif;background:var(--page-bg);color:var(--white);overflow-x:hidden}
+    a{color:inherit}
+    img,video{display:block;max-width:100%;height:auto}
 
-    /* HERO video only */
-    .hero{position:relative;min-height:520px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
-    .hero video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:0;object-fit:cover}
-    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.35));z-index:1}
-    .hero-inner{position:relative;z-index:2;padding:0 16px}
-    .hero h1{font-family:'Poppins',sans-serif;font-size:2.4rem;letter-spacing:-.5px;margin:0 0 8px}
-    .hero p{max-width:980px;margin:0 auto;line-height:1.55}
+    .site-header{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:18px;padding:14px 20px;background:rgba(5,5,5,.92);border-bottom:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px)}
+    .site-header .logo-link{display:flex;align-items:center}
+    .nav-desktop{margin-left:auto;display:flex;align-items:center;gap:16px}
+    .nav-desktop a,.lang-switch a,.nav-mobile a{text-decoration:none;color:#f2f2f2;font-weight:600;padding:8px 10px;border-radius:999px}
+    .nav-desktop a:hover,.lang-switch a:hover,.nav-mobile a:hover{background:rgba(255,255,255,.08)}
+    .lang-switch{display:flex;align-items:center;gap:8px;margin-left:8px}
+    .lang-switch a{border:1px solid rgba(255,255,255,.14)}
+    .lang-switch a.active-lang{background:#fff;color:#000;border-color:#fff}
+    .nav-toggle{display:none;margin-left:auto;background:none;border:none;width:42px;height:42px;position:relative;cursor:pointer}
+    .nav-toggle span{position:absolute;left:9px;right:9px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+    .nav-toggle span:nth-child(1){top:13px}.nav-toggle span:nth-child(2){top:20px}.nav-toggle span:nth-child(3){top:27px}
+    .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+    .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .nav-drawer{position:absolute;left:0;right:0;top:100%;background:#0c0c0c;border-bottom:1px solid rgba(255,255,255,.12)}
+    .nav-mobile{display:flex;flex-direction:column;padding:12px 20px 18px;gap:8px}
+    .lang-switch.mobile{margin:8px 0 0}
 
-    /* Sections */
-    .section{padding:60px 20px;max-width:1100px;margin:auto}
-    .section h2{font-family:'Poppins',sans-serif;margin:0 0 16px}
-    .section p{line-height:1.68;margin:0 0 12px}
+    .hero{position:relative;min-height:78vh;display:flex;align-items:center;overflow:hidden;background:#000}
+    .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.55) 42%,rgba(0,0,0,.68) 100%)}
+    .hero-inner{position:relative;z-index:1;width:min(var(--max),calc(100vw - 40px));margin:0 auto;padding:88px 0 80px}
+    .hero-copy{max-width:640px}
+    .eyebrow{display:inline-block;margin-bottom:16px;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+    .hero h1{margin:0 0 18px;font-family:'Poppins',sans-serif;font-size:clamp(2.8rem,7vw,5rem);line-height:1.02}
+    .hero p{margin:0;max-width:58ch;font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,.82)}
 
-    .grid-2{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
-    .grid-2 img{width:100%;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.08)}
+    main{padding:0 0 80px}
+    .content-band{background:var(--surface);color:var(--text);padding:84px 0}
+    .content-band.alt{background:var(--surface-alt)}
+    .content-band.muted{background:var(--surface-muted)}
+    .section-inner{width:min(var(--max),calc(100vw - 40px));margin:0 auto}
+    .intro{display:grid;gap:28px;max-width:920px}
+    .intro h2,.split-copy h2,.closing h2{margin:0;font-family:'Poppins',sans-serif;font-size:clamp(2rem,4vw,3.3rem);line-height:1.08}
+    .intro p,.split-copy p,.split-copy li,.closing p{margin:0;color:var(--muted);line-height:1.78;font-size:1rem}
+    .intro-figure{margin-top:10px;max-width:540px}
+    .intro-figure img{width:100%;object-fit:cover}
 
-    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:8px}
-    .card{border:1px solid var(--border);border-radius:12px;padding:18px}
-    .card h3{font-family:'Poppins',sans-serif;margin:0 0 8px;font-size:1.1rem}
-    .muted{color:var(--muted);font-size:.95rem}
+    .split-section{padding:0}
+    .split-grid{display:grid;grid-template-columns:minmax(280px,.95fr) minmax(320px,1.05fr);align-items:center;gap:72px}
+    .split-grid.reverse{grid-template-columns:minmax(320px,1.05fr) minmax(280px,.95fr)}
+    .split-media img,.split-media video{width:100%;object-fit:cover;background:#ddd}
+    .split-copy{display:grid;gap:18px}
+    .split-copy ul{margin:0;padding-left:20px;display:grid;gap:12px;color:var(--muted)}
+    .note{font-size:.92rem;color:#666}
+    .section-tag{display:inline-block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#666;margin-bottom:2px}
 
-    /* Shared video embed (vertical) */
-    .video-embed{
-      position: relative;
-      width: 100%;
-      aspect-ratio: 9 / 16;         /* vertical */
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0,0,0,.1);
+    .cta{background:#000;color:#fff;padding:64px 20px 72px;text-align:center;border-top:1px solid rgba(255,255,255,.1)}
+    .cta p{margin:0 0 18px;font-size:1.1rem;line-height:1.7;color:rgba(255,255,255,.8)}
+    .btn{display:inline-block;padding:13px 28px;border:1px solid #fff;color:#000;background:#fff;text-decoration:none;font-weight:700;border-radius:999px}
+    footer{padding:24px 20px 30px;text-align:center;color:rgba(255,255,255,.66);font-size:.92rem;background:#000}
+    footer a{text-decoration:none;color:rgba(255,255,255,.66)}
+
+    @media (max-width:900px){
+      .nav-desktop,.lang-switch.nav-desktop{display:none}
+      .nav-toggle{display:block}
+      .hero{min-height:66vh}
+      .hero-inner{padding:72px 0 64px}
+      .content-band{padding:60px 0}
+      .split-grid,.split-grid.reverse{grid-template-columns:1fr;gap:28px}
+      .split-media{order:1}
+      .split-copy{order:2}
     }
-    .video-embed video{
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    @media (max-width:640px){
+      .site-header{padding:12px 16px}
+      .hero-inner,.section-inner{width:calc(100vw - 28px)}
+      .hero h1{font-size:clamp(2.3rem,11vw,3.3rem)}
+      .intro p,.split-copy p,.split-copy li,.closing p,.hero p{font-size:.97rem}
     }
-
-    /* Suspended exo video: make smaller and responsive */
-    .suspended-embed{
-      max-width: 340px;   /* smaller on desktop */
-      margin: 0 auto;     /* center within the right column */
-    }
-    @media (min-width: 1400px){
-      .suspended-embed{ max-width: 300px; }
-    }
-    @media (max-width: 900px){
-      .suspended-embed{ max-width: 280px; } /* comfortable on mobile */
-    }
-
-    /* Indoor video two-column layout */
-    .indoor-grid{
-      display:grid;
-      grid-template-columns: 360px 1fr;   /* smaller video left, text right */
-      gap: 28px;
-      align-items: center;
-    }
-    .video-text h3{font-family:'Poppins',sans-serif;margin:0 0 10px}
-    .video-text p{margin:0 0 10px;color:var(--muted)}
-
-    /* Stack on mobile */
-    @media (max-width: 900px){
-      .indoor-grid{ grid-template-columns: 1fr; }
-      .video-embed{ max-width: 320px; margin: 0 auto; }
-      .video-text{ text-align:center; }
-    }
-
-    /* CTA */
-    .cta{display:flex;flex-direction:column;align-items:center;text-align:center;padding:56px 20px;background:#f7f7f7}
-    .cta p{font-size:1.2rem;margin-bottom:18px;font-weight:600}
-    .btn{display:inline-block;padding:12px 26px;background:var(--accent);color:#fff;text-decoration:none;border-radius:10px;font-weight:600;position:relative;overflow:hidden}
-    @keyframes highlight-line{0%{transform:translateX(-100%);}50%{transform:translateX(0);}100%{transform:translateX(100%);}}
-    .btn::after{content:'';position:absolute;left:0;bottom:0;width:100%;height:3px;background:linear-gradient(90deg,transparent 0%,var(--highlight) 35%,var(--highlight) 65%,transparent 100%);animation:highlight-line 2.5s cubic-bezier(.4,0,.2,1) infinite}
-
-    footer{background:#fff;text-align:center;padding:20px;color:var(--muted);font-size:.9em;border-top:1px solid var(--border)}
   </style>
-
-<style id="shared-header-style">
-  header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid #e5e5e5;position:relative;z-index:100}
-  header .logo-link{display:flex;align-items:center}
-  header nav{margin-left:auto;display:flex;align-items:center;gap:16px}
-  header nav a{margin:0 4px;text-decoration:none;color:#333;font-weight:600}
-  .lang-switch{margin-left:16px;display:flex;align-items:center;gap:8px;font-weight:600}
-  .lang-switch a{color:#333;text-decoration:none;padding:6px 10px;border:1px solid #ddd;border-radius:10px}
-  .lang-switch a.active-lang{background:#000;color:#fff;border-color:#000}
-</style>
-
-
-<style id="mobile-nav-global">
-  /* Base header */
-  .site-header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid #e5e5e5;position:relative;z-index:100}
-  .site-header .logo-link{display:flex;align-items:center}
-  .nav-desktop{margin-left:auto;display:flex;align-items:center;gap:16px}
-  .nav-desktop a{margin:0 4px;text-decoration:none;color:#333;font-weight:600}
-  .lang-switch{margin-left:16px;display:flex;align-items:center;gap:8px;font-weight:600}
-  .lang-switch a{color:#333;text-decoration:none;padding:6px 10px;border:1px solid #ddd;border-radius:10px}
-  .lang-switch a.active-lang{background:#000;color:#fff;border-color:#000}
-
-  /* Hamburger */
-  .nav-toggle{display:none;margin-left:auto;background:none;border:none;width:40px;height:40px;position:relative;cursor:pointer}
-  .nav-toggle span{position:absolute;left:8px;right:8px;height:2px;background:#111;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
-  .nav-toggle span:nth-child(1){top:12px}
-  .nav-toggle span:nth-child(2){top:19px}
-  .nav-toggle span:nth-child(3){top:26px}
-  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
-  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
-  /* Drawer */
-  .nav-drawer{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid #eee;box-shadow:0 6px 20px rgba(0,0,0,.08)}
-  .nav-mobile{display:flex;flex-direction:column;padding:10px 16px;gap:8px}
-  .nav-mobile a{text-decoration:none;color:#333;font-weight:600;padding:10px 6px;border-radius:8px}
-  .nav-mobile a:hover{background:#f7f7f7}
-  .lang-switch.mobile{margin:8px 0 6px 0}
-
-  /* Responsive */
-  @media (max-width: 900px){
-    .nav-desktop{display:none}
-    .nav-toggle{display:block}
-  }
-</style>
-
-
-<style id="overflow-and-media-fixes">
-  html, body { max-width: 100%; overflow-x: hidden; }
-  img, video { max-width: 100%; height: auto; }
-  .section img, .grid-2 img { max-width: 100%; height: auto; display: block; }
-  /* Standing/chair image specifically smaller & centered if present */
-  .standing-img { display:block; max-width: 320px; margin: 16px auto; border-radius:10px; box-shadow:0 6px 20px rgba(0,0,0,.08); }
-</style>
-
-
-<style id="suspended-mobile-css">
-  .suspended-mobile{display:none;margin-top:18px;max-width:280px;margin-left:auto;margin-right:auto}
-  @media (max-width:900px){
-    .suspended-mobile{display:block}
-  }
-</style>
-
 </head>
 <body>
 <header class="site-header">
   <a href="index.html" class="logo-link"><img src="/assets/icons/Logo abicybernetics.png" alt="AbiCybernetics Logo" style="height:50px" decoding="async"></a>
-
-  <!-- Mobile hamburger -->
-  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-
-  <!-- Desktop nav -->
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   <nav class="nav-desktop" aria-label="Primary">
     <a href="index.html">Home</a>
     <a href="product.html">Product</a>
     <a href="investors.html">Investors</a>
     <a href="contact.html">Contact</a>
   </nav>
-
-  <!-- Desktop language switch -->
   <div class="lang-switch nav-desktop" aria-label="Language">
-    <a href="./product.html" class="active-lang">EN</a>
+    <a href="product.html" class="active-lang">EN</a>
     <a href="../ro/produs.html">RO</a>
   </div>
-
-  <!-- Mobile drawer -->
   <div class="nav-drawer" hidden>
     <nav class="nav-mobile" aria-label="Mobile">
       <a href="index.html">Home</a>
@@ -219,179 +147,134 @@
       <a href="investors.html">Investors</a>
       <a href="contact.html">Contact</a>
       <div class="lang-switch mobile">
-        <a href="./product.html" class="active-lang">EN</a>
+        <a href="product.html" class="active-lang">EN</a>
         <a href="../ro/produs.html">RO</a>
       </div>
     </nav>
   </div>
 </header>
 
-
 <section class="hero" role="banner" aria-label="AbiCybernetics Exoskeleton">
-  <video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="/assets/video/banner-poster.jpg" style="position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:0;object-fit:cover">
+  <video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="/assets/video/banner-poster.jpg">
     <source src="/assets/video/video mers exterior.mp4#t=0.1" type="video/mp4">
   </video>
-  <div class="hero-inner" style="position:relative;z-index:2;padding:0 16px;text-align:center;color:#fff">
-    <h1>AbiCybernetics Exoskeleton – Mobility for you</h1>
-    <p>A modular platform for assisted walking high quality materials, ready for different sensor integrations. Real time synchronized control for natural gait.</p>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Abi exoskeleton.</span>
+      <h1>AbiCybernetics Exoskeleton – mobility for you.</h1>
+      <p>More than technology — we believe in freedom, strength, and possibility with one compact, modular system. Designed to fit your body and your vision, Abi empowers explorers, innovators, and everyday pioneers to move beyond limitations.</p>
+    </div>
   </div>
 </section>
 
-
 <main>
-<style id="main-width-fix">main{max-width:100vw;overflow-x:hidden}</style>
-<style>
-  .standing-img {
-    display: block;
-    max-width: 450px;  /* make smaller */
-    margin: 20px auto; /* center horizontally + spacing */
-    border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0,0,0,.08);
-  }
-</style>
-
-<main>
-  <section class="section" id="why">
-    <h2>Walking is Human</h2>
-    <p>Walking is one of the simplest yet most profound human acts. We rarely think about it — it’s part of who we are. With every step we feel the ground, move through the world, meet people and build experiences. Walking means freedom, independence and dignity.</p>
-    <p>For millions of people living with paraplegia or severe mobility impairments, walking is a distant dream. Being confined to a wheelchair is not only a loss of mobility — it carries a heavy toll on overall health. Prolonged sitting affects circulation, the heart, muscle tone and even mental wellbeing. For healthy people we say “sitting is the new smoking.” For someone with a motor disability, sitting becomes a true killer, accelerating complications and reducing both lifespan and quality of life. That’s why exoskeleton technology isn’t just robotics — it’s a promise of life.</p>
-    
-    <!-- Standing-up image smaller and centered -->
-    <img src="/assets/images/standing%20up.png" alt="Standing up with the exoskeleton" class="standing-img">
-  </section>
-</main>
-
-  </section>
-
-  <section class="section" id="tech">
-    <div class="grid-2">
+  <section class="content-band alt" id="why">
+    <div class="section-inner intro">
       <div>
-
-        <h2>How the exoskeleton assists gait</h2>
-        <div class="features">
-          <div class="card">
-            <h3>4 motors</h3>
-            <p>Four high‑precision actuators at the hips and knees deliver the torque needed for standing up and smooth gait.</p>
-          </div>
-          <div class="card">
-            <h3>Support crutches</h3>
-            <p>Added balance and fine control enable safe, assisted walking for users with gait impairments.</p>
-          </div>
-          <div class="card">
-            <h3>Sensing</h3>
-            <p>Sensors track posture and user intent in real time and adapt each step accordingly.</p>
-          </div>
-          <div class="card">
-            <h3>Real‑time control</h3>
-            <p>Millisecond‑level synchronization avoids rigidity and aims for a natural walking pattern.</p>
-          </div>
-        </div>
-        
-<p class="muted" style="margin-top:8px">* Note: device under development; not certified as a medical device.</p>
-<!-- Mobile-only suspended exo video -->
-<div class="video-embed suspended-mobile">
-  <video autoplay muted loop playsinline webkit-playsinline preload="metadata" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback nofullscreen">
-    <source src="/assets/video/video exo suspendat.mp4#t=0.1" type="video/mp4">
-  </video>
-</div>
-
+        <span class="section-tag">Mobility</span>
+        <h2>Walking is human</h2>
       </div>
-      <div>
-        <!-- Suspended exo video smaller & responsive -->
-        <div class="video-embed suspended-embed">
-          <video
-            autoplay
-            muted
-            loop
-            playsinline
-            webkit-playsinline
-            preload="metadata"
-            disablepictureinpicture
-            controlslist="nodownload noplaybackrate noremoteplayback nofullscreen"
-          >
-            <source src="/assets/video/video exo suspendat.mp4#t=0.1" type="video/mp4">
-          </video>
-        </div>
+      <p>Walking is one of the simplest yet most profound human acts. We rarely think about it — it’s part of who we are. With every step we feel the ground, move through the world, meet people and build experiences. Walking means freedom, independence and dignity.</p>
+      <p>For millions of people living with paraplegia or severe mobility impairments, walking is a distant dream. Being confined to a wheelchair is not only a loss of mobility — it carries a heavy toll on overall health. Prolonged sitting affects circulation, the heart, muscle tone and even mental wellbeing. For healthy people we say “sitting is the new smoking.” For someone with a motor disability, sitting becomes a true killer, accelerating complications and reducing both lifespan and quality of life. That’s why exoskeleton technology isn’t just robotics — it’s a promise of life.</p>
+      <figure class="intro-figure">
+        <img src="/assets/images/standing%20up.png" alt="Standing up with the exoskeleton">
+      </figure>
+    </div>
+  </section>
+
+  <section class="content-band muted split-section" id="tech">
+    <div class="section-inner split-grid">
+      <div class="split-media">
+        <img src="/assets/images/Exoskeleton%20Abi%201.png" alt="AbiCybernetics exoskeleton front view">
+      </div>
+      <div class="split-copy">
+        <span class="section-tag">Intelligence at core</span>
+        <h2>How the exoskeleton assists gait</h2>
+        <p>Four high-precision actuators at the hips and knees deliver the torque needed for standing up and smooth gait. Support crutches add balance and fine control for safe assisted walking.</p>
+        <p>Sensors track posture and user intent in real time and adapt each step accordingly. Millisecond-level synchronization avoids rigidity and aims for a natural walking pattern.</p>
+        <p class="note">* Note: device under development; not certified as a medical device.</p>
       </div>
     </div>
   </section>
 
-  <section class="section" id="platform">
-    <h2>Modular sensor platform</h2>
-    <ul>
-      <li><strong>EEG (electroencephalography)</strong> – interprets brain signals to anticipate user intent.</li>
-      <li><strong>EMG (electromyography)</strong> – provides muscular feedback and detects spasms from the user.</li>
-      <li><strong>Laser sensors</strong> – perceive the environment and adapt automatically to terrain.</li>
-      <li><strong>Tilt sensors</strong> – adjust gait dynamically according to ground angle and slope.</li>
-    </ul>
-  </section>
-
-  <section class="section" id="materials">
-    <h2>Premium materials & ergonomics</h2>
-    <ul>
-      <li><strong>High grade aluminum frame</strong> — a medical/aerospace-grade alloy with excellent strength-to-weight ratio.</li>
-      <li><strong>Robust yet lightweight</strong> — durable but light enough for everyday wear.</li>
-      <li><strong>Ergonomic padding</strong> — placed at contact points to maximize comfort during longer sessions.</li>
-      <li><strong>High build quality</strong> — ensures daily usability, safety, and reliability.</li>
-    </ul>
-  </section>
-
-  <section class="section" id="indoor-video">
-    <h2>Our mission is your mobility</h2>
-    <div class="indoor-grid">
-      <div class="video-embed">
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          webkit-playsinline
-          preload="metadata"
-          disablepictureinpicture
-          controlslist="nodownload noplaybackrate noremoteplayback nofullscreen"
-        >
-          <source src="/assets/video/video mers interior.mp4#t=0.1" type="video/mp4">
-        </video>
+  <section class="content-band alt split-section" id="platform">
+    <div class="section-inner split-grid reverse">
+      <div class="split-copy">
+        <span class="section-tag">Modular platform</span>
+        <h2>Modular sensor platform</h2>
+        <p>Designed for versatility, the system supports a wide range of sensor integrations — EEG, EMG, force sensors, gyroscopes, laser modules, and more.</p>
+        <ul>
+          <li><strong>EEG (electroencephalography)</strong> – interprets brain signals to anticipate user intent.</li>
+          <li><strong>EMG (electromyography)</strong> – provides muscular feedback and detects spasms from the user.</li>
+          <li><strong>Laser sensors</strong> – perceive the environment and adapt automatically to terrain.</li>
+          <li><strong>Tilt sensors</strong> – adjust gait dynamically according to ground angle and slope.</li>
+        </ul>
       </div>
-      <div class="video-text">
-        <h3>Step by step towards greatness</h3>
+      <div class="split-media">
+        <img src="/assets/images/Exoskeleton%20detail%202.png" alt="Structural detail of the exoskeleton">
+      </div>
+    </div>
+  </section>
+
+  <section class="content-band muted split-section" id="materials">
+    <div class="section-inner split-grid">
+      <div class="split-media">
+        <img src="/assets/images/Exoskeleton%20Abi%202.png" alt="Ergonomic module of the exoskeleton">
+      </div>
+      <div class="split-copy">
+        <span class="section-tag">Ergonomics</span>
+        <h2>Premium materials &amp; ergonomics</h2>
+        <p>Every component of the exoskeleton is designed to snap easily into place — no tools, no tangled cables, and no compromise when it comes to everyday comfort.</p>
+        <ul>
+          <li><strong>High-grade aluminum frame</strong> — a medical/aerospace-grade alloy with excellent strength-to-weight ratio.</li>
+          <li><strong>Robust yet lightweight</strong> — durable but light enough for everyday wear.</li>
+          <li><strong>Ergonomic padding</strong> — placed at contact points to maximize comfort during longer sessions.</li>
+          <li><strong>High build quality</strong> — ensures daily usability, safety, and reliability.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-band alt split-section" id="future">
+    <div class="section-inner split-grid reverse">
+      <div class="split-copy">
+        <span class="section-tag">Your mobility</span>
+        <h2>Our mission is your mobility</h2>
         <p>At <strong>AbiCybernetics</strong>, we believe technology must be more than hardware and software. It should be the bridge between physical limitations and the dream of walking again.</p>
         <p>That’s why we develop this platform with passion, attention to detail, and a clear vision: to make exoskeletons a normal part of everyday life.</p>
+        <p><strong>Near term:</strong> strength-assist for industrial work, sports rehabilitation, and augmentative exoskeletons for healthy users.</p>
+        <p><strong>Long term:</strong> adaptive AI that learns each user’s gait and <strong>brain-computer interfaces (BCI)</strong> connecting intention directly to movement. We envision a world where assistive technology isn’t a compromise, but an extension of humanity.</p>
+      </div>
+      <div class="split-media">
+        <img src="/assets/images/Exoskeleton%20detail%204.png" alt="Exoskeleton detail while in use">
       </div>
     </div>
-  </section>
-
-  <section class="section" id="future">
-    <h2>The future of assistive tech</h2>
-    <p><strong>Near term:</strong> strength‑assist for industrial work, sports rehabilitation, and augmentative exoskeletons for healthy users.</p>
-    <p><strong>Long term:</strong> adaptive AI that learns each user’s gait and <strong>brain–computer interfaces (BCI)</strong> connecting intention directly to movement. We envision a world where assistive technology isn’t a compromise, but an extension of humanity.</p>
   </section>
 </main>
 
 <section class="cta">
   <p>Take the first step into the future of mobility.</p>
-  <a href="/en/order.html" class="btn">Order Now</a>
+  <a href="/en/order.html" class="btn">Order now</a>
 </section>
 
 <footer>
-  © AbiCybernetics – Trademark&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/en/privacy-policy.html" style="color:#999;text-decoration:none;">Privacy Policy</a>
+  © AbiCybernetics – Trademark&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/en/privacy-policy.html">Privacy Policy</a>
 </footer>
 
-<script id="mobile-nav-script">
+<script>
   (function(){
     var btn = document.querySelector('.nav-toggle');
     var drawer = document.querySelector('.nav-drawer');
     if(!btn || !drawer) return;
     btn.addEventListener('click', function(){
       var expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', !expanded);
+      btn.setAttribute('aria-expanded', String(!expanded));
       if(expanded){
         drawer.setAttribute('hidden', '');
       } else {
         drawer.removeAttribute('hidden');
       }
     });
-    // Close drawer on link click
     drawer.addEventListener('click', function(e){
       if(e.target.tagName === 'A'){
         btn.setAttribute('aria-expanded','false');
@@ -400,6 +283,5 @@
     });
   })();
 </script>
-
 </body>
 </html>
