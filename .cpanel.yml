@@ -2,4 +2,9 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/r131848abic/public_html/
-    - /usr/bin/rsync -av --delete --exclude=".git" --exclude=".cpanel.yml" ./ $DEPLOYPATH
+    - /bin/find $DEPLOYPATH -mindepth 1 -maxdepth 1 ! -name cgi-bin -exec rm -rf {} \;
+    - /bin/cp -R api $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R en $DEPLOYPATH
+    - /bin/cp -R ro $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
