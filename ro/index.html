@@ -1,41 +1,36 @@
-
 <!DOCTYPE html>
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AbiCybernetics</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AbiCybernetics | Mobilitate redefinită prin performanță</title>
+  <meta name="description" content="O pagină de prezentare AbiCybernetics cinematică și puternică, inspirată de limbajul vizual premium din zona performance." />
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H52JMWTFJM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H52JMWTFJM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H52JMWTFJM');
+  </script>
 
-  gtag('config', 'G-H52JMWTFJM');
-</script>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1271705848068144');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1271705848068144&ev=PageView&noscript=1" alt="" /></noscript>
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1271705848068144');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1271705848068144&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  
   <!-- Hotjar Tracking Code for AbiCybernetics -->
-<script>
+  <script>
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:6447299,hjsv:6};
@@ -44,441 +39,443 @@ src="https://www.facebook.com/tr?id=1271705848068144&ev=PageView&noscript=1"
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon.png">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
-
+  </script>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://abicybernetics.com/en/index.html" />
+  <link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/index.html" />
   <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Inter',sans-serif;background:#fff;color:#000}
-
-    /* HEADER */
-    header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid #ccc;z-index:10}
-    .logo-link img{height:50px}
-    nav{margin-left:auto}
-    nav a{margin:0 10px;text-decoration:none;color:#333;font-weight:600}
-
-    /* HERO SLIDESHOW */
-    .slideshow-section{background:url('../assets/images/DSCN6670-2-scaled.jpg') center/cover no-repeat;padding:60px 0;display:flex;justify-content:center;align-items:center}
-    .slideshow-container{width:90%;max-width:800px;height:450px;position:relative;overflow:hidden;border-radius:8px}
-    .slideshow-container img{width:100%;height:100%;object-fit:cover;position:absolute;opacity:0;transition:opacity 1s}
-    .slideshow-container img.active{opacity:1}
-
-    /* INTRO & ORDER */
-    .content-section{background:#fff;padding:60px 20px}
-    .text-block{max-width:800px;margin:0 auto}
-    .text-block h2{margin-bottom:20px}
-    .text-block ul{margin-top:20px;padding-left:20px}
-    .order-btn{display:block;margin:25px auto 0;background:#555;color:#fff;padding:12px 25px;border-radius:6px;text-decoration:none;text-align:center}
-
-    /* FEATURE CARDS */
-    .features{background:#fff;padding:60px 20px}
-    .feature-item{display:flex;align-items:center;gap:30px;margin-bottom:50px;max-width:1000px;margin-inline:auto}
-    .feature-item:nth-child(even){flex-direction:row-reverse}
-    .feature-item img{width:50%;max-width:450px;border-radius:8px;object-fit:cover}
-    .feature-text{flex:1}
-    .feature-text h3{margin-bottom:15px}
-    .feature-text p{line-height:1.55}
-    @media(min-width:769px){.order-btn{width:220px}}
-    @media(max-width:768px){.feature-item{flex-direction:column!important}.feature-item img{width:100%}.feature-text{text-align:left}}
-
-    /* CTA */
-    /* Garden Divider */
-    .garden-divider{
-      width:100%;
-      height:120px;
-      background:url('../assets/images/DSCN6670-2-scaled.jpg') center/cover no-repeat;
-      border-radius:8px;
-      margin:40px 0;
+    :root {
+      --bg: #050608;
+      --panel: rgba(255,255,255,0.06);
+      --panel-strong: rgba(255,255,255,0.1);
+      --text: #f5f7fb;
+      --muted: rgba(245,247,251,0.72);
+      --line: rgba(255,255,255,0.12);
+      --accent: #e31b23;
+      --accent-soft: rgba(227,27,35,0.18);
+      --glow: 0 30px 80px rgba(0,0,0,0.45);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-sm: 14px;
+      --content: min(1200px, calc(100vw - 40px));
     }
-    @media(max-width:768px){
-      .garden-divider{height:80px;margin:30px 0;}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(227,27,35,0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(255,255,255,0.08), transparent 18%),
+        linear-gradient(180deg, #090a0d 0%, #050608 30%, #0a0d12 100%);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
     }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(135deg, rgba(255,255,255,0.06), transparent 30%, transparent 70%, rgba(227,27,35,0.08));
+      mix-blend-mode: screen;
+      opacity: 0.4;
+    }
+    a { color: inherit; text-decoration: none; }
+    img, video { max-width: 100%; display: block; }
+    .shell { width: var(--content); margin: 0 auto; }
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(5,6,8,0.58);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .site-header .shell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 84px;
+      gap: 24px;
+    }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .brand img { width: 52px; height: 52px; object-fit: contain; filter: drop-shadow(0 0 14px rgba(255,255,255,0.18)); }
+    .brand-copy { display: flex; flex-direction: column; gap: 2px; }
+    .brand-copy strong { font-size: 1rem; letter-spacing: 0.2em; text-transform: uppercase; }
+    .brand-copy span { color: var(--muted); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; }
+    .nav { display: flex; align-items: center; gap: 18px; }
+    .nav-links { display: flex; gap: 18px; align-items: center; }
+    .nav-links a { color: var(--muted); font-size: 0.95rem; transition: color 0.2s ease; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--text); }
+    .lang-switch { display: flex; gap: 8px; }
+    .lang-switch a { border: 1px solid var(--line); padding: 10px 14px; border-radius: 999px; color: var(--muted); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    .lang-switch a.active { background: var(--text); color: #050608; border-color: transparent; }
+    .menu-toggle { display: none; background: transparent; border: 1px solid var(--line); border-radius: 999px; color: var(--text); padding: 10px 14px; }
 
-    .cta-section{background:#fff;padding:40px 20px;text-align:center}
-    .cta-msg{font-size:1.25em;font-weight:600;margin-bottom:20px}
+    .hero { position: relative; min-height: 100vh; display: grid; align-items: end; isolation: isolate; }
+    .hero-media { position: absolute; inset: 0; overflow: hidden; }
+    .hero-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(5,6,8,0.18) 0%, rgba(5,6,8,0.52) 45%, rgba(5,6,8,0.94) 100%),
+        linear-gradient(90deg, rgba(5,6,8,0.8) 0%, rgba(5,6,8,0.28) 42%, rgba(5,6,8,0.66) 100%);
+    }
+    .hero-media video { width: 100%; height: 100%; object-fit: cover; transform: scale(1.05); }
+    .hero-content { position: relative; z-index: 1; padding: 150px 0 72px; }
+    .eyebrow { color: #c8ccd4; text-transform: uppercase; letter-spacing: 0.32em; font-size: 0.76rem; margin-bottom: 18px; display: inline-block; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr); gap: 32px; align-items: end; }
+    .hero h1 { font-size: clamp(3.3rem, 9vw, 7.4rem); line-height: 0.94; max-width: 10ch; letter-spacing: -0.05em; text-transform: uppercase; }
+    .hero h1 span { color: #ffffff; text-shadow: 0 0 28px rgba(255,255,255,0.16); }
+    .hero-copy p { margin-top: 22px; max-width: 38rem; color: var(--muted); font-size: 1.08rem; line-height: 1.7; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 32px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 54px; padding: 0 22px; border-radius: 999px; font-weight: 700; letter-spacing: 0.04em; transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease; }
+    .button:hover, .button:focus-visible { transform: translateY(-2px); }
+    .button-primary { background: linear-gradient(135deg, #ffffff 0%, #e7eaee 100%); color: #050608; box-shadow: 0 12px 30px rgba(255,255,255,0.12); }
+    .button-secondary { border: 1px solid var(--line); background: rgba(255,255,255,0.02); color: var(--text); }
+    .hero-panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: var(--glow);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+      backdrop-filter: blur(18px);
+    }
+    .hero-panel .kicker { color: #c4c8d2; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.76rem; }
+    .hero-panel strong { font-size: 2.2rem; display: block; margin: 18px 0 10px; }
+    .hero-panel p { color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
+    .metric-list { display: grid; gap: 14px; margin-top: 18px; }
+    .metric { display: grid; grid-template-columns: auto 1fr; gap: 12px 16px; align-items: center; padding-top: 14px; border-top: 1px solid var(--line); }
+    .metric strong { font-size: 1.25rem; margin: 0; }
+    .metric span { color: var(--muted); font-size: 0.92rem; }
 
-    /* WHY SECTION */
-    .why-section{background:#fff;padding:60px 20px}
-    .why-section>div{max-width:800px;margin:0 auto}
-    .why-section h2{margin-bottom:20px}
+    .stats-band { margin-top: -38px; position: relative; z-index: 2; }
+    .stats-grid {
+      width: var(--content);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      background: rgba(12,14,19,0.86);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: var(--glow);
+      backdrop-filter: blur(18px);
+    }
+    .stat-card { padding: 10px 12px; border-left: 1px solid rgba(255,255,255,0.08); }
+    .stat-card:first-child { border-left: 0; }
+    .stat-card strong { display: block; font-size: clamp(1.8rem, 4vw, 3rem); margin-bottom: 4px; }
+    .stat-card span { color: var(--muted); font-size: 0.96rem; line-height: 1.45; }
 
-    /* FOOTER */
-    footer{background:#fff;text-align:center;padding:20px;color:#666;font-size:.9em;border-top:1px solid #ccc}
-  
-h1, h2, h3, .hero-text, .slogan {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-}
+    section { padding: 100px 0; }
+    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 40px; }
+    .section-heading h2 { font-size: clamp(2rem, 5vw, 4rem); line-height: 1; letter-spacing: -0.05em; text-transform: uppercase; max-width: 12ch; }
+    .section-heading p { max-width: 34rem; color: var(--muted); line-height: 1.75; }
 
-  
-/* Order button animation visibility fix */
-.order-btn::after{
-  bottom:2px;   /* move inside visible area */
-  z-index:1;    /* bring in front */
-}
+    .experience-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; }
+    .experience-main, .experience-stack article, .story-card, .cta-banner {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--glow);
+    }
+    .experience-main { position: relative; min-height: 620px; display: flex; align-items: end; }
+    .experience-main img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .experience-main::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,6,8,0.02), rgba(5,6,8,0.8)); }
+    .experience-copy { position: relative; z-index: 1; padding: 34px; max-width: 34rem; }
+    .experience-copy h3 { font-size: clamp(1.7rem, 4vw, 3rem); letter-spacing: -0.04em; line-height: 1.04; text-transform: uppercase; }
+    .experience-copy p { margin-top: 16px; color: rgba(245,247,251,0.8); line-height: 1.75; }
+    .experience-stack { display: grid; gap: 24px; }
+    .experience-stack article { padding: 24px; display: grid; gap: 18px; }
+    .experience-stack img { border-radius: 16px; aspect-ratio: 16 / 10; object-fit: cover; }
+    .experience-stack h3 { font-size: 1.3rem; text-transform: uppercase; letter-spacing: -0.04em; }
+    .experience-stack p { color: var(--muted); line-height: 1.7; }
 
+    .performance-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .performance-card {
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      position: relative;
+      overflow: hidden;
+    }
+    .performance-card::before { content: ""; position: absolute; inset: auto -40px -60px auto; width: 180px; height: 180px; background: radial-gradient(circle, rgba(227,27,35,0.22), transparent 70%); }
+    .performance-card strong { display: block; font-size: 2rem; margin-bottom: 18px; }
+    .performance-card h3 { font-size: 1.2rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: -0.03em; }
+    .performance-card p { color: var(--muted); line-height: 1.7; position: relative; z-index: 1; }
 
-    .lang-switch{margin-left:16px; display:flex; align-items:center; gap:8px; font-weight:600}
-    .lang-switch a{color:#333; text-decoration:none; padding:6px 10px; border:1px solid #ddd; border-radius:10px}
-    .lang-switch a.active-lang{background:#000; color:#fff; border-color:#000}
-    @media(max-width:600px){ .lang-switch a{padding:6px 8px;font-size:.9rem} }
-    
-</style>
+    .story-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .story-card { padding: 28px; display: grid; gap: 24px; }
+    .story-card img { border-radius: 18px; aspect-ratio: 16 / 11; object-fit: cover; }
+    .story-card h3 { font-size: 1.55rem; letter-spacing: -0.04em; text-transform: uppercase; }
+    .story-card p { color: var(--muted); line-height: 1.75; }
+    .story-meta { display: flex; justify-content: space-between; gap: 12px; color: #dbe0e8; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.16em; }
 
-<link rel="alternate" hreflang="en" href="https://abicybernetics.com/en/index.html"/>
-<link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/index.html"/>
+    .cta-banner { padding: 40px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
+    .cta-banner h2 { font-size: clamp(2rem, 4vw, 3.8rem); line-height: 0.98; letter-spacing: -0.05em; text-transform: uppercase; max-width: 11ch; }
+    .cta-banner p { color: var(--muted); line-height: 1.75; max-width: 38rem; margin-top: 16px; }
 
-<style id="shared-header-style-ro">
-  header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid #e5e5e5;position:relative;z-index:100}
-  header .logo-link{display:flex;align-items:center}
-  header nav{margin-left:auto;display:flex;align-items:center;gap:16px}
-  header nav a{margin:0 4px;text-decoration:none;color:#333;font-weight:600}
-  .lang-switch{margin-left:16px;display:flex;align-items:center;gap:8px;font-weight:600}
-  .lang-switch a{color:#333;text-decoration:none;padding:6px 10px;border:1px solid #ddd;border-radius:10px}
-  .lang-switch a.active-lang{background:#000;color:#fff;border-color:#000}
-</style>
+    footer { padding: 26px 0 40px; color: var(--muted); }
+    .footer-shell { width: var(--content); margin: 0 auto; display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid var(--line); padding-top: 22px; flex-wrap: wrap; }
 
+    [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
 
-<style id="remove-garden-bg-ro">
-  .slideshow-section, .hero, body {
-    background-image: none !important;
-    background: #fff !important;
-  }
-</style>
+    @media (max-width: 1040px) {
+      .hero-grid, .experience-grid, .cta-banner { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stat-card:nth-child(3) { border-left: 0; }
+      .section-heading { flex-direction: column; align-items: start; }
+    }
+    @media (max-width: 820px) {
+      .menu-toggle { display: inline-flex; }
+      .nav { position: absolute; top: 100%; left: 20px; right: 20px; display: none; flex-direction: column; align-items: stretch; padding: 18px; border-radius: 22px; background: rgba(9,10,13,0.96); border: 1px solid var(--line); box-shadow: var(--glow); }
+      .nav.open { display: flex; }
+      .nav-links { flex-direction: column; align-items: start; }
+      .lang-switch { width: 100%; }
+      .lang-switch a { flex: 1; text-align: center; }
+      .hero-content { padding-top: 130px; }
+      .stats-grid, .performance-grid, .story-grid { grid-template-columns: 1fr; }
+      .stat-card { border-left: 0; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 18px; }
+      .stat-card:first-child { border-top: 0; padding-top: 0; }
+      section { padding: 82px 0; }
+    }
+    @media (max-width: 560px) {
+      .shell { width: min(100vw - 28px, 1200px); }
+      .site-header .shell { min-height: 74px; }
+      .brand-copy span { display: none; }
+      .hero h1 { font-size: clamp(2.8rem, 18vw, 4.8rem); }
+      .hero-copy p, .section-heading p, .experience-copy p, .performance-card p, .story-card p, .cta-banner p { font-size: 0.98rem; }
+      .hero-panel, .experience-copy, .performance-card, .story-card, .cta-banner { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell">
+      <a class="brand" href="index.html">
+        <img src="../assets/icons/Logo abicybernetics.png" alt="AbiCybernetics logo" />
+        <span class="brand-copy">
+          <strong>AbiCybernetics</strong>
+          <span>Mobilitate de performanță, creată pentru oameni</span>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+      <div class="nav" id="site-nav">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#hero">Acasă</a>
+          <a href="#experience">Experiență</a>
+          <a href="#performance">Performanță</a>
+          <a href="#stories">Poveste</a>
+          <a href="produs.html">Produs</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="lang-switch" aria-label="Language selector">
+          <a href="../en/index.html">EN</a><a href="index.html" class="active">RO</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
+  <section class="hero" id="hero">
+    <div class="hero-media">
+      <video autoplay muted loop playsinline poster="../assets/video/banner-poster.jpg">
+        <source src="../assets/video/video mers exterior.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="hero-content shell">
+      <span class="eyebrow">Sistem de mobilitate de nouă generație</span>
+      <div class="hero-grid">
+        <div class="hero-copy" data-reveal>
+          <h1>Mobilitate care impresionează din prima secundă.</h1>
+          <p>Inspirată de energia vizuală a brandurilor auto de performanță, noua experiență AbiCybernetics folosește contrast cinematic, mișcare imersivă și storytelling puternic pentru a transmite inovație înainte ca utilizatorul să citească prima specificație.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="order.html">Rezervă o consultație</a>
+            <a class="button button-secondary" href="#experience">Descoperă designul</a>
+          </div>
+        </div>
+        <aside class="hero-panel" data-reveal>
+          <span class="kicker">Impact vizual</span>
+          <strong>Construită să oprească scroll-ul.</strong>
+          <p>Fiecare strat este calibrat pentru emoție: video dramatic, spațiere premium, suprafețe luminoase și imagini de produs care prezintă exoscheletul ca pe un erou tehnologic.</p>
+          <div class="metric-list">
+            <div class="metric"><strong>01</strong><span>Hero imersiv cu mișcare premium</span></div>
+            <div class="metric"><strong>02</strong><span>Paletă dark luxury cu contrast puternic</span></div>
+            <div class="metric"><strong>03</strong><span>Trasee clare către produs, contact și investitori</span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
 
-<style id="mobile-nav-global-ro">
-  /* Base header */
-  .site-header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid #e5e5e5;position:relative;z-index:100}
-  .site-header .logo-link{display:flex;align-items:center}
-  .nav-desktop{margin-left:auto;display:flex;align-items:center;gap:16px}
-  .nav-desktop a{margin:0 4px;text-decoration:none;color:#333;font-weight:600}
-  .lang-switch{margin-left:16px;display:flex;align-items:center;gap:8px;font-weight:600}
-  .lang-switch a{color:#333;text-decoration:none;padding:6px 10px;border:1px solid #ddd;border-radius:10px}
-  .lang-switch a.active-lang{background:#000;color:#fff;border-color:#000}
-
-  /* Hamburger */
-  .nav-toggle{display:none;margin-left:auto;background:none;border:none;width:40px;height:40px;position:relative;cursor:pointer}
-  .nav-toggle span{position:absolute;left:8px;right:8px;height:2px;background:#111;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
-  .nav-toggle span:nth-child(1){top:12px}
-  .nav-toggle span:nth-child(2){top:19px}
-  .nav-toggle span:nth-child(3){top:26px}
-  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
-  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
-  /* Drawer */
-  .nav-drawer{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid #eee;box-shadow:0 6px 20px rgba(0,0,0,.08)}
-  .nav-mobile{display:flex;flex-direction:column;padding:10px 16px;gap:8px}
-  .nav-mobile a{text-decoration:none;color:#333;font-weight:600;padding:10px 6px;border-radius:8px}
-  .nav-mobile a:hover{background:#f7f7f7}
-  .lang-switch.mobile{margin:8px 0 6px 0}
-
-  /* Responsive */
-  @media (max-width: 900px){
-    .nav-desktop{display:none}
-    .nav-toggle{display:block}
-  }
-</style>
-
-
-<style id="banner-mov-responsive">
-  .banner-hero {
-    width: 100%;
-    height: 75vh;
-    max-height: 850px;
-    object-fit: cover;
-    display: block;
-  }
-  .overlay-text {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,.6);
-    padding: 0 12px;
-  }
-  .overlay-text .title {
-    font-size: 32px;
-    font-weight: 700;
-    font-family: Poppins,Arial,sans-serif;
-    line-height: 1.1;
-  }
-  .overlay-text .subtitle {
-    font-size: 24px;
-    font-weight: 500;
-    font-family: Poppins,Arial,sans-serif;
-    line-height: 1.1;
-  }
-  @media (max-width: 768px){
-    .banner-hero { height: 52vh; max-height: 520px; }
-    .overlay-text .title { font-size: 26px; }
-    .overlay-text .subtitle { font-size: 18px; }
-  }
-</style>
-
-<header class="site-header">
-  <a href="index.html" class="logo-link">
-    <img src="../assets/icons/Logo abicybernetics.png" alt="AbiCybernetics Logo" style="height:50px">
-  </a>
-
-  <!-- Mobile hamburger -->
-  <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-
-  <!-- Desktop nav -->
-  <nav class="nav-desktop" aria-label="Navigație principală">
-    <a href="index.html">Acasă</a>
-    <a href="produs.html">Produs</a>
-    <a href="finantare.html">Finanțare</a>
-    <a href="investitori.html">Investitori</a>
-    <a href="partener.html">Partener</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <!-- Desktop language switch -->
-  <div class="lang-switch nav-desktop" aria-label="Selectare limbă">
-    <a href="../en/index.html">EN</a>
-    <a href="index.html" class="active-lang">RO</a>
+  <div class="stats-band">
+    <div class="stats-grid" data-reveal>
+      <div class="stat-card"><strong>360°</strong><span>Storytelling vizual care generează curiozitate instant.</span></div>
+      <div class="stat-card"><strong>24/7</strong><span>Interfață premium care pare vie la fiecare vizită.</span></div>
+      <div class="stat-card"><strong>3X</strong><span>Ierarhie mai clară pentru înțelegerea produsului.</span></div>
+      <div class="stat-card"><strong>100%</strong><span>Experiență dramatică, pregătită pentru mobil.</span></div>
+    </div>
   </div>
 
-  <!-- Mobile drawer -->
-  <div class="nav-drawer" hidden>
-    <nav class="nav-mobile" aria-label="Meniu mobil">
-      <a href="index.html">Acasă</a>
-      <a href="produs.html">Produs</a>
-      <a href="finantare.html">Finanțare</a>
-      <a href="investitori.html">Investitori</a>
-      <a href="partener.html">Partener</a>
-      <a href="contact.html">Contact</a>
-      <div class="lang-switch mobile">
-        <a href="../en/index.html">EN</a>
-        <a href="index.html" class="active-lang">RO</a>
+  <section id="experience">
+    <div class="shell">
+      <div class="section-heading" data-reveal>
+        <h2>O secvență de lansare pentru potențialul uman.</h2>
+        <p>Pagina este construită ca un reveal: intrare dramatică, dovadă de capabilitate, apoi povești de produs cu impact emoțional. Exact această progresie îi oferă magnetismul asociat brandurilor premium de performanță.</p>
       </div>
-    </nav>
+      <div class="experience-grid">
+        <article class="experience-main" data-reveal>
+          <img src="../assets/images/exo_black.png" alt="AbiCybernetics exoskeleton" />
+          <div class="experience-copy">
+            <span class="eyebrow">Prezentare hero a produsului</span>
+            <h3>Prezență sculptată. Încredere tehnică. Dorință imediată de a afla mai mult.</h3>
+            <p>Imaginile ample, gradientele profunde și textul concis fac exoscheletul să pară avansat, aspirational și premium, fără să piardă claritatea beneficiului pentru om.</p>
+          </div>
+        </article>
+        <div class="experience-stack">
+          <article data-reveal>
+            <img src="../assets/images/standing up.png" alt="User standing with support" />
+            <div>
+              <h3>Emoție în mișcare</h3>
+              <p>Ritmul vizual dintre video, imagini statice și carduri stratificate îl conduce pe utilizator înainte și întărește ideea de transformare, grijă și încredere.</p>
+            </div>
+          </article>
+          <article data-reveal>
+            <img src="../assets/images/Exoskeleton detail 3.png" alt="Exoskeleton engineering detail" />
+            <div>
+              <h3>Inginerie ca spectacol</h3>
+              <p>Cadrele close-up și contrastul rafinat transformă fiecare componentă mecanică într-un element precis, intenționat și memorabil.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="performance">
+    <div class="shell">
+      <div class="section-heading" data-reveal>
+        <h2>Limbaj de performanță transformat în încredere.</h2>
+        <p>În locul unui layout medical generic, redesignul poziționează AbiCybernetics ca un brand care definește categoria. Arată premium, dar explică rapid valoarea pentru pacienți, parteneri și investitori.</p>
+      </div>
+      <div class="performance-grid">
+        <article class="performance-card" data-reveal>
+          <strong>Bold</strong>
+          <h3>Ierarhie vizuală</h3>
+          <p>Titlurile supradimensionate și spațierea controlată creează un impact emoțional imediat fără să încarce vizitatorul.</p>
+        </article>
+        <article class="performance-card" data-reveal>
+          <strong>Clear</strong>
+          <h3>Trasee de conversie</h3>
+          <p>Acțiunile principale și secundare rămân mereu vizibile și ghidează natural către contact, comandă sau explorare detaliată.</p>
+        </article>
+        <article class="performance-card" data-reveal>
+          <strong>Premium</strong>
+          <h3>Percepție de brand</h3>
+          <p>Panourile glassmorphism, umbrele cinematice și imaginile atent regizate cresc percepția de inovație și ambiție.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="stories">
+    <div class="shell">
+      <div class="section-heading" data-reveal>
+        <h2>Povești care arată ca un showcase, nu ca o broșură.</h2>
+        <p>Aceste secțiuni transformă homepage-ul într-o declarație de brand. Utilizatorii văd capabilitate, focus uman și rafinament tehnic într-un format memorabil și editorial.</p>
+      </div>
+      <div class="story-grid">
+        <article class="story-card" data-reveal>
+          <div class="story-meta"><span>Siluetă semnătură</span><span>Perspectivă frontală</span></div>
+          <img src="../assets/images/Exoskeleton Abi 1.png" alt="AbiCybernetics profile view" />
+          <div>
+            <h3>O prezență mecanică proiectată în jurul încrederii umane.</h3>
+            <p>Produsul este prezentat ca o lansare flagship: postură puternică, contrast dark și suficient spațiu vizual cât să transmită autoritate și calm simultan.</p>
+          </div>
+        </article>
+        <article class="story-card" data-reveal>
+          <div class="story-meta"><span>Finisaj precis</span><span>Arhitectură spate</span></div>
+          <img src="../assets/images/Exoskeleton Abi 3.png" alt="AbiCybernetics rear view" />
+          <div>
+            <h3>Detaliul funcțional devine storytelling premium.</h3>
+            <p>Suprafețele tehnice și detaliile structurale sunt tratate ca active de brand, ceea ce face site-ul să pară mai avansat și mai credibil la prima vedere.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shell">
+      <div class="cta-banner" data-reveal>
+        <div>
+          <span class="eyebrow">Pregătit pentru următorul pas</span>
+          <h2>Transformă atenția în acțiune.</h2>
+          <p>Folosește acest homepage dramatic ca primul punct de contact pentru consultații, discuții cu investitori și descoperirea produsului. Este gândit să oprească utilizatorul, să-i transmită emoție și să-l facă să continue explorarea.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="button button-primary" href="contact.html">Vorbește cu echipa</a>
+          <a class="button button-secondary" href="investitori.html">Vezi investitorii</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-shell">
+      <span>AbiCybernetics — storytelling premium pentru mobilitate, cu un prim impact puternic.</span>
+      <span>Design creat să fie îndrăzneț, cinematic și orientat spre conversie.</span>
+    </div>
+  </footer>
+
+
+  <div id="cookie-banner" style="position:fixed;left:20px;right:20px;bottom:20px;z-index:60;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:18px 20px;border:1px solid rgba(255,255,255,0.12);border-radius:20px;background:rgba(10,12,16,0.92);box-shadow:0 30px 80px rgba(0,0,0,0.45);backdrop-filter:blur(18px);">
+    <p style="color:rgba(245,247,251,0.78);line-height:1.6;max-width:58rem;">Continuând navigarea, accepți folosirea cookie-urilor pentru analiză, optimizarea experienței și îmbunătățirea comunicării AbiCybernetics.</p>
+    <button id="cookie-accept" class="button button-primary" type="button" style="min-height:48px;">Acceptă</button>
   </div>
-</header>
-
-<section class="slideshow-section">
-  <div class="video-wrapper" style="position:relative;">
-    <video class="banner-hero" autoplay muted loop playsinline webkit-playsinline preload="auto">
-      <source src="../assets/video/banner%20main.MOV" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.15),rgba(0,0,0,0.25));"></div>
-    <div class="overlay-text">
-      <div class="title">Walking</div>
-      <div class="subtitle">Made Easy</div>
-    </div>
-  </div>
-</section>
-
-  <section class="content-section" style="padding-top:30px">
-    <div class="text-block">
-
-<section class="content-section">
-  <div class="text-block">
-    <h2>Exoscheletul Abi.</h2>
-    <p>
-      Mai mult decât tehnologie — credem în <strong>libertatea ta</strong>. Creat să se potrivească
-      corpului și viziunii tale, Abi este un exoschelet creat pentru cei care nu acceptă limitări.
-    </p>
-
-
-</ul>
-</ul>
-
-<a href="order.html" class="order-btn">Comandă acum</a>
-</div>
-  </section>
-
-  <section class="features">
-    <div class="feature-item">
-      <img src="../assets/images/Exoskeleton detail 4.png" alt="Fast Delivery">
-      <div class="feature-text">
-        <h3>Nucleu Inteligent</h3>
-<p>Proiectat pentru versatilitate, sistemul suportă o gamă largă de integrări de senzori — EEG, EMG, forță, giroscop, laser și altele. Fie că monitorizezi activitatea neuronală, mișcarea sau feedback-ul de forță, platforma este pregătită pentru aceste nevoi. Arhitectura sa îți permite să personalizezi capabilitățile de detecție în funcție de nevoile individuale, obiectivele de cercetare sau scenariile de utilizare aflate în dezvoltare. Nu este doar inteligent — este construit pentru precizia de care ai nevoie.</p>
-      </div>
-    </div>
-    <div class="feature-item">
-      <img src="../assets/images/Exoskeleton detail 3.png" alt="Open Source">
-      <div class="feature-text">
-       <h3>Creat pentru a fi rapid îmbrăcat.</h3>
-<p>Fiecare componentă a exoscheletului este proiectată să se fixeze ușor la locul ei — fără unelte, fără cabluri încâlcite. Designul modular face echiparea dispozitivului rapidă și intuitivă, fie că te pregătești pentru o sesiune de mișcare, utilizare clinică sau pentru un setup de cercetare. Ai la dispoziție un sistem complet pentru întregul corp, ușor de îmbrăcat și de ajustat.</p>
-
-      </div>
-    </div>
-    <div class="feature-item">
-      <img src="../assets/images/Exoskeleton detail 2.png" alt="Human Centric">
-      <div class="feature-text">
-        <h3>Puterea care ține pasul cu tine.</h3>
-<p>Bucură-te de autonomie extinsă a bateriei pentru utilizare pe tot parcursul zilei. Mergi timp de 2 ore continuu sau până la 5 ore cu pauze, iar atunci când este nevoie de reîncărcare, pur și simplu schimbă bateria în câteva secunde. Bateria de schimbă rapid cu zero întreruperi — doar schimbi și continui.</p>
-
-      </div>
-    </div>
-    <div class="feature-item">
-      <img src="../assets/images/Exoskelton detail 1.png" alt="Lifetime Support">
-      <div class="feature-text">
-      <h3> Precizie ergonomică.</h3>
-<p>Exoscheletul permite reglaje fine ale pozițiilor articulațiilor, lungimii segmentelor și unghiurilor de aliniere pentru a se adapta diferențelor anatomice individuale. Este conceput să ofere suport sigur și confortabil utilizatorilor cu înălțimi între 150 cm și 190 cm și greutăți corporale de până la 100 kg, asigurând o potrivire optimă, funcționalitate și eficiență biomecanică pentru o gamă largă de utilizatori.</p>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="garden-divider"></div>
-
-<section class="why-section">
-    <div>
-      <h2>Mobilitatea înseamnă libertate</h2>
-<p style="font-size:1.1em;margin-bottom:15px">Credem în <strong>libertatea</strong> ta. Pentru prima dată poți comanda un exoschelet complet funcțional pentru membrele inferioare direct la tine acasă — clinică sau laborator.</p>
-<p style="font-size:1.1em;margin-bottom:15px">Echipa noastră va fi alături de tine la fiecare pas, oferindu-ți actualizări în timp real, asistență virtuală la instalare și răspunsuri clare la orice întrebare tehnică sau practică pe care o ai.</p>
-<p style="font-size:.8em;font-style:italic;color:#666;margin-top:10px">* Notă: Acesta nu este un dispozitiv medical certificat. Este un sistem deschis și în continuă dezvoltare pentru utilizare personală de către early adopters, pasionați de tehnologie și oricine dorește să facă parte din procesul de dezvoltare.</p>
-
-<ul style="margin-top:15px;padding-left:20px;line-height:1.6">
-  <li>Timp de livrare ~12 săptămâni de la comandă până la expediere</li>
-  <li>Inginer dedicat pentru fiecare client</li>
-  <li>Firmware open-source &amp; SDK pentru personalizare rapidă</li>
-  <li>Livrare globală și suport la instalare de la distanță</li>
-</ul>
-
-      </ul>
-    </div>
-  </section>
-
-
-  <section class="cta-section">
-    <p class="cta-msg">Fă primul pas către un nou nivel de libertate.</p>
-    <a href="order.html" class="order-btn">Comandă-l azi</a>
-  </section>
-
-
-    <footer>© AbiCybernetics – Trademark&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html" style="color:#999;text-decoration:none;font-size:0.85em;">Privacy&nbsp;Policy</a></footer>
 
   <script>
-    const heroSlides = document.querySelectorAll('.slide');
-    let heroIndex = 0;
-    setInterval(() => {
-      heroSlides[heroIndex].classList.remove('active');
-      heroIndex = (heroIndex + 1) % heroSlides.length;
-      heroSlides[heroIndex].classList.add('active');
-    }, 3000);
-  </script>
-  <!-- Simple Cookie Banner START -->
-<style>
-  .simple-cookie-banner{
-    position:fixed;bottom:0;left:0;width:100%;
-    background:#222;color:#fff;font-family:Arial,Helvetica,sans-serif;
-    padding:12px 16px;display:flex;flex-wrap:wrap;align-items:center;
-    z-index:9999;box-shadow:0 -2px 8px rgba(0,0,0,.25);
-  }
-  .simple-cookie-banner p{margin:0 12px 8px 0;font-size:0.9rem;flex:1 1 220px}
-  .simple-cookie-banner button{
-    background:#0077cc;border:0;color:#fff;padding:8px 20px;
-    border-radius:4px;font-weight:bold;cursor:pointer;font-size:0.9rem;
-  }
-@media(max-width:500px){
-  .simple-cookie-banner{padding:12px}
-  .simple-cookie-banner p{margin-bottom:8px}
-}
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('site-nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+      nav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
 
-/* --- Animated highlight line ----------------------------- */
-@keyframes highlight-line{
-  0%   {transform:translateX(-100%);}
-  50%  {transform:translateX(0);}
-  100% {transform:translateX(100%);}
-}
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, { threshold: 0.18 });
+    document.querySelectorAll('[data-reveal]').forEach((el) => observer.observe(el));
 
-.order-btn{
-  position:relative;
-  overflow:hidden;
-}
-
-.order-btn::after{
-  content:'';
-  position:absolute;
-  left:0;
-  bottom:0;
-  width:100%;
-  height:3px;
-  background:linear-gradient(
-    90deg,
-    transparent 0%,
-    #ffbf47 35%,
-    #ffbf47 65%,
-    transparent 100%
-  );
-  animation:highlight-line 2.5s cubic-bezier(.4,0,.2,1) infinite;
-}
-
-@media (prefers-reduced-motion: reduce){
-  .order-btn::after{animation:none;}
-}
-
-
-/* Order button animation visibility fix */
-.order-btn::after{
-  bottom:2px;   /* move inside visible area */
-  z-index:1;    /* bring in front */
-}
-
-</style>
-
-<div id="scb" class="simple-cookie-banner" role="alert">
-  <p>
-    By continuing to use our site, you agree to the use of cookies to enhance navigation,
-    analyze site usage, and support our marketing efforts.
-  </p>
-  <button id="scb-btn">Accept</button>
-</div>
-
-<script>
-  (function(){
-    const banner=document.getElementById('scb');
-    const btn=document.getElementById('scb-btn');
-    if(localStorage.getItem('cookie_consent')){banner.remove();}
-    btn.addEventListener('click',()=>{
-      localStorage.setItem('cookie_consent','accepted');
-      banner.remove();
-      // ➜ load your analytics scripts here if needed
-      // window.loadAnalytics?.();
-    });
-  })();
-</script>
-<!-- Simple Cookie Banner END -->
-
-
-<script id="mobile-nav-script-ro">
-  (function(){
-    var btn = document.querySelector('.nav-toggle');
-    var drawer = document.querySelector('.nav-drawer');
-    if(!btn || !drawer) return;
-    btn.addEventListener('click', function(){
-      var expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', !expanded);
-      if(expanded){
-        drawer.setAttribute('hidden', '');
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieAccept = document.getElementById('cookie-accept');
+    if (cookieBanner && cookieAccept) {
+      if (localStorage.getItem('cookie_consent') === 'accepted') {
+        cookieBanner.remove();
       } else {
-        drawer.removeAttribute('hidden');
+        cookieAccept.addEventListener('click', () => {
+          localStorage.setItem('cookie_consent', 'accepted');
+          cookieBanner.remove();
+        });
       }
-    });
-    // Close drawer on link click
-    drawer.addEventListener('click', function(e){
-      if(e.target.tagName === 'A'){
-        btn.setAttribute('aria-expanded','false');
-        drawer.setAttribute('hidden','');
-      }
-    });
-  })();
-</script>
-
+    }
+  </script>
 </body>
 </html>
