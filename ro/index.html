@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AbiCybernetics | Platformă premium de exoschelet pentru mobilitate</title>
-  <meta name="description" content="AbiCybernetics prezintă o platformă premium de exoschelet pentru partea inferioară a corpului, cu inginerie modulară, mobilitate asistată și onboarding global."/>
+  <title>AbiCybernetics | Platformă de mobilitate cu exoschelet</title>
+  <meta name="description" content="AbiCybernetics prezintă o platformă premium de exoschelet pentru partea inferioară a corpului, cu inginerie modulară, suport adaptiv pentru mobilitate și onboarding global."/>
   <meta name="robots" content="index,follow,max-image-preview:large"/>
   <link rel="canonical" href="https://abicybernetics.com/ro/index.html"/>
   <link rel="alternate" hreflang="en" href="https://abicybernetics.com/en/index.html"/>
   <link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/index.html"/>
   <link rel="alternate" hreflang="x-default" href="https://abicybernetics.com/"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="AbiCybernetics | Platformă premium de exoschelet pentru mobilitate"/>
-  <meta property="og:description" content="Descoperă homepage-ul premium AbiCybernetics, construit în jurul mobilității, modularității, designului industrial elegant și onboarding-ului clar."/>
+  <meta property="og:title" content="AbiCybernetics | Platformă de mobilitate cu exoschelet"/>
+  <meta property="og:description" content="Homepage-ul AbiCybernetics folosește acum același limbaj vizual premium ca pagina de produs, păstrând conținutul corect de homepage."/>
   <meta property="og:url" content="https://abicybernetics.com/ro/index.html"/>
   <meta property="og:image" content="https://abicybernetics.com/assets/video/banner-poster.jpg"/>
   <meta property="og:locale" content="ro_RO"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="AbiCybernetics | Platformă premium de exoschelet pentru mobilitate"/>
-  <meta name="twitter:description" content="Descoperă homepage-ul premium AbiCybernetics, construit în jurul mobilității, modularității, designului industrial elegant și onboarding-ului clar."/>
+  <meta name="twitter:title" content="AbiCybernetics | Platformă de mobilitate cu exoschelet"/>
+  <meta name="twitter:description" content="Homepage-ul AbiCybernetics folosește acum același limbaj vizual premium ca pagina de produs, păstrând conținutul corect de homepage."/>
   <meta name="twitter:image" content="https://abicybernetics.com/assets/video/banner-poster.jpg"/>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H52JMWTFJM"></script>
   <script>
@@ -56,9 +56,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="/assets/video/banner-poster.jpg" fetchpriority="high">
-  <link rel="preload" as="video" href="/assets/video/banner%20main.MOV" type="video/mp4">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/styles/luxury-home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -68,11 +66,113 @@
       "logo": "https://abicybernetics.com/assets/icons/Logo%20abicybernetics.png"
     }
   </script>
+  <style>
+    :root{
+      --page-bg:#050505;
+      --page-bg-soft:#111111;
+      --surface:#f3f3f1;
+      --surface-alt:#ffffff;
+      --surface-muted:#e8e8e5;
+      --text:#0f0f0f;
+      --muted:#4a4a4a;
+      --line:#d4d4cf;
+      --white:#ffffff;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Inter',sans-serif;background:var(--page-bg);color:var(--white);overflow-x:hidden}
+    a{color:inherit}
+    img,video{display:block;max-width:100%;height:auto}
+
+    .site-header{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:18px;padding:14px 20px;background:rgba(5,5,5,.92);border-bottom:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px)}
+    .site-header .logo-link{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .brand-note{display:flex;flex-direction:column;gap:2px}
+    .brand-note strong{font-family:'Poppins',sans-serif;font-size:.96rem;line-height:1}
+    .brand-note span{font-size:.76rem;color:rgba(255,255,255,.66)}
+    .nav-desktop{margin-left:auto;display:flex;align-items:center;gap:16px}
+    .nav-desktop a,.lang-switch a,.nav-mobile a{text-decoration:none;color:#f2f2f2;font-weight:600;padding:8px 10px;border-radius:999px}
+    .nav-desktop a:hover,.lang-switch a:hover,.nav-mobile a:hover{background:rgba(255,255,255,.08)}
+    .lang-switch{display:flex;align-items:center;gap:8px;margin-left:8px}
+    .lang-switch a{border:1px solid rgba(255,255,255,.14)}
+    .lang-switch a.active-lang{background:#fff;color:#000;border-color:#fff}
+    .nav-toggle{display:none;margin-left:auto;background:none;border:none;width:42px;height:42px;position:relative;cursor:pointer}
+    .nav-toggle span{position:absolute;left:9px;right:9px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+    .nav-toggle span:nth-child(1){top:13px}.nav-toggle span:nth-child(2){top:20px}.nav-toggle span:nth-child(3){top:27px}
+    .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+    .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .nav-drawer{position:absolute;left:0;right:0;top:100%;background:#0c0c0c;border-bottom:1px solid rgba(255,255,255,.12)}
+    .nav-mobile{display:flex;flex-direction:column;padding:12px 20px 18px;gap:8px}
+    .lang-switch.mobile{margin:8px 0 0}
+
+    .hero{position:relative;min-height:78vh;display:flex;align-items:center;overflow:hidden;background:#000}
+    .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.55) 42%,rgba(0,0,0,.68) 100%)}
+    .hero-inner{position:relative;z-index:1;width:min(var(--max),calc(100vw - 40px));margin:0 auto;padding:88px 0 80px}
+    .hero-copy{max-width:680px}
+    .eyebrow{display:inline-block;margin-bottom:16px;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+    .hero h1{margin:0 0 18px;font-family:'Poppins',sans-serif;font-size:clamp(2.8rem,7vw,5rem);line-height:1.02}
+    .hero p{margin:0;max-width:58ch;font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,.82)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+    .btn,.btn-secondary{display:inline-flex;align-items:center;justify-content:center;padding:13px 28px;border-radius:999px;text-decoration:none;font-weight:700}
+    .btn{border:1px solid #fff;color:#000;background:#fff}
+    .btn-secondary{border:1px solid rgba(255,255,255,.22);color:#fff;background:rgba(255,255,255,.04)}
+    .hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px;max-width:880px}
+    .hero-stat{padding:18px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);border-radius:18px;backdrop-filter:blur(4px)}
+    .hero-stat strong{display:block;font-size:1.35rem;font-family:'Poppins',sans-serif;color:var(--white)}
+    .hero-stat span{display:block;margin-top:8px;color:rgba(255,255,255,.72);line-height:1.6;font-size:.92rem}
+
+    main{padding:0 0 80px}
+    .content-band{background:var(--surface);color:var(--text);padding:84px 0}
+    .content-band.alt{background:var(--surface-alt)}
+    .content-band.muted{background:var(--surface-muted)}
+    .section-inner{width:min(var(--max),calc(100vw - 40px));margin:0 auto}
+    .intro{display:grid;gap:28px;max-width:920px}
+    .intro h2,.split-copy h2,.closing h2{margin:0;font-family:'Poppins',sans-serif;font-size:clamp(2rem,4vw,3.3rem);line-height:1.08}
+    .intro p,.split-copy p,.split-copy li,.closing p,.feature-card p{margin:0;color:var(--muted);line-height:1.78;font-size:1rem}
+    .intro-figure{margin-top:10px;max-width:540px}
+    .intro-figure img{width:100%;object-fit:cover}
+
+    .split-section{padding:0}
+    .split-grid{display:grid;grid-template-columns:minmax(280px,.95fr) minmax(320px,1.05fr);align-items:center;gap:72px}
+    .split-grid.reverse{grid-template-columns:minmax(320px,1.05fr) minmax(280px,.95fr)}
+    .split-media img,.split-media video{width:100%;object-fit:cover;background:#ddd;border-radius:18px}
+    .split-copy{display:grid;gap:18px}
+    .split-copy ul{margin:0;padding-left:20px;display:grid;gap:12px;color:var(--muted)}
+    .note{font-size:.92rem;color:#666}
+    .section-tag{display:inline-block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#666;margin-bottom:2px}
+    .feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:8px}
+    .feature-card{padding:18px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.55)}
+    .feature-card h3{margin:0 0 8px;font-family:'Poppins',sans-serif;font-size:1.08rem;line-height:1.25;color:var(--text)}
+
+    .cta{background:#000;color:#fff;padding:64px 20px 72px;text-align:center;border-top:1px solid rgba(255,255,255,.1)}
+    .cta p{margin:0 0 18px;font-size:1.1rem;line-height:1.7;color:rgba(255,255,255,.8)}
+    footer{padding:24px 20px 30px;text-align:center;color:rgba(255,255,255,.66);font-size:.92rem;background:#000}
+    footer a{text-decoration:none;color:rgba(255,255,255,.66)}
+    .cookie-banner{position:fixed;left:18px;right:18px;bottom:18px;z-index:999;padding:16px 18px;border-radius:24px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:rgba(12,12,13,.94);border:1px solid rgba(255,255,255,.1);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+    .cookie-banner p{flex:1 1 300px;color:rgba(244,246,248,.82);line-height:1.65;font-size:.95rem}
+    .cookie-banner button{padding:12px 18px;border:0;border-radius:999px;background:var(--white);color:#111;font-weight:800;cursor:pointer}
+
+    @media (max-width:900px){
+      .nav-desktop,.lang-switch.nav-desktop{display:none}
+      .nav-toggle{display:block}
+      .hero{min-height:66vh}
+      .hero-inner{padding:72px 0 64px}
+      .content-band{padding:60px 0}
+      .split-grid,.split-grid.reverse,.hero-stats,.feature-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .site-header{padding:12px 16px}
+      .hero-inner,.section-inner{width:calc(100vw - 28px)}
+      .hero h1{font-size:clamp(2.3rem,11vw,3.3rem)}
+      .intro p,.split-copy p,.split-copy li,.closing p,.hero p,.feature-card p{font-size:.97rem}
+    }
+  </style>
 </head>
 <body>
-<div class="site-shell">
 <header class="site-header">
-  <a href="index.html" class="logo-link"><img src="/assets/icons/Logo abicybernetics.png" alt="Logo AbiCybernetics" decoding="async"><span class="brand-note"><strong>AbiCybernetics</strong><span>Sisteme adaptive pentru mobilitate</span></span></a>
+  <a href="index.html" class="logo-link"><img src="/assets/icons/Logo abicybernetics.png" alt="AbiCybernetics Logo" style="height:50px" decoding="async"><span class="brand-note"><strong>AbiCybernetics</strong><span>Sisteme adaptive de mobilitate</span></span></a>
   <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false"><span></span><span></span><span></span></button>
   <nav class="nav-desktop" aria-label="Navigație principală">
     <a href="index.html">Acasă</a>
@@ -97,178 +197,116 @@
     </nav>
   </div>
 </header>
+
+<section class="hero" role="banner" aria-label="Homepage AbiCybernetics">
+  <video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="/assets/video/banner-poster.jpg">
+    <source src="/assets/video/banner%20main.MOV" type="video/mp4">
+  </video>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Platforma de exoschelet Abi</span>
+      <h1>Mersul. Mai simplu.</h1>
+      <p>Mai mult decât tehnologie — credem în libertatea, forța și posibilitățile tale într-un sistem compact și modular. Gândit să se adapteze corpului și viziunii tale, Abi le oferă exploratorilor, inovatorilor și pionierilor de zi cu zi șansa de a merge dincolo de limitări.</p>
+      <div class="hero-actions">
+        <a href="order.html" class="btn">Comandă acum</a>
+        <a href="#experienta" class="btn-secondary">Explorează avantajele</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>150–190 cm</strong><span>Se reglează confortabil pentru o plajă largă de utilizatori, înălțimi și nevoi.</span></div>
+        <div class="hero-stat"><strong>Până la 5 ore</strong><span>Mers continuu de până la 2 ore sau până la 5 ore cu pauze.</span></div>
+        <div class="hero-stat"><strong>Global</strong><span>Livrare internațională cu suport remote la instalare și inginer dedicat.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <main>
-  <section class="hero">
-    <div class="hero-media">
-      <video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="/assets/video/banner-poster.jpg">
-        <source src="/assets/video/banner%20main.MOV" type="video/mp4">
-        Browserul tău nu suportă redarea video.
-      </video>
-    </div>
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <div class="section-kicker">Platforma de exoschelet Abi</div>
-        <h1 class="hero-title">Mișcare cu mai multă încredere.</h1>
-        <p>AbiCybernetics combină design industrial elegant, inginerie modulară și suport adaptiv pentru mobilitate într-o platformă de exoschelet pentru partea inferioară a corpului, construită pentru pionieri, clinici, laboratoare și utilizatori orientați spre viitor.</p>
-        <div class="hero-actions">
-          <a href="order.html" class="order-btn">Comandă acum</a>
-          <a href="#experienta" class="ghost-btn">Explorează platforma</a>
-        </div>
-        <div class="hero-bottom">
-          <div class="hero-stat"><strong>150–190 cm</strong><span>Reglajele ergonomice fine susțin confortul și alinierea pentru o plajă largă de utilizatori.</span></div>
-          <div class="hero-stat"><strong>Până la 5 ore</strong><span>Mers continuu de până la 2 ore sau până la 5 ore cu pauze planificate și schimb rapid al bateriei.</span></div>
-          <div class="hero-stat"><strong>Global</strong><span>Livrare internațională, setup remote și onboarding ghidat împreună cu un inginer Abi dedicat.</span></div>
-        </div>
+  <section class="content-band alt" id="experienta">
+    <div class="section-inner intro">
+      <div>
+        <span class="section-tag">Mobilitate redefinită</span>
+        <h2>Mobilitatea înseamnă libertate.</h2>
       </div>
-      <aside class="hero-side">
-        <div class="hero-rail">
-          <article class="rail-card highlight">
-            <div class="mini-label">Inteligență de precizie</div>
-            <strong>Pregătit pentru senzori avansați și control adaptiv.</strong>
-            <p>Platforma suportă EEG, EMG, senzori de forță, giroscop, laser și integrări viitoare pentru cercetare, experimentare și fluxuri de mobilitate personalizate.</p>
+      <p>Pentru prima dată, poți comanda un exoschelet complet funcțional pentru partea inferioară a corpului, livrat direct acasă, într-o clinică sau într-un laborator de cercetare. Echipa noastră rămâne alături de tine la fiecare pas, cu actualizări în timp real, asistență virtuală la instalare și răspunsuri clare la întrebările tehnice sau practice.</p>
+      <figure class="intro-figure">
+        <img src="/assets/images/standing%20up.png" alt="Ridicare cu exoscheletul">
+      </figure>
+    </div>
+  </section>
+
+  <section class="content-band muted split-section" id="platforma">
+    <div class="section-inner split-grid">
+      <div class="split-media">
+        <img src="/assets/images/exo_black.png" alt="Exoschelet AbiCybernetics în finisaj negru">
+      </div>
+      <div class="split-copy">
+        <span class="section-tag">Sistem modular compact</span>
+        <h2>Construit pentru libertate, cercetare și explorare de zi cu zi.</h2>
+        <p>Abi combină ingineria modulară cu un design centrat pe om pentru a crea un exoschelet compact, portabil și adaptabil pentru o gamă largă de utilizatori și scenarii reale.</p>
+        <ul>
+          <li><strong>Potrivire centrată pe utilizator</strong> – reglajele fine ale articulațiilor, segmentelor și alinierii ajută sistemul să se adapteze diferențelor anatomice.</li>
+          <li><strong>Portabil prin design</strong> – un sistem complet modular, ușor de transportat și rapid de echipat.</li>
+          <li><strong>Creat pentru pionieri</strong> – ideal pentru early adopters, cercetători și inovatori care vor să exploreze mișcarea și tehnologii noi.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-band alt split-section" id="capabilitati">
+    <div class="section-inner split-grid reverse">
+      <div class="split-copy">
+        <span class="section-tag">Inteligență la bază</span>
+        <h2>Integrare de senzori pregătită pentru precizie.</h2>
+        <p>Conceput pentru versatilitate, sistemul suportă EEG, EMG, senzori de forță, giroscop, laser și multe altele, astfel încât detecția și controlul să poată fi adaptate cerințelor reale și obiectivelor în evoluție.</p>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Autonomie extinsă</h3>
+            <p>Bateria susține sesiuni lungi, iar schimbul rapid reduce întreruperile dintre activități.</p>
           </article>
-          <article class="rail-card">
-            <div class="mini-label">Setup rapid</div>
-            <strong>Hardware modular gândit să se asambleze rapid și intuitiv.</strong>
-            <p>Componentele snap-fit, traseele curate de cabluri și ajustările practice fac purtarea zilnică, transportul și configurarea mult mai fluide.</p>
+          <article class="feature-card">
+            <h3>Setup rapid</h3>
+            <p>Componentele sunt gândite să se fixeze rapid, fără unelte și fără cabluri încurcate.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Firmware open &amp; SDK</h3>
+            <p>Arhitectura deschisă face posibilă personalizarea și experimentarea rapidă.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Suport dedicat</h3>
+            <p>Fiecare client primește ghidaj direct de la un inginer pentru instalare și utilizare.</p>
           </article>
         </div>
-      </aside>
-    </div>
-  </section>
-
-  <section class="section" id="experienta">
-    <div class="overview-strip">
-      <div>
-        <div class="section-kicker">Mobilitate redefinită</div>
-        <h2 class="section-title">Un homepage centrat pe produs.</h2>
-        <p class="section-copy">Fiecare secțiune este construită astfel încât exoscheletul să rămână în centru: cum arată, cum se adaptează, cum se livrează și de ce platforma contează pentru utilizatorii care caută suport real pentru mobilitate într-o prezentare premium și modernă.</p>
       </div>
-      <div class="spec-grid">
-        <article class="spec-item"><div class="spec-label">Livrare</div><strong>~12 săptămâni</strong><p>Timp estimativ de la confirmarea comenzii până la expediere.</p></article>
-        <article class="spec-item"><div class="spec-label">Onboarding</div><strong>Inginer dedicat</strong><p>Fiecare client primește suport la configurare, asistență tehnică și comunicare directă.</p></article>
-        <article class="spec-item"><div class="spec-label">Platformă</div><strong>Firmware &amp; SDK deschise</strong><p>Creată pentru customizare, experimentare și integrări viitoare.</p></article>
+      <div class="split-media">
+        <img src="/assets/images/Exoskeleton%20detail%204.png" alt="Detaliu al exoscheletului Abi">
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="editorial-grid">
-      <div class="editorial-visual">
-        <img src="/assets/images/exo_black.png" alt="Exoschelet AbiCybernetics cu finisaj negru" loading="eager" decoding="async">
-        <div class="spotlight-meta">
-          <span>Design industrial premium</span>
-          <span>Arhitectură modulară</span>
-          <span>Pregătit pentru senzori avansați</span>
-        </div>
+  <section class="content-band muted split-section" id="de-ce-abi">
+    <div class="section-inner split-grid">
+      <div class="split-media">
+        <img src="/assets/images/Exoskeleton%20detail%202.png" alt="Detaliu structural al exoscheletului Abi">
       </div>
-      <div class="editorial-panel">
-        <div class="editorial-body">
-          <div class="editorial-label">Sistem compact modular</div>
-          <h2 class="editorial-title">Construit pentru libertate, cercetare și utilizare reală.</h2>
-          <p>Abi îmbină un design vizual rafinat cu inginerie practică pentru a crea un exoschelet pentru partea inferioară a corpului care se simte compact, portabil și credibil, fie că ajunge acasă, într-o clinică sau într-un mediu de cercetare.</p>
-          <div class="editorial-points">
-            <div class="editorial-point"><strong>Potrivire centrată pe om</strong><p>Reglajele pentru poziția articulațiilor, lungimea segmentelor și unghiurile de aliniere ajută sistemul să se adapteze anatomiei individuale.</p></div>
-            <div class="editorial-point"><strong>Portabil prin design</strong><p>Sistemul complet este modular, mai ușor de transportat și mai rapid de purtat decât setările tradiționale greoaie.</p></div>
-            <div class="editorial-point"><strong>Creat pentru pionieri</strong><p>Potrivit pentru early adopters, cercetători și inovatori care vor o platformă serioasă, cu spațiu real de evoluție.</p></div>
-          </div>
-        </div>
-        <div class="hero-actions">
-          <a href="contact.html" class="outline-btn">Contactează-ne</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="gallery-layout">
-      <article class="gallery-card tall">
-        <img src="/assets/images/Exoskeleton detail 4.png" alt="Detaliu al exoscheletului Abi" loading="lazy" decoding="async">
-        <div class="gallery-caption">
-          <div class="card-label">Ecosistem de senzori</div>
-          <h3>Integrare pregătită pentru precizie.</h3>
-          <p>O poveste de produs clară, susținută de profunzime tehnică reală: EEG, EMG, senzori de forță, giroscop, sensing bazat pe laser și loc pentru fluxuri personalizate.</p>
-        </div>
-      </article>
-      <div class="gallery-stack">
-        <article class="gallery-card">
-          <img src="/assets/images/Exoskeleton detail 2.png" alt="Detaliu ergonomic al exoscheletului Abi" loading="lazy" decoding="async">
-          <div class="gallery-caption">
-            <div class="card-label">Autonomie</div>
-            <h3>Mergi mai mult, schimbi mai repede.</h3>
-            <p>Autonomia extinsă susține sesiuni mai lungi, iar schimbul rapid al bateriei reduce fricțiunea dintre activități.</p>
-          </div>
-        </article>
-        <article class="gallery-card">
-          <img src="/assets/images/Exoskeleton detail 3.png" alt="Detaliu despre structura modulară Abi" loading="lazy" decoding="async">
-          <div class="gallery-caption">
-            <div class="card-label">Nucleu modular</div>
-            <h3>Asamblare snap-in, fără unelte.</h3>
-            <p>Fiecare componentă este gândită să se conecteze rapid și curat, astfel încât setup-ul să fie simplu pentru mobilitate, clinică sau laborator.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="capability-grid">
-      <article class="capability-card">
-        <div class="card-label">Ergonomie</div>
-        <h3>150–190 cm | până la 100 kg</h3>
-        <p>Suportul reglabil ajută platforma să se potrivească unei game largi de utilizatori, păstrând confortul și stabilitatea mecanică.</p>
-      </article>
-      <article class="capability-card">
-        <div class="card-label">Customizare</div>
-        <h3>Adaptată obiectivelor tale</h3>
-        <p>Arhitectura este gândită pentru nevoi personale de mobilitate, programe de cercetare și extinderi funcționale viitoare.</p>
-      </article>
-      <article class="capability-card">
-        <div class="card-label">Suport</div>
-        <h3>Setup remote inclus</h3>
-        <p>Abi combină livrarea globală cu asistență directă la distanță, pentru un onboarding clar și sigur.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="timeline-wrap">
-      <div class="quote-card">
-        <div class="section-kicker">Notă importantă</div>
-        <blockquote>„Acesta nu este un dispozitiv medical certificat. Este un sistem deschis, în evoluție, pentru utilizare personală, cercetare și early adopters.”</blockquote>
-        <p>Abi este construit pentru oamenii care vor să contribuie la viitorul mobilității, roboticii purtabile și experimentării centrate pe om.</p>
-      </div>
-      <div class="timeline-card">
-        <div class="section-kicker">De ce Abi</div>
-        <h2 class="section-title">Un traseu clar de la interes la mișcare.</h2>
-        <div class="timeline-list">
-          <div class="timeline-item"><div class="timeline-index">01</div><div><strong>Comandă și producție</strong><p>Timpul estimativ de livrare este de aproximativ 12 săptămâni de la confirmarea comenzii până la expediere.</p></div></div>
-          <div class="timeline-item"><div class="timeline-index">02</div><div><strong>Onboarding ghidat</strong><p>Un inginer dedicat asistă configurarea, răspunde la întrebări și oferă actualizări pe tot parcursul procesului.</p></div></div>
-          <div class="timeline-item"><div class="timeline-index">03</div><div><strong>Dezvoltare deschisă</strong><p>Firmware-ul open, accesul la SDK și hardware-ul modular fac posibilă customizarea rapidă.</p></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="cta-panel">
-      <div>
-        <div class="section-kicker">Pasul următor</div>
-        <h2 class="cta-title">Începe cu o platformă creată să evolueze.</h2>
-        <p>Comandă un exoschelet pentru partea inferioară a corpului pentru acasă, clinică sau laborator și lucrează direct cu echipa AbiCybernetics pentru a construi o experiență de mobilitate pornind de la nevoi reale.</p>
-      </div>
-      <div>
-        <p>Ești gata să explorezi o experiență de mobilitate mai premium și mai clar centrată pe produs?</p>
-        <div class="hero-actions">
-          <a href="order.html" class="order-btn">Comandă-l</a>
-          <a href="contact.html" class="ghost-btn">Programează o discuție</a>
-        </div>
+      <div class="split-copy closing">
+        <span class="section-tag">De ce Abi</span>
+        <h2>Un traseu clar de la interes la mișcare.</h2>
+        <p>Acesta nu este un dispozitiv medical certificat. Este un sistem deschis, aflat în continuă evoluție, pentru utilizare personală, early adopters, entuziaști ai tehnologiei și oameni care vor să facă parte din procesul de dezvoltare.</p>
+        <p>Abi este o platformă de exoschelet în evoluție, construită pentru pionierii care vor să contribuie la viitorul mobilității, cercetării și roboticii purtabile.</p>
+        <p><strong>Timp de livrare:</strong> aproximativ 12 săptămâni de la comandă la expediere. <strong>Onboarding remote:</strong> inclus. <strong>Suport internațional:</strong> disponibil.</p>
       </div>
     </div>
   </section>
 </main>
 
-<footer>© AbiCybernetics – Trademark&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html">Politica&nbsp;de&nbsp;confidențialitate</a></footer>
+<section class="cta">
+  <p>Credem în libertatea ta. Comandă un exoschelet complet funcțional pentru acasă, clinică sau laborator și construiește alături de echipa noastră viitorul mișcării.</p>
+  <a href="order.html" class="btn">Comandă acum</a>
+</section>
+
+<footer>
+  © AbiCybernetics – Trademark&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html">Politica de confidențialitate</a>
+</footer>
 
 <div id="scb" class="cookie-banner" role="alert">
   <p>Continuând să folosești site-ul nostru, ești de acord cu utilizarea cookie-urilor pentru a îmbunătăți navigarea, a analiza traficul și a susține eforturile noastre de marketing.</p>
@@ -279,14 +317,18 @@
   (function(){
     const banner=document.getElementById('scb');
     const btn=document.getElementById('scb-btn');
-    if(localStorage.getItem('cookie_consent')){banner.remove();}
-    btn.addEventListener('click',()=>{
-      localStorage.setItem('cookie_consent','accepted');
-      banner.remove();
-    });
+    if(banner && btn){
+      if(localStorage.getItem('cookie_consent')){banner.remove();}
+      else {
+        btn.addEventListener('click',()=>{
+          localStorage.setItem('cookie_consent','accepted');
+          banner.remove();
+        });
+      }
+    }
   })();
 </script>
-<script id="mobile-nav-script-ro">
+<script>
   (function(){
     var btn = document.querySelector('.nav-toggle');
     var drawer = document.querySelector('.nav-drawer');
@@ -305,6 +347,6 @@
     });
   })();
 </script>
-</div>
+
 </body>
 </html>
