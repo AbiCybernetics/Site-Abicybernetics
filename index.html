@@ -199,7 +199,7 @@
 </header>
 
 <section class="hero" role="banner" aria-label="AbiCybernetics homepage">
-  <video class="hero-video" muted loop playsinline webkit-playsinline preload="none" aria-hidden="true" disablepictureinpicture disableremoteplayback data-src="/assets/video/banner%20main.MOV"></video>
+  <video class="hero-video" muted loop playsinline webkit-playsinline preload="none" aria-hidden="true" disablepictureinpicture disableremoteplayback data-src-desktop="/assets/video/banner%20main.mov" data-src-mobile="/assets/video/banner%20main%20mobil.mov"></video>
   <div class="hero-inner">
     <div class="hero-copy">
       <span class="eyebrow">Abi exoskeleton platform</span>
@@ -338,10 +338,16 @@
 
     if(shouldSkipVideo){return;}
 
+    const mobileHeroQuery=window.matchMedia('(max-width: 767px)');
+
+    const getHeroVideoSrc=()=>mobileHeroQuery.matches?heroVideo.dataset.srcMobile:heroVideo.dataset.srcDesktop;
+
     const loadHeroVideo=()=>{
-      if(heroVideo.dataset.loaded){return;}
-      heroVideo.src=heroVideo.dataset.src;
-      heroVideo.dataset.loaded='true';
+      const selectedSrc=getHeroVideoSrc();
+      if(!selectedSrc){return;}
+      if(heroVideo.dataset.loaded===selectedSrc){return;}
+      heroVideo.src=selectedSrc;
+      heroVideo.dataset.loaded=selectedSrc;
       heroVideo.load();
     };
 
