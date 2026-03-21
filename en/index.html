@@ -112,16 +112,10 @@
     .hero-inner{position:relative;z-index:1;width:min(var(--max),calc(100vw - 40px));margin:0 auto;padding:88px 0 80px}
     .hero-copy{max-width:680px}
     .eyebrow{display:inline-block;margin-bottom:16px;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72)}
-    .hero h1{margin:0 0 18px;font-family:'Poppins',sans-serif;font-size:clamp(2.8rem,7vw,5rem);line-height:1.02}
-    .hero p{margin:0;max-width:58ch;font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,.82)}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+    .hero h1{margin:0;font-family:'Poppins',sans-serif;font-size:clamp(2.8rem,7vw,5rem);line-height:1.02;font-weight:600;max-width:10ch}
     .btn,.btn-secondary{display:inline-flex;align-items:center;justify-content:center;padding:13px 28px;border-radius:999px;text-decoration:none;font-weight:700}
     .btn{border:1px solid #fff;color:#000;background:#fff}
     .btn-secondary{border:1px solid rgba(255,255,255,.22);color:#fff;background:rgba(255,255,255,.04)}
-    .hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px;max-width:880px}
-    .hero-stat{padding:18px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);border-radius:18px;backdrop-filter:blur(4px)}
-    .hero-stat strong{display:block;font-size:1.35rem;font-family:'Poppins',sans-serif;color:var(--white)}
-    .hero-stat span{display:block;margin-top:8px;color:rgba(255,255,255,.72);line-height:1.6;font-size:.92rem}
 
     main{padding:0 0 80px}
     .content-band{background:var(--surface);color:var(--text);padding:84px 0}
@@ -131,8 +125,10 @@
     .intro{display:grid;gap:28px;max-width:920px}
     .intro h2,.split-copy h2,.closing h2{margin:0;font-family:'Poppins',sans-serif;font-size:clamp(2rem,4vw,3.3rem);line-height:1.08}
     .intro p,.split-copy p,.split-copy li,.closing p,.feature-card p{margin:0;color:var(--muted);line-height:1.78;font-size:1rem}
-    .intro-figure{margin-top:10px;max-width:540px}
-    .intro-figure img{width:100%;object-fit:cover}
+    .specs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .spec-card{padding:22px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.55)}
+    .spec-card strong{display:block;font-size:1.3rem;font-family:'Poppins',sans-serif;color:var(--text)}
+    .spec-card span{display:block;margin-top:8px;color:var(--muted);line-height:1.65;font-size:.96rem}
 
     .split-section{padding:0}
     .split-grid{display:grid;grid-template-columns:minmax(280px,.95fr) minmax(320px,1.05fr);align-items:center;gap:72px}
@@ -160,7 +156,7 @@
       .hero{min-height:66vh}
       .hero-inner{padding:72px 0 64px}
       .content-band{padding:60px 0}
-      .split-grid,.split-grid.reverse,.hero-stats,.feature-grid{grid-template-columns:1fr}
+      .split-grid,.split-grid.reverse,.feature-grid,.specs-grid{grid-template-columns:1fr}
     }
     @media (max-width:640px){
       .site-header{padding:12px 16px}
@@ -204,18 +200,8 @@
   </video>
   <div class="hero-inner">
     <div class="hero-copy">
-      <span class="eyebrow">Abi exoskeleton platform</span>
-      <h1>Walking. Made easy.</h1>
-      <p>More than technology — we believe in your freedom, strength, and possibilities with one compact, modular system. Designed to fit your body and your vision, Abi empowers explorers, innovators, and everyday pioneers to move beyond limitations.</p>
-      <div class="hero-actions">
-        <a href="order.html" class="btn">Order now</a>
-        <a href="#experience" class="btn-secondary">Explore features</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat"><strong>150–190 cm</strong><span>Comfortably adjusts to a wide range of users, heights, and needs.</span></div>
-        <div class="hero-stat"><strong>Up to 5 hrs</strong><span>Walk up to 2 hours continuously or up to 5 hours with breaks.</span></div>
-        <div class="hero-stat"><strong>Global</strong><span>Worldwide shipping with remote installation support and a dedicated engineer.</span></div>
-      </div>
+      <span class="eyebrow">Abi exoskeleton</span>
+      <h1>Walking made easy.</h1>
     </div>
   </div>
 </section>
@@ -224,13 +210,15 @@
   <section class="content-band alt" id="experience">
     <div class="section-inner intro">
       <div>
-        <span class="section-tag">Mobility redefined</span>
-        <h2>Mobility means freedom.</h2>
+        <span class="section-tag">Specifications</span>
+        <h2>Everything important, in one place.</h2>
       </div>
       <p>For the first time, you can order a fully functional lower-body exoskeleton delivered directly to your home, clinic, or research lab. Our team will be with you at every step, providing real-time updates, virtual setup assistance, and clear answers to any technical or practical questions you may have.</p>
-      <figure class="intro-figure">
-        <img src="/assets/images/mobility%20suport.JPG" alt="Standing up with the exoskeleton">
-      </figure>
+      <div class="specs-grid">
+        <article class="spec-card"><strong>150–190 cm</strong><span>Comfortably adjusts to a wide range of users, heights, and needs.</span></article>
+        <article class="spec-card"><strong>Up to 5 hrs</strong><span>Walk up to 2 hours continuously or up to 5 hours with breaks.</span></article>
+        <article class="spec-card"><strong>Global support</strong><span>Worldwide shipping with remote installation support and a dedicated engineer.</span></article>
+      </div>
     </div>
   </section>
 
