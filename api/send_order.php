@@ -66,7 +66,7 @@ $user_html = <<<HTML
 <html lang="en">
 <meta charset="utf-8">
 <body style="font-family: Arial, Helvetica, sans-serif; color:#111;">
-  <div style="max-width:640px;margin:0 auto;border:1px solid #dcdcdc;padding:24px;border-radius:12px;">
+  <div style="max-width:640px;margin:0 auto;border:1px solid #dcdcdc;padding:24px;border-radius:0;">
     <div style="text-align:center;margin-bottom:16px;">
       <div style="display:inline-block;width:64px;height:64px;border-radius:50%;background:#fafafa;color:#e8c547;line-height:64px;font-size:36px;border:1px solid #dcdcdc;">✓</div>
     </div>
@@ -134,7 +134,7 @@ http_response_code($success ? 200 : 500);
   :root { --bg:#ffffff; --card:#ffffff; --line:#dcdcdc; --text:#111; --muted:#555; --gold:#e8c547; }
   html,body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
   .wrap { min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:28px; width:100%; max-width:720px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:0; padding:28px; width:100%; max-width:720px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
   .badge { width:72px; height:72px; border-radius:50%; background:#fafafa; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; border:1px solid var(--line); }
   .badge svg { width:40px; height:40px; stroke: var(--gold); }
   h1 { text-align:center; margin:8px 0 12px; font-size:28px; }
