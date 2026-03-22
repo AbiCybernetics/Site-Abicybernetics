@@ -108,7 +108,8 @@
     .hero{position:relative;min-height:78vh;display:flex;align-items:center;overflow:hidden;background:#000}
     .hero-poster,.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
     .hero-poster{z-index:0}
-    .hero video{opacity:1}
+    .hero video{opacity:0;transition:opacity .35s ease}
+    .hero video.is-ready{opacity:1}
     .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.55) 42%,rgba(0,0,0,.68) 100%)}
     .hero-inner{position:relative;z-index:1;width:min(var(--max),calc(100vw - 40px));margin:0 auto;padding:88px 0 80px}
     .hero-copy{max-width:680px}
@@ -197,9 +198,7 @@
 
 <section class="hero" role="banner" aria-label="AbiCybernetics homepage">
   <img class="hero-poster" src="/assets/video/banner-poster.jpg" alt="" aria-hidden="true">
-  <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="/assets/video/banner-poster.jpg" aria-hidden="true" disablepictureinpicture disableremoteplayback>
-    <source src="/assets/video/video mers exterior.mp4#t=0.1" type="video/mp4">
-  </video>
+  <video class="hero-video" poster="/assets/video/banner-poster.jpg" muted loop playsinline webkit-playsinline preload="none" aria-hidden="true" disablepictureinpicture disableremoteplayback data-src="/assets/video/banner%20main.mov" data-fallback-src="/assets/video/video%20mers%20exterior.mp4#t=0.1"></video>
   <div class="hero-inner">
     <div class="hero-copy">
       <span class="eyebrow">Abi exoskeleton</span>
@@ -315,6 +314,76 @@
           banner.remove();
         });
       }
+    }
+  })();
+</script>
+<script>
+  (function(){
+    const heroVideo=document.querySelector('.hero-video');
+    if(!heroVideo){return;}
+
+    const connection=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
+    const prefersReducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersReducedData=window.matchMedia('(prefers-reduced-data: reduce)').matches;
+    const shouldSkipVideo=prefersReducedMotion||prefersReducedData||(connection&&(connection.saveData||/2g/.test(connection.effectiveType||'')));
+
+    if(shouldSkipVideo){return;}
+
+    const getHeroVideoSources=()=>[heroVideo.dataset.src,heroVideo.dataset.fallbackSrc].filter((source,index,list)=>source&&list.indexOf(source)===index);
+
+    const loadHeroVideo=(forceReload=false)=>{
+      const candidateSources=getHeroVideoSources();
+      if(!candidateSources.length){return;}
+      const selectedSrc=candidateSources[0];
+      if(!forceReload && heroVideo.dataset.loaded===selectedSrc){return;}
+      heroVideo.dataset.sources=JSON.stringify(candidateSources);
+      heroVideo.dataset.sourceIndex='0';
+      heroVideo.src=selectedSrc;
+      heroVideo.dataset.loaded=selectedSrc;
+      heroVideo.load();
+    };
+
+    const revealHeroVideo=()=>{
+      heroVideo.classList.add('is-ready');
+      const playPromise=heroVideo.play();
+      if(playPromise && typeof playPromise.catch==='function'){
+        playPromise.catch(function(){});
+      }
+    };
+
+    heroVideo.addEventListener('loadeddata', revealHeroVideo);
+    heroVideo.addEventListener('canplay', revealHeroVideo);
+
+    heroVideo.addEventListener('error', function(){
+      const candidateSources=JSON.parse(heroVideo.dataset.sources||'[]');
+      const currentIndex=Number(heroVideo.dataset.sourceIndex||0);
+      const nextSrc=candidateSources[currentIndex+1];
+
+      if(nextSrc){
+        heroVideo.dataset.sourceIndex=String(currentIndex+1);
+        heroVideo.src=nextSrc;
+        heroVideo.dataset.loaded=nextSrc;
+        heroVideo.load();
+        return;
+      }
+
+      heroVideo.removeAttribute('src');
+      heroVideo.load();
+      delete heroVideo.dataset.loaded;
+    });
+
+    const scheduleHeroVideo=()=>{
+      if('requestIdleCallback' in window){
+        requestIdleCallback(loadHeroVideo,{timeout:800});
+        return;
+      }
+      setTimeout(loadHeroVideo,120);
+    };
+
+    if(document.readyState==='loading'){
+      document.addEventListener('DOMContentLoaded', scheduleHeroVideo, {once:true});
+    } else {
+      scheduleHeroVideo();
     }
   })();
 </script>
