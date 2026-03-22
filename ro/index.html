@@ -198,7 +198,7 @@
 
 <section class="hero" role="banner" aria-label="Homepage AbiCybernetics">
   <img class="hero-poster" src="/assets/video/banner-poster.jpg" alt="" aria-hidden="true">
-  <video poster="/assets/video/banner-poster.jpg" class="hero-video" muted loop playsinline webkit-playsinline preload="none" aria-hidden="true" disablepictureinpicture disableremoteplayback data-src-desktop="/assets/video/banner%20main.mov" data-src-mobile="/assets/video/banner%20main%20mobil.mov"></video>
+  <video poster="/assets/video/banner-poster.jpg" class="hero-video" muted loop playsinline webkit-playsinline preload="none" aria-hidden="true" disablepictureinpicture disableremoteplayback data-src-desktop="/assets/video/banner%20main.mov" data-src-mobile="/assets/video/banner%20main%20mobil.mov" data-fallback-src="/assets/video/video%20mers%20exterior.mp4#t=0.1"></video>
   <div class="hero-inner">
     <div class="hero-copy">
       <span class="eyebrow">Abi exoskeleton</span>
@@ -331,12 +331,19 @@
 
     const mobileHeroQuery=window.matchMedia('(max-width: 767px)');
 
-    const getHeroVideoSrc=()=>mobileHeroQuery.matches?heroVideo.dataset.srcMobile:heroVideo.dataset.srcDesktop;
+    const getHeroVideoSources=()=>{
+      const primarySource=mobileHeroQuery.matches?heroVideo.dataset.srcMobile:heroVideo.dataset.srcDesktop;
+      const fallbackSources=[heroVideo.dataset.srcMobile,heroVideo.dataset.srcDesktop,heroVideo.dataset.fallbackSrc];
+      return [primarySource,...fallbackSources].filter((source,index,list)=>source&&list.indexOf(source)===index);
+    };
 
-    const loadHeroVideo=()=>{
-      const selectedSrc=getHeroVideoSrc();
-      if(!selectedSrc){return;}
-      if(heroVideo.dataset.loaded===selectedSrc){return;}
+    const loadHeroVideo=(forceReload=false)=>{
+      const candidateSources=getHeroVideoSources();
+      if(!candidateSources.length){return;}
+      const selectedSrc=candidateSources[0];
+      if(!forceReload && heroVideo.dataset.loaded===selectedSrc){return;}
+      heroVideo.dataset.sources=JSON.stringify(candidateSources);
+      heroVideo.dataset.sourceIndex='0';
       heroVideo.src=selectedSrc;
       heroVideo.dataset.loaded=selectedSrc;
       heroVideo.load();
@@ -354,6 +361,18 @@
     heroVideo.addEventListener('canplay', revealHeroVideo);
 
     heroVideo.addEventListener('error', function(){
+      const candidateSources=JSON.parse(heroVideo.dataset.sources||'[]');
+      const currentIndex=Number(heroVideo.dataset.sourceIndex||0);
+      const nextSrc=candidateSources[currentIndex+1];
+
+      if(nextSrc){
+        heroVideo.dataset.sourceIndex=String(currentIndex+1);
+        heroVideo.src=nextSrc;
+        heroVideo.dataset.loaded=nextSrc;
+        heroVideo.load();
+        return;
+      }
+
       heroVideo.removeAttribute('src');
       heroVideo.load();
       delete heroVideo.dataset.loaded;
@@ -368,7 +387,7 @@
     };
 
     const handleViewportChange=()=>{
-      loadHeroVideo();
+      loadHeroVideo(true);
     };
 
     if(typeof mobileHeroQuery.addEventListener==='function'){
