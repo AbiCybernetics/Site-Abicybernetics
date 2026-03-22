@@ -173,28 +173,18 @@
 </head>
 <body>
 <header class="site-header">
-  <a href="index.html" class="logo-link"><img src="../assets/icons/Logo abicybernetics.png" alt="AbiCybernetics Logo" style="height:50px"></a>
-
-  <!-- Mobile hamburger -->
-  <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-
-  <!-- Desktop nav -->
+  <a href="index.html" class="logo-link"><img src="/assets/icons/Logo abicybernetics.png" alt="AbiCybernetics Logo" style="height:50px" decoding="async"></a>
+  <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false"><span></span><span></span><span></span></button>
   <nav class="nav-desktop" aria-label="Navigație principală">
     <a href="index.html">Acasă</a>
     <a href="produs.html">Produs</a>
     <a href="investitori.html">Investitori</a>
     <a href="contact.html">Contact</a>
   </nav>
-
-  <!-- Desktop language switch -->
-  <div class="lang-switch nav-desktop" aria-label="Selectare limbă">
+  <div class="lang-switch nav-desktop" aria-label="Limbă">
     <a href="../en/order.html">EN</a>
     <a href="order.html" class="active-lang">RO</a>
   </div>
-
-  <!-- Mobile drawer -->
   <div class="nav-drawer" hidden>
     <nav class="nav-mobile" aria-label="Meniu mobil">
       <a href="index.html">Acasă</a>
@@ -381,6 +371,10 @@
     document.getElementById('estimator_snapshot').value = JSON.stringify(snapshot, null, 2);
   });
 </script>
+
+<footer>
+  © AbiCybernetics – Trademark&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html">Politica de confidențialitate</a>
+</footer>
 
 <!-- Simple Cookie Banner START (unchanged) -->
 <style>
