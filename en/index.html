@@ -198,7 +198,7 @@
 
 <section class="hero" role="banner" aria-label="AbiCybernetics homepage">
   <img class="hero-poster" src="/assets/video/banner-poster.jpg" alt="" aria-hidden="true">
-  <video class="hero-video" poster="/assets/video/banner-poster.jpg" muted loop playsinline webkit-playsinline preload="none" aria-hidden="true" disablepictureinpicture disableremoteplayback data-src="/assets/video/banner%20main.mov"></video>
+  <video class="hero-video" poster="/assets/video/banner-poster.jpg" muted loop playsinline webkit-playsinline preload="none" aria-hidden="true" disablepictureinpicture disableremoteplayback data-src="/assets/video/banner%20main.mov" data-fallback-src="/assets/video/video%20mers%20exterior.mp4#t=0.1"></video>
   <div class="hero-inner">
     <div class="hero-copy">
       <span class="eyebrow">Abi exoskeleton</span>
@@ -329,10 +329,17 @@
 
     if(shouldSkipVideo){return;}
 
-    const loadHeroVideo=()=>{
-      if(heroVideo.dataset.loaded){return;}
-      heroVideo.src=heroVideo.dataset.src;
-      heroVideo.dataset.loaded='true';
+    const getHeroVideoSources=()=>[heroVideo.dataset.src,heroVideo.dataset.fallbackSrc].filter((source,index,list)=>source&&list.indexOf(source)===index);
+
+    const loadHeroVideo=(forceReload=false)=>{
+      const candidateSources=getHeroVideoSources();
+      if(!candidateSources.length){return;}
+      const selectedSrc=candidateSources[0];
+      if(!forceReload && heroVideo.dataset.loaded===selectedSrc){return;}
+      heroVideo.dataset.sources=JSON.stringify(candidateSources);
+      heroVideo.dataset.sourceIndex='0';
+      heroVideo.src=selectedSrc;
+      heroVideo.dataset.loaded=selectedSrc;
       heroVideo.load();
     };
 
@@ -348,6 +355,18 @@
     heroVideo.addEventListener('canplay', revealHeroVideo);
 
     heroVideo.addEventListener('error', function(){
+      const candidateSources=JSON.parse(heroVideo.dataset.sources||'[]');
+      const currentIndex=Number(heroVideo.dataset.sourceIndex||0);
+      const nextSrc=candidateSources[currentIndex+1];
+
+      if(nextSrc){
+        heroVideo.dataset.sourceIndex=String(currentIndex+1);
+        heroVideo.src=nextSrc;
+        heroVideo.dataset.loaded=nextSrc;
+        heroVideo.load();
+        return;
+      }
+
       heroVideo.removeAttribute('src');
       heroVideo.load();
       delete heroVideo.dataset.loaded;
