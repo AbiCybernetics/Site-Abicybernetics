@@ -263,6 +263,34 @@
   }
 </style>
 
+<style id="shared-global-header-footer">
+  .site-header{position:sticky;top:0;z-index:120;display:flex;align-items:center;gap:18px;padding:14px 20px;background:rgba(5,5,5,.92);border-bottom:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px)}
+  .site-header .logo-link{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .site-header .nav-desktop{margin-left:auto;display:flex;align-items:center;gap:16px}
+  .site-header .nav-desktop a,.site-header .lang-switch a,.site-header .nav-mobile a{text-decoration:none;color:#f2f2f2;font-weight:600;padding:8px 10px;border-radius:999px}
+  .site-header .nav-desktop a:hover,.site-header .lang-switch a:hover,.site-header .nav-mobile a:hover{background:rgba(255,255,255,.08)}
+  .site-header .lang-switch{display:flex;align-items:center;gap:8px;margin-left:8px;font-weight:600}
+  .site-header .lang-switch a{border:1px solid rgba(255,255,255,.14)}
+  .site-header .lang-switch a.active-lang{background:#fff;color:#000;border-color:#fff}
+  .site-header .nav-toggle{display:none;margin-left:auto;background:none;border:none;width:42px;height:42px;position:relative;cursor:pointer}
+  .site-header .nav-toggle span{position:absolute;left:9px;right:9px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+  .site-header .nav-toggle span:nth-child(1){top:13px}
+  .site-header .nav-toggle span:nth-child(2){top:20px}
+  .site-header .nav-toggle span:nth-child(3){top:27px}
+  .site-header .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .site-header .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .site-header .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .site-header .nav-drawer{position:absolute;left:0;right:0;top:100%;background:#0c0c0c;border-bottom:1px solid rgba(255,255,255,.12)}
+  .site-header .nav-mobile{display:flex;flex-direction:column;padding:12px 20px 18px;gap:8px}
+  .site-header .lang-switch.mobile{margin:8px 0 0}
+  .site-footer{padding:24px 20px 30px;text-align:center;color:rgba(255,255,255,.66);font-size:.92rem;background:#000;border-top:1px solid rgba(255,255,255,.1)}
+  .site-footer a{text-decoration:none;color:rgba(255,255,255,.66)}
+  @media (max-width:900px){
+    .site-header .nav-desktop,.site-header .lang-switch.nav-desktop{display:none}
+    .site-header .nav-toggle{display:block}
+  }
+</style>
+
 </head>
 <body style="min-height: 100vh; display: flex; flex-direction: column;">
   <header class="site-header">
@@ -310,7 +338,7 @@
     </div>
   </section>
 
-  <footer>
+  <footer class="site-footer">
   © AbiCybernetics – Trademark&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html">Politica de confidențialitate</a>
 </footer>
 
