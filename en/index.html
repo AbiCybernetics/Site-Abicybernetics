@@ -6,8 +6,8 @@
   <title>AbiCybernetics | Futuristic exoskeleton mobility platform</title>
   <meta name="description" content="AbiCybernetics presents a premium lower-body exoskeleton platform with modular engineering, adaptive mobility support, and worldwide onboarding."/>
   <meta name="robots" content="index,follow,max-image-preview:large"/>
-  <link rel="canonical" href="https://abicybernetics.com/en/index.html"/>
-  <link rel="alternate" hreflang="en" href="https://abicybernetics.com/en/index.html"/>
+  <link rel="canonical" href="https://abicybernetics.com/"/>
+  <link rel="alternate" hreflang="en" href="https://abicybernetics.com/"/>
   <link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/index.html"/>
   <link rel="alternate" hreflang="x-default" href="https://abicybernetics.com/"/>
   <meta property="og:type" content="website"/>
@@ -106,47 +106,35 @@
     .lang-switch.mobile{margin:8px 0 0}
 
     .hero{position:relative;min-height:78vh;display:flex;align-items:center;overflow:hidden;background:#000}
-    .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;z-index:0;filter:brightness(1.1)}
-    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.3) 40%,rgba(0,0,0,.1) 70%,rgba(0,0,0,0) 100%)}
+    .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;z-index:0}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.55) 42%,rgba(0,0,0,.68) 100%)}
     .hero-inner{position:relative;z-index:1;width:min(var(--max),calc(100vw - 40px));margin:0 auto;padding:88px 0 80px}
     .hero-copy{max-width:680px}
     .eyebrow{display:inline-block;margin-bottom:16px;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72)}
-    .hero h1{margin:0;font-family:'Poppins',sans-serif;font-size:clamp(2.8rem,7vw,5rem);line-height:1.02;font-weight:600;max-width:10ch}
+    .hero h1{margin:0 0 18px;font-family:'Poppins',sans-serif;font-size:clamp(2.8rem,7vw,5rem);line-height:1.02}
+    .hero p{margin:0;max-width:58ch;font-size:1.05rem;line-height:1.75;color:rgba(255,255,255,.82)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
     .btn,.btn-secondary{display:inline-flex;align-items:center;justify-content:center;padding:13px 28px;border-radius:999px;text-decoration:none;font-weight:700}
     .btn{border:1px solid #fff;color:#000;background:#fff}
     .btn-secondary{border:1px solid rgba(255,255,255,.22);color:#fff;background:rgba(255,255,255,.04)}
+    .hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px;max-width:880px}
+    .hero-stat{padding:18px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);border-radius:0;backdrop-filter:blur(4px)}
+    .hero-stat strong{display:block;font-size:1.35rem;font-family:'Poppins',sans-serif;color:var(--white)}
+    .hero-stat span{display:block;margin-top:8px;color:rgba(255,255,255,.72);line-height:1.6;font-size:.92rem}
 
-    main{padding:10px 0 96px;display:grid;gap:30px}
-    main > section{position:relative}
-    main > section + section::before{
-      content:"";
-      position:absolute;
-      left:50%;
-      top:-15px;
-      width:min(var(--max),calc(100vw - 88px));
-      height:1px;
-      transform:translateX(-50%);
-      background:linear-gradient(90deg,transparent 0%,rgba(38,132,255,.16) 20%,rgba(59,153,252,.92) 50%,rgba(38,132,255,.16) 80%,transparent 100%);
-      background-size:200% 100%;
-      animation:section-line-ltr 4.8s ease-in-out infinite;
-      box-shadow:0 0 10px rgba(59,153,252,.35);
-      pointer-events:none;
-    }
-    main > section:nth-of-type(even)::before{animation-name:section-line-rtl}
-    .content-band{background:var(--surface);color:var(--text);padding:92px 0}
+    main{padding:0 0 80px}
+    .content-band{background:var(--surface);color:var(--text);padding:84px 0}
     .content-band.alt{background:var(--surface-alt)}
     .content-band.muted{background:var(--surface-muted)}
     .section-inner{width:min(var(--max),calc(100vw - 40px));margin:0 auto}
     .intro{display:grid;gap:28px;max-width:920px}
     .intro h2,.split-copy h2,.closing h2{margin:0;font-family:'Poppins',sans-serif;font-size:clamp(2rem,4vw,3.3rem);line-height:1.08}
     .intro p,.split-copy p,.split-copy li,.closing p,.feature-card p{margin:0;color:var(--muted);line-height:1.78;font-size:1rem}
-    .specs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .spec-card{padding:22px;border-radius:0;border:1px solid var(--line);background:rgba(255,255,255,.55)}
-    .spec-card strong{display:block;font-size:1.3rem;font-family:'Poppins',sans-serif;color:var(--text)}
-    .spec-card span{display:block;margin-top:8px;color:var(--muted);line-height:1.65;font-size:.96rem}
+    .intro-figure{margin-top:10px;max-width:540px}
+    .intro-figure img{width:100%;object-fit:cover}
 
     .split-section{padding:0}
-    .split-grid{display:grid;grid-template-columns:minmax(280px,.95fr) minmax(320px,1.05fr);align-items:center;gap:120px}
+    .split-grid{display:grid;grid-template-columns:minmax(280px,.95fr) minmax(320px,1.05fr);align-items:center;gap:72px}
     .split-grid.reverse{grid-template-columns:minmax(320px,1.05fr) minmax(280px,.95fr)}
     .split-media img,.split-media video{width:100%;object-fit:cover;background:#ddd;border-radius:0}
     .split-copy{display:grid;gap:18px}
@@ -154,10 +142,24 @@
     .note{font-size:.92rem;color:#666}
     .section-tag{display:inline-block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#666;margin-bottom:2px}
     .feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:8px}
-    .feature-card{padding:18px;border-radius:0;border:1px solid var(--line);background:rgba(255,255,255,.55)}
-    .feature-card h3{margin:0 0 8px;font-family:'Poppins',sans-serif;font-size:1.08rem;line-height:1.25;color:var(--text)}
+    .feature-card,.funnel-card,.review-card,.contact-card,.faq-item{padding:18px;border-radius:0;border:1px solid var(--line);background:rgba(255,255,255,.55)}
+    .feature-card h3,.funnel-card h3,.review-card h3,.contact-card h3{margin:0 0 8px;font-family:'Poppins',sans-serif;font-size:1.08rem;line-height:1.25;color:var(--text)}
+    .funnel-grid,.review-grid,.contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:24px}
+    .funnel-card p,.review-card p,.contact-card p,.faq-item p{margin:0;color:var(--muted);line-height:1.72}
+    .review-card strong{display:block;margin-bottom:8px;font-size:1rem;color:var(--text)}
+    .review-meta{display:block;margin-top:14px;font-size:.92rem;color:#666}
+    .faq-list{display:grid;gap:14px;margin-top:24px}
+    .faq-item summary{cursor:pointer;list-style:none;font-weight:700;color:var(--text);display:flex;justify-content:space-between;gap:12px;align-items:center}
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-item summary::after{content:'+';font-size:1.4rem;line-height:1;color:#666}
+    .faq-item[open] summary::after{content:'−'}
+    .faq-item p{margin-top:14px}
+    .contact-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}
+    .contact-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px}
+    .contact-list{display:grid;gap:14px}
+    .contact-list a{text-decoration:none;font-weight:700;color:var(--text)}
 
-    .cta{background:#000;color:#fff;padding:72px 20px 80px;text-align:center;border-top:1px solid rgba(255,255,255,.1)}
+    .cta{background:#000;color:#fff;padding:64px 20px 72px;text-align:center;border-top:1px solid rgba(255,255,255,.1)}
     .cta p{margin:0 0 18px;font-size:1.1rem;line-height:1.7;color:rgba(255,255,255,.8)}
     footer{padding:24px 20px 30px;text-align:center;color:rgba(255,255,255,.66);font-size:.92rem;background:#000}
     footer a{text-decoration:none;color:rgba(255,255,255,.66)}
@@ -165,31 +167,16 @@
     .cookie-banner p{flex:1 1 300px;color:rgba(244,246,248,.82);line-height:1.65;font-size:.95rem}
     .cookie-banner button{padding:12px 18px;border:0;border-radius:999px;background:var(--white);color:#111;font-weight:800;cursor:pointer}
 
-    @keyframes section-line-ltr{
-      0%{background-position:200% 50%;opacity:.45}
-      50%{background-position:100% 50%;opacity:1}
-      100%{background-position:0% 50%;opacity:.45}
-    }
-    @keyframes section-line-rtl{
-      0%{background-position:0% 50%;opacity:.45}
-      50%{background-position:100% 50%;opacity:1}
-      100%{background-position:200% 50%;opacity:.45}
-    }
-
     @media (max-width:900px){
       .nav-desktop,.lang-switch.nav-desktop{display:none}
       .nav-toggle{display:block}
       .hero{min-height:66vh}
       .hero-inner{padding:72px 0 64px}
-      main{gap:24px;padding:24px 0 88px}
-      main > section + section::before{top:-12px;width:calc(100vw - 56px)}
-      .content-band{padding:68px 0}
-      .split-grid,.split-grid.reverse,.feature-grid,.specs-grid{grid-template-columns:1fr}
+      .content-band{padding:60px 0}
+      .split-grid,.split-grid.reverse,.hero-stats,.feature-grid,.funnel-grid,.review-grid,.contact-grid{grid-template-columns:1fr}
     }
     @media (max-width:640px){
       .site-header{padding:12px 16px}
-      main{gap:20px;padding:20px 0 80px}
-      main > section + section::before{top:-10px;width:calc(100vw - 40px)}
       .hero-inner,.section-inner{width:calc(100vw - 28px)}
       .hero h1{font-size:clamp(2.3rem,11vw,3.3rem)}
       .intro p,.split-copy p,.split-copy li,.closing p,.hero p,.feature-card p{font-size:.97rem}
@@ -258,8 +245,18 @@
   </video>
   <div class="hero-inner">
     <div class="hero-copy">
-      <span class="eyebrow">Abi exoskeleton</span>
-      <h1>Walking made easy.</h1>
+      <span class="eyebrow">Abi exoskeleton platform</span>
+      <h1>Walking. Made easy.</h1>
+      <p>More than technology — we believe in your freedom, strength, and possibilities with one compact, modular system. Designed to fit your body and your vision, Abi empowers explorers, innovators, and everyday pioneers to move beyond limitations.</p>
+      <div class="hero-actions">
+        <a href="order.html" class="btn">Order now</a>
+        <a href="#experience" class="btn-secondary">Explore features</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>150–190 cm</strong><span>Comfortably adjusts to a wide range of users, heights, and needs.</span></div>
+        <div class="hero-stat"><strong>Up to 5 hrs</strong><span>Walk up to 2 hours continuously or up to 5 hours with breaks.</span></div>
+        <div class="hero-stat"><strong>Global</strong><span>Worldwide shipping with remote installation support and a dedicated engineer.</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -268,15 +265,13 @@
   <section class="content-band alt" id="experience">
     <div class="section-inner intro">
       <div>
-        <span class="section-tag">Specifications</span>
-        <h2>Everything for your needs.</h2>
+        <span class="section-tag">Mobility redefined</span>
+        <h2>Mobility means freedom.</h2>
       </div>
-      <p>You can now order a fully functional lower-body exoskeleton delivered directly to your doorstep. You can request in person or remote support for the initial setup, with real-time cutting edge updates.</p>
-      <div class="specs-grid">
-        <article class="spec-card"><strong>160–190 cm up to 120 kg</strong><span>Comfortably adjusts to a wide range of users, heights, and needs.</span></article>
-        <article class="spec-card"><strong>Smart battery</strong><span>Walk continuously with interchangable battery.</span></article>
-        <article class="spec-card"><strong>Global service</strong><span>Worldwide shipping with remote installation support and a dedicated engineer.</span></article>
-      </div>
+      <p>For the first time, you can order a fully functional lower-body exoskeleton delivered directly to your home, clinic, or research lab. Our team will be with you at every step, providing real-time updates, virtual setup assistance, and clear answers to any technical or practical questions you may have.</p>
+      <figure class="intro-figure">
+        <img src="/assets/images/mobility%20suport.JPG" alt="Standing up with the exoskeleton">
+      </figure>
     </div>
   </section>
 
@@ -287,10 +282,10 @@
       </div>
       <div class="split-copy">
         <span class="section-tag">Compact modular system</span>
-        <h2>Built for freedom of movement.</h2>
-        <p>Human centered design through a compact, portable, and adaptable system for a wide range of users and use cases.</p>
+        <h2>Built for freedom, research, and everyday exploration.</h2>
+        <p>Abi combines modular engineering with human-centered design to create a lower-body exoskeleton that is compact, portable, and adaptable for a wide range of users and use cases.</p>
         <ul>
-          <li><strong>Human-centered fit</strong> – fine adjustments of walk patterns, joint positions, segment lengths, and alignment angles help adapt the system to individual anatomical differences.</li>
+          <li><strong>Human-centered fit</strong> – fine adjustments of joint positions, segment lengths, and alignment angles help adapt the system to individual anatomical differences.</li>
           <li><strong>Portable by design</strong> – a compact full-body system that is modular, portable, easy to carry, and fast to wear.</li>
           <li><strong>Designed for pioneers</strong> – created for early adopters, researchers, and innovators who want to explore movement and test new technologies.</li>
         </ul>
@@ -302,8 +297,8 @@
     <div class="section-inner split-grid reverse">
       <div class="split-copy">
         <span class="section-tag">Intelligence at core</span>
-        <h2>Easy to carry and use</h2>
-        <p>Designed for daily usage, the device is designed modular so it can be easily transported and equipped.</p>
+        <h2>Precision-ready sensor integration.</h2>
+        <p>Designed for versatility, the system supports EEG, EMG, force, gyroscope, laser, and more, allowing tailored detection capabilities for individual requirements and evolving goals.</p>
         <div class="feature-grid">
           <article class="feature-card">
             <h3>Extended battery life</h3>
@@ -312,6 +307,10 @@
           <article class="feature-card">
             <h3>Rapid setup</h3>
             <p>Every component is designed to snap easily into place with no tools or tangled cables.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Open firmware &amp; SDK</h3>
+            <p>Open architecture makes rapid customization and experimentation possible.</p>
           </article>
           <article class="feature-card">
             <h3>Dedicated support</h3>
@@ -325,23 +324,130 @@
     </div>
   </section>
 
-<section class="content-band muted split-section" id="why-abi">
-  <div class="section-inner split-grid">
-
-    <div class="split-copy closing">
-      <span class="section-tag">Why Abi</span>
-      <h2>A clear path from interest to movement.</h2>
-      <p>This is not a certified medical device. It is an open, continuously evolving system for personal use by early adopters, technology enthusiasts, and people who want to be part of the development process.</p>
-      <p>Abi is an evolving exoskeleton platform built for pioneers who want to help shape the future of mobility, research, and wearable robotics.</p>
-      <p><strong>Delivery time:</strong> approximately 12 weeks from order to shipment. <strong>Remote onboarding:</strong> included. <strong>Worldwide support:</strong> available.</p>
+  <section class="content-band muted split-section" id="why-abi">
+    <div class="section-inner split-grid">
+      <div class="split-media">
+        <img src="/assets/images/Exoskeleton%20detail%202.png" alt="Abi exoskeleton structural detail">
+      </div>
+      <div class="split-copy closing">
+        <span class="section-tag">Why Abi</span>
+        <h2>A clear path from interest to movement.</h2>
+        <p>This is not a certified medical device. It is an open, continuously evolving system for personal use by early adopters, technology enthusiasts, and people who want to be part of the development process.</p>
+        <p>Abi is an evolving exoskeleton platform built for pioneers who want to help shape the future of mobility, research, and wearable robotics.</p>
+        <p><strong>Delivery time:</strong> approximately 12 weeks from order to shipment. <strong>Remote onboarding:</strong> included. <strong>Worldwide support:</strong> available.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="split-media">
-      <img src="/assets/images/Exoskeleton%20detail%202.png" alt="Abi exoskeleton structural detail">
+  <section class="content-band alt" id="details">
+    <div class="section-inner intro">
+      <div>
+        <span class="section-tag">Request more details</span>
+        <h2>Get the exact answers you need before you move forward.</h2>
+      </div>
+      <p>Whether you want technical specs, delivery clarity, onboarding information, or a quick orientation call, we can guide you toward the right next step.</p>
+      <div class="funnel-grid">
+        <article class="funnel-card">
+          <h3>For personal use</h3>
+          <p>Learn how fitting, onboarding, support, and day-to-day use work for your routine.</p>
+        </article>
+        <article class="funnel-card">
+          <h3>For clinics &amp; labs</h3>
+          <p>Request a clearer overview of deployment, logistics, and collaboration options for your team.</p>
+        </article>
+        <article class="funnel-card">
+          <h3>For early adopters</h3>
+          <p>See how Abi supports research, testing, and feedback loops for wearable robotics pioneers.</p>
+        </article>
+      </div>
+      <div class="contact-actions">
+        <a href="mailto:office@abicybernetics.com?subject=Request%20more%20details%20about%20Abi" class="btn">Request more details</a>
+        <a href="https://wa.me/40728044104" class="btn-secondary" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <section class="content-band muted" id="reviews">
+    <div class="section-inner intro">
+      <div>
+        <span class="section-tag">Reviews</span>
+        <h2>What people value in the Abi experience.</h2>
+      </div>
+      <p>These review-style highlights summarize the feedback themes we want visitors to understand quickly: support, adaptability, and confidence during onboarding.</p>
+      <div class="review-grid">
+        <article class="review-card">
+          <strong>"Clear support from the first conversation."</strong>
+          <p>Visitors need to feel that they will not be left alone after ordering. Abi emphasizes direct guidance and practical answers.</p>
+          <span class="review-meta">Support-driven onboarding</span>
+        </article>
+        <article class="review-card">
+          <strong>"The platform feels built for real-world adaptation."</strong>
+          <p>Modularity, fit adjustments, and open architecture help the system feel relevant for individuals, clinics, and research environments.</p>
+          <span class="review-meta">Adaptability &amp; flexibility</span>
+        </article>
+        <article class="review-card">
+          <strong>"Fast contact options make the next step easier."</strong>
+          <p>Easy access to email and WhatsApp reduces friction and turns curiosity into real conversations with the team.</p>
+          <span class="review-meta">Low-friction conversion path</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-band alt" id="faq">
+    <div class="section-inner intro">
+      <div>
+        <span class="section-tag">FAQ</span>
+        <h2>Frequently asked questions before ordering.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Can I ask questions before placing an order?</summary>
+          <p>Yes. Use email or WhatsApp to request technical details, onboarding information, delivery estimates, or help identifying whether Abi fits your use case.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How long does delivery take?</summary>
+          <p>The current estimate shown on the homepage is approximately 12 weeks from order to shipment, with remote onboarding included.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is Abi a certified medical device?</summary>
+          <p>No. Abi is presented as an evolving open platform intended for personal use, early adopters, researchers, and technology enthusiasts.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How can I contact the team fastest?</summary>
+          <p>You can email <a href="mailto:office@abicybernetics.com">office@abicybernetics.com</a> or message the team directly on WhatsApp for a faster conversation.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-band muted" id="get-in-touch">
+    <div class="section-inner contact-grid">
+      <div class="split-copy closing">
+        <span class="section-tag">Get in touch</span>
+        <h2>Talk with AbiCybernetics directly.</h2>
+        <p>If you want to discuss pricing, product fit, onboarding, or partnership opportunities, contact us directly and we will help you choose the right next step.</p>
+        <div class="contact-actions">
+          <a href="mailto:office@abicybernetics.com?subject=Let%27s%20talk%20about%20Abi" class="btn">Email us</a>
+          <a href="https://wa.me/40728044104" class="btn-secondary" target="_blank" rel="noopener">Open WhatsApp</a>
+        </div>
+      </div>
+      <aside class="contact-card">
+        <h3>Direct contact</h3>
+        <div class="contact-list">
+          <div>
+            <strong>Email</strong><br>
+            <a href="mailto:office@abicybernetics.com">office@abicybernetics.com</a>
+          </div>
+          <div>
+            <strong>WhatsApp</strong><br>
+            <a href="https://wa.me/40728044104" target="_blank" rel="noopener">+40 728 044 104</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
 
 <section class="cta">
   <p>We believe in your freedom. Order a fully functional lower-body exoskeleton for your home, clinic, or lab, and build the future of movement together with our team.</p>
