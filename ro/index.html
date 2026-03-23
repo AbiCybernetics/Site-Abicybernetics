@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AbiCybernetics | Platformă de mobilitate cu exoschelet</title>
-  <meta name="description" content="AbiCybernetics prezintă o platformă premium de exoschelet pentru partea inferioară a corpului, cu inginerie modulară, suport adaptiv pentru mobilitate și onboarding global."/>
+  <title>AbiCybernetics | Platformă futuristă de mobilitate cu exoschelet</title>
+  <meta name="description" content="AbiCybernetics prezintă o platformă premium de exoschelet pentru partea inferioară a corpului, cu inginerie modulară, suport adaptiv pentru mobilitate și onboarding la nivel global."/>
   <meta name="robots" content="index,follow,max-image-preview:large"/>
   <link rel="canonical" href="https://abicybernetics.com/ro/index.html"/>
   <link rel="alternate" hreflang="en" href="https://abicybernetics.com/en/index.html"/>
   <link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/index.html"/>
   <link rel="alternate" hreflang="x-default" href="https://abicybernetics.com/"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:title" content="AbiCybernetics | Platformă de mobilitate cu exoschelet"/>
-  <meta property="og:description" content="Homepage-ul AbiCybernetics folosește acum același limbaj vizual premium ca pagina de produs, păstrând conținutul corect de homepage."/>
+  <meta property="og:title" content="AbiCybernetics | Platformă futuristă de mobilitate cu exoschelet"/>
+  <meta property="og:description" content="Descoperă homepage-ul AbiCybernetics în același limbaj vizual premium ca pagina de produs, păstrând povestea originală a homepage-ului."/>
   <meta property="og:url" content="https://abicybernetics.com/ro/index.html"/>
-  <meta property="og:image" content="https://abicybernetics.com/assets/video/banner-poster.jpg"/>
+  <meta property="og:image" content="https://abicybernetics.com/assets/video/banner-poster.JPG"/>
   <meta property="og:locale" content="ro_RO"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="AbiCybernetics | Platformă de mobilitate cu exoschelet"/>
-  <meta name="twitter:description" content="Homepage-ul AbiCybernetics folosește acum același limbaj vizual premium ca pagina de produs, păstrând conținutul corect de homepage."/>
-  <meta name="twitter:image" content="https://abicybernetics.com/assets/video/banner-poster.jpg"/>
+  <meta name="twitter:title" content="AbiCybernetics | Platformă futuristă de mobilitate cu exoschelet"/>
+  <meta name="twitter:description" content="Descoperă homepage-ul AbiCybernetics în același limbaj vizual premium ca pagina de produs, păstrând povestea originală a homepage-ului."/>
+  <meta name="twitter:image" content="https://abicybernetics.com/assets/video/banner-poster.JPG"/>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H52JMWTFJM"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -106,15 +106,23 @@
     .lang-switch.mobile{margin:8px 0 0}
 
     .hero{position:relative;min-height:78vh;display:flex;align-items:center;overflow:hidden;background:#000}
-    .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;z-index:0}
-    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.55) 42%,rgba(0,0,0,.68) 100%)}
+    .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;z-index:0;filter:brightness(.82) saturate(.92)}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.44) 0%,rgba(0,0,0,.24) 42%,rgba(0,0,0,.34) 100%)}
     .hero-inner{position:relative;z-index:1;width:min(var(--max),calc(100vw - 40px));margin:0 auto;padding:88px 0 80px}
     .hero-copy{max-width:680px}
-    .eyebrow{display:inline-block;margin-bottom:16px;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+    .eyebrow{display:inline-block;margin-bottom:16px;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.78)}
     .hero h1{margin:0;font-family:'Poppins',sans-serif;font-size:clamp(2.8rem,7vw,5rem);line-height:1.02;font-weight:600;max-width:10ch}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
     .btn,.btn-secondary{display:inline-flex;align-items:center;justify-content:center;padding:13px 28px;border-radius:999px;text-decoration:none;font-weight:700}
     .btn{border:1px solid #fff;color:#000;background:#fff}
     .btn-secondary{border:1px solid rgba(255,255,255,.22);color:#fff;background:rgba(255,255,255,.04)}
+    .specs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .spec-card{padding:22px;border-radius:0;border:1px solid var(--line);background:rgba(255,255,255,.55)}
+    .spec-card strong{display:block;font-size:1.3rem;font-family:'Poppins',sans-serif;color:var(--text)}
+    .spec-card span{display:block;margin-top:8px;color:var(--muted);line-height:1.65;font-size:.96rem}
+    .intro-actions{display:flex;flex-wrap:wrap;gap:14px}
+    .intro-actions .btn{border-color:#111;background:#111;color:#fff}
+    .intro-actions .btn-secondary{border:1px solid rgba(17,17,17,.16);background:transparent;color:#111}
 
     main{padding:0 0 80px}
     .content-band{background:var(--surface);color:var(--text);padding:84px 0}
@@ -124,10 +132,8 @@
     .intro{display:grid;gap:28px;max-width:920px}
     .intro h2,.split-copy h2,.closing h2{margin:0;font-family:'Poppins',sans-serif;font-size:clamp(2rem,4vw,3.3rem);line-height:1.08}
     .intro p,.split-copy p,.split-copy li,.closing p,.feature-card p{margin:0;color:var(--muted);line-height:1.78;font-size:1rem}
-    .specs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .spec-card{padding:22px;border-radius:0;border:1px solid var(--line);background:rgba(255,255,255,.55)}
-    .spec-card strong{display:block;font-size:1.3rem;font-family:'Poppins',sans-serif;color:var(--text)}
-    .spec-card span{display:block;margin-top:8px;color:var(--muted);line-height:1.65;font-size:.96rem}
+    .intro-figure{margin-top:10px;max-width:540px}
+    .intro-figure img{width:100%;object-fit:cover}
 
     .split-section{padding:0}
     .split-grid{display:grid;grid-template-columns:minmax(280px,.95fr) minmax(320px,1.05fr);align-items:center;gap:72px}
@@ -209,9 +215,9 @@
 </head>
 <body>
 <header class="site-header">
-  <a href="index.html" class="logo-link"><img src="/assets/icons/Logo abicybernetics.png" alt="AbiCybernetics Logo" style="height:50px" decoding="async"></a>
+  <a href="index.html" class="logo-link"><img src="/assets/icons/Logo abicybernetics.png" alt="Logo AbiCybernetics" style="height:50px" decoding="async"></a>
   <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false"><span></span><span></span><span></span></button>
-  <nav class="nav-desktop" aria-label="Navigație principală">
+  <nav class="nav-desktop" aria-label="Principală">
     <a href="index.html">Acasă</a>
     <a href="produs.html">Produs</a>
     <a href="investitori.html">Investitori</a>
@@ -222,7 +228,7 @@
     <a href="index.html" class="active-lang">RO</a>
   </div>
   <div class="nav-drawer" hidden>
-    <nav class="nav-mobile" aria-label="Meniu mobil">
+    <nav class="nav-mobile" aria-label="Mobil">
       <a href="index.html">Acasă</a>
       <a href="produs.html">Produs</a>
       <a href="investitori.html">Investitori</a>
@@ -241,8 +247,8 @@
   </video>
   <div class="hero-inner">
     <div class="hero-copy">
-      <span class="eyebrow">Abi exoskeleton</span>
-      <h1>Walking made easy.</h1>
+      <span class="eyebrow">Platforma de exoschelet Abi</span>
+      <h1>Mersul. Făcut ușor.</h1>
     </div>
   </div>
 </section>
@@ -251,15 +257,21 @@
   <section class="content-band alt" id="experienta">
     <div class="section-inner intro">
       <div>
-        <span class="section-tag">Specificații</span>
-        <h2>Tot ce contează, într-un singur loc.</h2>
+        <span class="section-tag">Mobilitate redefinită</span>
       </div>
-      <p>Pentru prima dată, poți comanda un exoschelet complet funcțional pentru partea inferioară a corpului, livrat direct acasă, într-o clinică sau într-un laborator de cercetare. Echipa noastră rămâne alături de tine la fiecare pas, cu actualizări în timp real, asistență virtuală la instalare și răspunsuri clare la întrebările tehnice sau practice.</p>
+      <p>Conceput pentru corpul tău și pentru viziunea ta, Abi oferă exploratorilor, inovatorilor și pionierilor de zi cu zi puterea de a depăși limitele cu un singur sistem compact și modular.</p>
+      <div class="intro-actions">
+        <a href="order.html" class="btn">Comandă acum</a>
+        <a href="#caracteristici" class="btn-secondary">Explorează caracteristicile</a>
+      </div>
       <div class="specs-grid">
-        <article class="spec-card"><strong>150–190 cm</strong><span>Se reglează confortabil pentru o plajă largă de utilizatori, înălțimi și nevoi.</span></article>
-        <article class="spec-card"><strong>Până la 5 ore</strong><span>Mers continuu de până la 2 ore sau până la 5 ore cu pauze.</span></article>
-        <article class="spec-card"><strong>Suport global</strong><span>Livrare internațională cu suport remote la instalare și inginer dedicat.</span></article>
+        <article class="spec-card"><strong>160–190 cm până la 120 kg</strong><span>Se ajustează confortabil pentru o gamă largă de utilizatori, înălțimi și nevoi.</span></article>
+        <article class="spec-card"><strong>Baterie inteligentă</strong><span>Baterie interschimbabilă, ca să poți merge cât de mult îți dorești.</span></article>
       </div>
+      <p>Pentru prima dată, poți comanda un exoschelet complet funcțional pentru partea inferioară a corpului, livrat direct acasă, într-o clinică sau într-un laborator de cercetare. Echipa noastră îți va fi alături la fiecare pas, cu actualizări în timp real, asistență virtuală la configurare și răspunsuri clare la orice întrebare tehnică sau practică.</p>
+      <figure class="intro-figure">
+        <img src="/assets/images/mobility%20suport.JPG" alt="Ridicare în picioare cu exoscheletul">
+      </figure>
     </div>
   </section>
 
@@ -270,44 +282,31 @@
       </div>
       <div class="split-copy">
         <span class="section-tag">Sistem modular compact</span>
-        <h2>Construit pentru libertate, cercetare și explorare de zi cu zi.</h2>
-        <p>Abi combină ingineria modulară cu un design centrat pe om pentru a crea un exoschelet compact, portabil și adaptabil pentru o gamă largă de utilizatori și scenarii reale.</p>
-        <ul>
-          <li><strong>Potrivire centrată pe utilizator</strong> – reglajele fine ale articulațiilor, segmentelor și alinierii ajută sistemul să se adapteze diferențelor anatomice.</li>
-          <li><strong>Portabil prin design</strong> – un sistem complet modular, ușor de transportat și rapid de echipat.</li>
-          <li><strong>Creat pentru pionieri</strong> – ideal pentru early adopters, cercetători și inovatori care vor să exploreze mișcarea și tehnologii noi.</li>
-        </ul>
+        <h2>Libertatea ta este ambiția noastră</h2>
+        <p>Design centrat pe om, compact, portabil și adaptabil pentru o gamă largă de utilizatori și scenarii de utilizare.</p>
       </div>
     </div>
   </section>
 
-  <section class="content-band alt split-section" id="capabilitati">
+  <section class="content-band alt split-section" id="caracteristici">
     <div class="section-inner split-grid reverse">
       <div class="split-copy">
-        <span class="section-tag">Inteligență la bază</span>
-        <h2>Integrare de senzori pregătită pentru precizie.</h2>
-        <p>Conceput pentru versatilitate, sistemul suportă EEG, EMG, senzori de forță, giroscop, laser și multe altele, astfel încât detecția și controlul să poată fi adaptate cerințelor reale și obiectivelor în evoluție.</p>
+        <span class="section-tag">Design inteligent</span>
+        <h2>Sistem snap</h2>
+        <p>Conceput pentru utilizare și transport ușor printr-un sistem de îmbinare rapidă.</p>
         <div class="feature-grid">
           <article class="feature-card">
-            <h3>Autonomie extinsă</h3>
-            <p>Bateria susține sesiuni lungi, iar schimbul rapid reduce întreruperile dintre activități.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Setup rapid</h3>
-            <p>Componentele sunt gândite să se fixeze rapid, fără unelte și fără cabluri încurcate.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Firmware open &amp; SDK</h3>
-            <p>Arhitectura deschisă face posibilă personalizarea și experimentarea rapidă.</p>
+            <h3>Baterie inteligentă</h3>
+            <p>Bucură-te de autonomie extinsă pentru utilizare pe parcursul întregii zile, cu schimburi rapide între sesiuni.</p>
           </article>
           <article class="feature-card">
             <h3>Suport dedicat</h3>
-            <p>Fiecare client primește ghidaj direct de la un inginer pentru instalare și utilizare.</p>
+            <p>Fiecărui client îi este alocat un inginer pentru ghidaj, configurare și suport practic.</p>
           </article>
         </div>
       </div>
       <div class="split-media">
-        <img src="/assets/images/Exoskeleton%20detail%204.png" alt="Detaliu al exoscheletului Abi">
+        <img src="/assets/images/Exoskeleton%20detail%203.png" alt="Detaliu al exoscheletului Abi">
       </div>
     </div>
   </section>
@@ -315,14 +314,13 @@
   <section class="content-band muted split-section" id="de-ce-abi">
     <div class="section-inner split-grid">
       <div class="split-media">
-        <img src="/assets/images/Exoskeleton%20detail%202.png" alt="Detaliu structural al exoscheletului Abi">
+        <img src="/assets/images/Exoskeleton%20detail%204.png" alt="Detaliu structural al exoscheletului Abi">
       </div>
       <div class="split-copy closing">
         <span class="section-tag">De ce Abi</span>
-        <h2>Un traseu clar de la interes la mișcare.</h2>
-        <p>Acesta nu este un dispozitiv medical certificat. Este un sistem deschis, aflat în continuă evoluție, pentru utilizare personală, early adopters, entuziaști ai tehnologiei și oameni care vor să facă parte din procesul de dezvoltare.</p>
-        <p>Abi este o platformă de exoschelet în evoluție, construită pentru pionierii care vor să contribuie la viitorul mobilității, cercetării și roboticii purtabile.</p>
-        <p><strong>Timp de livrare:</strong> aproximativ 12 săptămâni de la comandă la expediere. <strong>Onboarding remote:</strong> inclus. <strong>Suport internațional:</strong> disponibil.</p>
+        <h2>Accesibil și bun</h2>
+        <h2>31.000 $</h2>
+        <p>Ideal pentru early adopters și entuziaști ai tehnologiei.</p>
       </div>
     </div>
   </section>
@@ -331,13 +329,13 @@
     <div class="section-inner intro">
       <div>
         <span class="section-tag">Cere mai multe detalii</span>
-        <h2>Primește răspunsurile potrivite înainte să mergi mai departe.</h2>
+        <h2>Primește răspunsurile exacte de care ai nevoie înainte să mergi mai departe.</h2>
       </div>
-      <p>Dacă vrei clarificări despre specificații, livrare, onboarding sau compatibilitate, echipa noastră te poate ghida rapid spre următorul pas potrivit.</p>
+      <p>Fie că vrei specificații tehnice, claritate despre livrare, informații despre onboarding sau un scurt apel de orientare, te putem ghida către următorul pas potrivit.</p>
       <div class="funnel-grid">
         <article class="funnel-card">
           <h3>Pentru uz personal</h3>
-          <p>Află cum funcționează potrivirea, instalarea, suportul și utilizarea zilnică pentru rutina ta.</p>
+          <p>Află cum funcționează potrivirea, onboardingul, suportul și utilizarea de zi cu zi pentru rutina ta.</p>
         </article>
         <article class="funnel-card">
           <h3>Pentru clinici &amp; laboratoare</h3>
@@ -345,7 +343,7 @@
         </article>
         <article class="funnel-card">
           <h3>Pentru early adopters</h3>
-          <p>Vezi cum Abi susține cercetarea, testarea și feedback-ul continuu pentru pionierii roboticii purtabile.</p>
+          <p>Vezi cum Abi susține cercetarea, testarea și ciclurile de feedback pentru pionierii roboticii purtabile.</p>
         </article>
       </div>
       <div class="contact-actions">
@@ -358,25 +356,25 @@
   <section class="content-band muted" id="review-uri">
     <div class="section-inner intro">
       <div>
-        <span class="section-tag">Review-uri</span>
+        <span class="section-tag">Recenzii</span>
         <h2>Ce apreciază oamenii în experiența Abi.</h2>
       </div>
-      <p>Aceste mesaje de tip review evidențiază rapid ceea ce contează într-un funnel bun: suport clar, adaptabilitate și încredere în onboarding.</p>
+      <p>Aceste evidențieri în stil recenzie rezumă temele de feedback pe care vrem ca vizitatorii să le înțeleagă rapid: suport, adaptabilitate și încredere în timpul onboardingului.</p>
       <div class="review-grid">
         <article class="review-card">
-          <strong>"Suport clar încă de la prima conversație."</strong>
-          <p>Vizitatorii trebuie să simtă că nu rămân singuri după comandă. Abi pune accent pe ghidaj direct și răspunsuri practice.</p>
+          <strong>„Suport clar încă de la prima conversație.”</strong>
+          <p>Vizitatorii trebuie să simtă că nu vor fi lăsați singuri după comandă. Abi pune accent pe ghidaj direct și răspunsuri practice.</p>
           <span class="review-meta">Onboarding orientat pe suport</span>
         </article>
         <article class="review-card">
-          <strong>"Platforma pare construită pentru adaptare reală."</strong>
-          <p>Modularitatea, reglajele și arhitectura deschisă fac sistemul relevant pentru utilizatori individuali, clinici și medii de cercetare.</p>
-          <span class="review-meta">Adaptabilitate &amp; flexibilitate</span>
+          <strong>„Platforma pare construită pentru adaptare în lumea reală.”</strong>
+          <p>Modularitatea, reglajele de potrivire și arhitectura deschisă fac ca sistemul să fie relevant pentru persoane, clinici și medii de cercetare.</p>
+          <span class="review-meta">Adaptabilitate și flexibilitate</span>
         </article>
         <article class="review-card">
-          <strong>"Opțiunile rapide de contact fac pasul următor mult mai ușor."</strong>
-          <p>Accesul direct la email și WhatsApp reduce fricțiunea și transformă interesul în conversații reale cu echipa.</p>
-          <span class="review-meta">Traseu de conversie fără fricțiune</span>
+          <strong>„Opțiunile rapide de contact fac pasul următor mai ușor.”</strong>
+          <p>Accesul simplu la email și WhatsApp reduce fricțiunea și transformă curiozitatea în conversații reale cu echipa.</p>
+          <span class="review-meta">Traseu de conversie cu fricțiune redusă</span>
         </article>
       </div>
     </div>
@@ -390,20 +388,20 @@
       </div>
       <div class="faq-list">
         <details class="faq-item">
-          <summary>Pot cere informații înainte să plasez o comandă?</summary>
-          <p>Da. Poți folosi emailul sau WhatsApp pentru detalii tehnice, onboarding, estimări de livrare sau pentru a verifica dacă Abi se potrivește scenariului tău.</p>
+          <summary>Pot pune întrebări înainte să plasez o comandă?</summary>
+          <p>Da. Folosește emailul sau WhatsApp pentru a cere detalii tehnice, informații despre onboarding, estimări de livrare sau ajutor pentru a identifica dacă Abi se potrivește scenariului tău.</p>
         </details>
         <details class="faq-item">
           <summary>Cât durează livrarea?</summary>
-          <p>Estimarea curentă afișată pe homepage este de aproximativ 12 săptămâni de la comandă la expediere, cu onboarding remote inclus.</p>
+          <p>Estimarea curentă afișată pe homepage este de aproximativ 12 săptămâni de la comandă până la expediere, cu onboarding remote inclus.</p>
         </details>
         <details class="faq-item">
           <summary>Abi este un dispozitiv medical certificat?</summary>
-          <p>Nu. Abi este prezentat ca o platformă deschisă, în evoluție, destinată utilizării personale, early adopters, cercetătorilor și pasionaților de tehnologie.</p>
+          <p>Nu. Abi este prezentat ca o platformă deschisă, în evoluție, destinată utilizării personale, early adopters, cercetătorilor și entuziaștilor de tehnologie.</p>
         </details>
         <details class="faq-item">
-          <summary>Cum contactez echipa cel mai rapid?</summary>
-          <p>Poți trimite email la <a href="mailto:office@abicybernetics.com">office@abicybernetics.com</a> sau poți scrie direct pe WhatsApp pentru o conversație mai rapidă.</p>
+          <summary>Cum pot contacta echipa cel mai rapid?</summary>
+          <p>Poți trimite email la <a href="mailto:office@abicybernetics.com">office@abicybernetics.com</a> sau poți scrie direct echipei pe WhatsApp pentru o conversație mai rapidă.</p>
         </details>
       </div>
     </div>
@@ -412,16 +410,16 @@
   <section class="content-band muted" id="contact">
     <div class="section-inner contact-grid">
       <div class="split-copy closing">
-        <span class="section-tag">Ia legătura</span>
-        <h2>Vorbește direct cu echipa AbiCybernetics.</h2>
-        <p>Dacă vrei să discuți despre preț, potrivirea produsului, onboarding sau oportunități de parteneriat, contactează-ne direct și te ajutăm cu următorul pas.</p>
+        <span class="section-tag">Ia legătura cu noi</span>
+        <h2>Vorbește direct cu noi.</h2>
+        <p>Dacă vrei să discuți despre preț, potrivirea produsului, onboarding sau oportunități de parteneriat, contactează-ne direct și te vom ajuta să alegi următorul pas potrivit.</p>
         <div class="contact-actions">
-          <a href="mailto:office@abicybernetics.com?subject=Hai%20sa%20vorbim%20despre%20Abi" class="btn">Trimite email</a>
+          <a href="mailto:office@abicybernetics.com?subject=Hai%20s%C4%83%20vorbim%20despre%20Abi" class="btn">Trimite-ne email</a>
           <a href="https://wa.me/40728044104" class="btn-secondary" target="_blank" rel="noopener">Deschide WhatsApp</a>
         </div>
       </div>
       <aside class="contact-card">
-        <h3>Date de contact</h3>
+        <h3>Contact direct</h3>
         <div class="contact-list">
           <div>
             <strong>Email</strong><br>
@@ -438,7 +436,7 @@
 </main>
 
 <section class="cta">
-  <p>Credem în libertatea ta. Comandă un exoschelet complet funcțional pentru acasă, clinică sau laborator și construiește alături de echipa noastră viitorul mișcării.</p>
+  <p>Credem în libertatea ta. Comandă un exoschelet complet funcțional pentru partea inferioară a corpului pentru acasă, clinică sau laborator și construiește alături de echipa noastră viitorul mișcării.</p>
   <a href="order.html" class="btn">Comandă acum</a>
 </section>
 
@@ -447,8 +445,8 @@
 </footer>
 
 <div id="scb" class="cookie-banner" role="alert">
-  <p>Continuând să folosești site-ul nostru, ești de acord cu utilizarea cookie-urilor pentru a îmbunătăți navigarea, a analiza traficul și a susține eforturile noastre de marketing.</p>
-  <button id="scb-btn">Accept</button>
+  <p>Continuând să folosești site-ul nostru, ești de acord cu utilizarea cookie-urilor pentru a îmbunătăți navigarea, a analiza utilizarea site-ului și a susține eforturile noastre de marketing.</p>
+  <button id="scb-btn">Acceptă</button>
 </div>
 
 <script>
