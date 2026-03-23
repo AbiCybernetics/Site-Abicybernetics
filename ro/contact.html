@@ -60,21 +60,37 @@
       padding: 0;
     }
 
-    body, html {
-      font-family: 'Segoe UI', sans-serif;
-      background: url('/assets/images/DSCN6670-2-scaled.jpg') no-repeat center center fixed;
+    :root {
+      --surface: rgba(8, 12, 20, 0.78);
+      --surface-strong: rgba(9, 14, 24, 0.92);
+      --line: rgba(255, 255, 255, 0.14);
+      --text: #f4f7fb;
+      --muted: rgba(244, 247, 251, 0.78);
+      --accent: #6fd3ff;
+      --accent-strong: #2ab5f7;
+      --shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      background:
+        linear-gradient(135deg, rgba(6, 10, 18, 0.88), rgba(7, 32, 56, 0.72)),
+        url('/assets/images/DSCN6670-2-scaled.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: white;
+      color: var(--text);
     }
 
     body::before {
       content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(3, 7, 14, 0.18), rgba(3, 7, 14, 0.62));
       z-index: 0;
+      pointer-events: none;
     }
 
     body > * {
@@ -82,117 +98,351 @@
       z-index: 1;
     }
 
-    header {
-      width: 100%;
-      background-color: white;
-      padding: 10px 20px;
-      display: flex;
+    .page-shell {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 80px;
+    }
+
+    .hero-panel,
+    .contact-card,
+    .map-panel,
+    .trust-panel,
+    .contact-box,
+    .info-tile {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .hero-panel {
+      border-radius: 28px;
+      padding: 48px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+      gap: 28px;
+      align-items: start;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
       align-items: center;
-      justify-content: flex-start;
-      position: relative;
-      z-index: 10;
-      border-bottom: 1px solid #ccc;
+      gap: 10px;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+      font-weight: 600;
     }
 
-    .logo-link img {
-      height: 50px;
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.7;
     }
 
-    nav {
-      margin-left: auto;
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      margin-bottom: 18px;
+      max-width: 12ch;
     }
 
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
+    .hero-copy p,
+    .trust-panel p,
+    .contact-card p,
+    .contact-box p,
+    .info-tile p,
+    .map-copy p {
+      color: var(--muted);
+      line-height: 1.72;
+      font-size: 1rem;
     }
 
-    .contact-section {
+    .hero-lead {
+      max-width: 60ch;
+      margin-bottom: 26px;
+    }
+
+    .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 30px 10px;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .btn,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       gap: 10px;
-      max-width: 1200px;
-      margin: auto;
-      width: 100%;
+      border-radius: 999px;
+      padding: 14px 22px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
 
-    .contact-info {
-      flex: 1;
-      min-width: 300px;
-      max-width: 48%;
+    .btn {
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #03111b;
+      box-shadow: 0 18px 34px rgba(42, 181, 247, 0.28);
     }
 
-    .contact-info h2 {
-      margin-bottom: 20px;
-      color: white;
-      text-align: left;
+    .btn-secondary {
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.04);
     }
 
-    .contact-info p {
+    .btn:hover,
+    .btn-secondary:hover {
+      transform: translateY(-1px);
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .metric {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.55rem;
+      margin-bottom: 8px;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 16px;
+    }
+
+    .info-tile {
+      border-radius: 24px;
+      padding: 24px;
+    }
+
+    .info-tile h2,
+    .trust-panel h2,
+    .contact-card h2,
+    .map-copy h2 {
+      font-size: 1.28rem;
       margin-bottom: 12px;
-      color: white;
-      text-align: left;
-      font-size: 1.1em;
     }
 
-    .contact-info a {
-      color: white;
-      text-decoration: underline;
+    .info-tile ul,
+    .trust-list,
+    .department-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
     }
 
-    .map-container {
-      flex: 1;
-      min-width: 300px;
-      max-width: 48%;
+    .info-tile li,
+    .trust-list li,
+    .department-list li {
+      color: var(--muted);
+      line-height: 1.6;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .info-tile li::before,
+    .trust-list li::before,
+    .department-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .contact-card,
+    .map-panel,
+    .trust-panel {
+      border-radius: 28px;
+      padding: 32px;
+    }
+
+    .contact-card {
+      display: grid;
+      gap: 24px;
+    }
+
+    .contact-box {
+      border-radius: 22px;
+      padding: 22px;
+      background: var(--surface-strong);
+    }
+
+    .contact-box .label {
+      display: inline-block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .contact-box a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .contact-box .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 6px 0 10px;
+      word-break: break-word;
+    }
+
+    .contact-box .small-note {
+      font-size: 0.94rem;
+      color: rgba(244, 247, 251, 0.68);
+    }
+
+    .department-list strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .map-panel {
+      display: grid;
+      gap: 20px;
+    }
+
+    .map-frame {
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      min-height: 340px;
     }
 
     iframe {
       width: 100%;
-      height: 300px;
-      border: 2px solid white;
-      border-radius: 10px;
+      height: 100%;
+      min-height: 340px;
+      border: 0;
+      display: block;
+    }
+
+    .map-copy {
+      display: grid;
+      gap: 12px;
+    }
+
+    .office-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .office-meta span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .trust-panel {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 28px;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .trust-grid .info-tile {
+      min-height: 100%;
     }
 
     footer {
-      background: white;
+      background: rgba(0, 0, 0, 0.9);
       text-align: center;
       padding: 20px;
-      color: #666;
+      color: #c8d0d7;
       font-size: 0.9em;
-      border-top: 1px solid #ccc;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
       margin-top: auto;
     }
 
-    @media (max-width: 768px) {
-      .contact-section {
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 10px;
+    @media (max-width: 1024px) {
+      .hero-panel,
+      .contact-layout,
+      .trust-panel {
+        grid-template-columns: 1fr;
       }
 
-      .contact-info, .map-container {
-        width: 100%;
-        max-width: 100%;
-        text-align: center;
-      }
-
-      .contact-info h2, .contact-info p {
-        text-align: center;
+      .hero-panel,
+      .contact-card,
+      .map-panel,
+      .trust-panel {
+        padding: 28px;
       }
     }
-    
-  
-    .lang-switch{margin-left:16px; display:flex; align-items:center; gap:8px; font-weight:600}
-    .lang-switch a{color:#333; text-decoration:none; padding:6px 10px; border:1px solid #ddd; border-radius:10px}
-    .lang-switch a.active-lang{background:#000; color:#fff; border-color:#000}
-    @media(max-width:600px){ .lang-switch a{padding:6px 8px;font-size:.9rem} }
-    
-</style>
+
+    @media (max-width: 768px) {
+      .page-shell {
+        width: min(100% - 20px, 1180px);
+        padding: 24px 0 56px;
+      }
+
+      .hero-panel,
+      .contact-card,
+      .map-panel,
+      .trust-panel,
+      .info-tile {
+        border-radius: 22px;
+      }
+
+      .hero-metrics,
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn,
+      .btn-secondary {
+        width: 100%;
+      }
+    }
+  </style>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <script>
@@ -320,23 +570,140 @@
   </div>
 </header>
 
-  <section class="contact-section">
-    <div class="contact-info">
-      <h2>Contactează-ne</h2>
-      <p><strong>Email:</strong> <a href="mailto:office@abicybernetics.com">office@abicybernetics.com</a></p>
-      <p><strong>Telefon:</strong> <a href="tel:+40728044104">+40 728 044 104</a></p>
-      <p><strong>Locație:</strong> București, România</p>
-    </div>
+  <main class="page-shell">
+    <section class="hero-panel">
+      <div class="hero-copy">
+        <span class="eyebrow">Contact business global</span>
+        <h1>Intră în legătură cu AbiCybernetics într-un cadru profesionist.</h1>
+        <p class="hero-lead">AbiCybernetics colaborează cu organizații medicale, distribuitori, investitori și parteneri strategici care caută comunicare clară, pași următori bine definiți și răspunsuri profesioniste. Folosește opțiunile directe de mai jos pentru a începe o discuție comercială, clinică sau de parteneriat cu echipa noastră.</p>
+        <div class="hero-actions">
+          <a class="btn" href="mailto:office@abicybernetics.com?subject=Solicitare%20business%20AbiCybernetics">Trimite email la office@abicybernetics.com</a>
+          <a class="btn-secondary" href="tel:+40728044104">Sună la birou</a>
+        </div>
+        <div class="hero-metrics" aria-label="Repere contact">
+          <div class="metric">
+            <strong>24–48h</strong>
+            <span>Interval tipic de răspuns pentru solicitări business și de parteneriat.</span>
+          </div>
+          <div class="metric">
+            <strong>Internațional</strong>
+            <span>Dialog cu distribuitori, investitori, instituții și parteneri din piețe diferite.</span>
+          </div>
+          <div class="metric">
+            <strong>Acces direct</strong>
+            <span>Un singur punct de contact pentru discuții comerciale, generale și de colaborare.</span>
+          </div>
+        </div>
+      </div>
 
-    <div class="map-container">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.439384373771!2d26.096306315181016!3d44.43966397910206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff404e5fb2e1%3A0xf6f1fa91a34c0b87!2sBucharest%2C%20Romania!5e0!3m2!1sen!2sro!4v1680101010101" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </section>
+      <aside class="hero-side">
+        <div class="info-tile">
+          <h2>De ce ne contactează companiile</h2>
+          <p>Ajutăm organizațiile să evalueze potrivirea, calendarul și structura unei colaborări înainte de discuțiile comerciale detaliate.</p>
+          <ul>
+            <li>Evaluare de produs și discuții de achiziție.</li>
+            <li>Solicitări pentru distribuție, reselleri și parteneriate strategice.</li>
+            <li>Introduceri pentru investitori și business development.</li>
+          </ul>
+        </div>
+        <div class="info-tile">
+          <h2>Ce să incluzi în mesaj</h2>
+          <p>Pentru un răspuns mai rapid, menționează organizația ta, piața vizată, scopul proiectului și intervalul de timp dorit pentru follow-up.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="contact-layout">
+      <div class="contact-card">
+        <div>
+          <span class="eyebrow">Canale directe de contact</span>
+          <h2>Birou de contact profesional</h2>
+          <p>Contactează biroul AbiCybernetics pentru solicitări comerciale, parteneriate, introduceri pentru investitori și discuții despre produs. Mesajul tău este direcționat către persoana potrivită, astfel încât conversația să poată avansa eficient.</p>
+        </div>
+
+        <div class="contact-box">
+          <span class="label">Email birou</span>
+          <a class="contact-link" href="mailto:office@abicybernetics.com?subject=Solicitare%20business%20AbiCybernetics">office@abicybernetics.com</a>
+          <p>Folosește această adresă pentru solicitări noi de business, parteneriate internaționale, colaborări instituționale și introduceri executive.</p>
+          <p class="small-note">Un click pe adresă deschide clientul tău de email cu un subiect pregătit pentru o solicitare AbiCybernetics.</p>
+        </div>
+
+        <div class="contact-box">
+          <span class="label">Telefon birou</span>
+          <a class="contact-link" href="tel:+40728044104">+40 728 044 104</a>
+          <p>Pentru coordonare urgentă, discuții live sau programarea unui apel cu echipa.</p>
+        </div>
+
+        <ul class="department-list">
+          <li>
+            <strong>Business development</strong>
+            Explorarea parteneriatelor, oportunități regionale și discuții de canal.
+          </li>
+          <li>
+            <strong>Discuții despre produs și context clinic</strong>
+            Întrebări despre potrivirea produsului, scenarii de utilizare și evaluare organizațională.
+          </li>
+          <li>
+            <strong>Investitori și media</strong>
+            Introduceri, actualizări strategice și oportunități de vizibilitate.
+          </li>
+        </ul>
+      </div>
+
+      <div class="map-panel">
+        <div class="map-copy">
+          <span class="eyebrow">Locația biroului</span>
+          <h2>Biroul din București, pregătit pentru comunicare internațională</h2>
+          <p>AbiCybernetics operează din București, România, coordonând conversații cu stakeholderi din piețe diferite. Dacă echipa ta preferă o comunicare inițială prin email, trimite solicitarea la adresa biroului și vom confirma următorul pas potrivit.</p>
+          <div class="office-meta">
+            <span>București, România</span>
+            <span>Comunicare email-first disponibilă</span>
+            <span>Apeluri la cerere sau prin programare</span>
+          </div>
+        </div>
+        <div class="map-frame">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.439384373771!2d26.096306315181016!3d44.43966397910206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff404e5fb2e1%3A0xf6f1fa91a34c0b87!2sBucharest%2C%20Romania!5e0!3m2!1sen!2sro!4v1680101010101"
+            title="Harta locației biroului AbiCybernetics"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-panel">
+      <div>
+        <span class="eyebrow">Cum lucrăm</span>
+        <h2>O experiență de contact clară și credibilă pentru stakeholderi internaționali</h2>
+        <p>Fie că reprezinți o clinică, un distribuitor, un fond de investiții, presa sau un partener strategic, procesul de contact este simplu: descrii oportunitatea, trimiți contextul relevant către echipa office și continui discuția cu decidenții potriviți.</p>
+        <ul class="trust-list">
+          <li>O singură adresă business pentru preluare și direcționare organizată.</li>
+          <li>Limbaj de contact profesionist, potrivit pentru outreach instituțional și corporate.</li>
+          <li>Locație de birou vizibilă și acces telefonic direct pentru comunicare cu încredere.</li>
+        </ul>
+      </div>
+      <div class="trust-grid">
+        <div class="info-tile">
+          <h2>Pentru parteneri</h2>
+          <p>Include geografia, modelul de business și obiectivul colaborării pentru ca echipa noastră să revină cu următorul pas relevant.</p>
+        </div>
+        <div class="info-tile">
+          <h2>Pentru cumpărători din healthcare</h2>
+          <p>Descrie scenariul de utilizare, mediul de implementare și orizontul de achiziție pentru a pregăti eficient conversația.</p>
+        </div>
+        <div class="info-tile">
+          <h2>Pentru investitori</h2>
+          <p>Trimite introducerea prin adresa office și include fondul, aria de interes și disponibilitatea pentru întâlnire.</p>
+        </div>
+        <div class="info-tile">
+          <h2>Pentru media</h2>
+          <p>Menționează publicația, deadline-ul și cererea de interviu pentru a direcționa corect mesajul.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
   © AbiCybernetics – Trademark&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html">Politica de confidențialitate</a>
