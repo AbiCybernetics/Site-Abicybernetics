@@ -19,15 +19,25 @@ function field($key) {
     return isset($_POST[$key]) ? trim((string)$_POST[$key]) : "";
 }
 
+$contact  = strip_tags(field("contact"));
+$whatsapp = strip_tags(field("whatsapp"));
+
+// Backward compatibility with the previous order form
 $name  = strip_tags(field("name"));
 $email = filter_var(field("email"), FILTER_SANITIZE_EMAIL);
 $phone = strip_tags(field("phone"));
 $notes = htmlspecialchars(field("notes"), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 
+if ($contact === "") {
+    $contact = $name !== "" ? $name : $email;
+}
+if ($whatsapp === "") {
+    $whatsapp = $phone;
+}
+
 $errors = [];
-if ($name === "")  { $errors[] = "Name is required."; }
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) { $errors[] = "A valid email is required."; }
-if ($phone === "") { $errors[] = "Phone is required."; }
+if ($contact === "")  { $errors[] = "Contact is required."; }
+if ($whatsapp === "") { $errors[] = "WhatsApp is required."; }
 
 if (!empty($errors)) {
     http_response_code(400);
@@ -38,8 +48,9 @@ if (!empty($errors)) {
 $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
 $ua = $_SERVER['HTTP_USER_AGENT'] ?? 'unknown';
 
-$subject_admin = "New Exoskeleton Order from {$name}";
-$subject_user  = "We received your order — AbiCybernetics";
+$display_name = $contact !== "" ? $contact : "Customer";
+$subject_admin = "New Exoskeleton Order from {$display_name}";
+$subject_user  = "We received your request — AbiCybernetics";
 
 $now = (new DateTime('now', new DateTimeZone('Europe/Bucharest')))->format('Y-m-d H:i:s T');
 
@@ -49,9 +60,10 @@ $admin_html = <<<HTML
 <meta charset="utf-8">
 <body style="font-family: Arial, Helvetica, sans-serif; color:#0b0b0b;">
   <h2>New Order Submission</h2>
-  <p><strong>Name:</strong> {$name}</p>
-  <p><strong>Email:</strong> {$email}</p>
-  <p><strong>Phone:</strong> {$phone}</p>
+  <p><strong>Contact:</strong> {$contact}</p>
+  <p><strong>WhatsApp:</strong> {$whatsapp}</p>
+  <p><strong>Previous email field:</strong> {$email}</p>
+  <p><strong>Previous phone field:</strong> {$phone}</p>
   <p><strong>Notes:</strong><br>{$notes}</p>
   <hr>
   <p style="font-size:12px;color:#555;">Submitted: {$now}</p>
@@ -70,12 +82,12 @@ $user_html = <<<HTML
     <div style="text-align:center;margin-bottom:16px;">
       <div style="display:inline-block;width:64px;height:64px;border-radius:50%;background:#fafafa;color:#e8c547;line-height:64px;font-size:36px;border:1px solid #dcdcdc;">✓</div>
     </div>
-    <h1 style="margin:0 0 8px;font-size:22px;">Thank you, {$name}!</h1>
+    <h1 style="margin:0 0 8px;font-size:22px;">Thank you, {$display_name}!</h1>
     <p style="margin:0 0 12px;line-height:1.6;">
-      We’ve received your request and a member of the AbiCybernetics team will contact you shortly.
+      We’ve received your request and a member of the AbiCybernetics team will contact you shortly on your preferred channel.
     </p>
     <p style="margin:0 0 12px;line-height:1.6;">
-      If you have any questions in the meantime, reply to this email or call us at <strong>+40 728 044 104</strong>.
+      If you have any questions in the meantime, send us a WhatsApp message or call us at <strong>+40 728 044 104</strong>.
     </p>
     <p style="margin:12px 0 0;font-size:12px;color:#666;">This is an automated confirmation. Please keep it for your records.</p>
   </div>
@@ -89,7 +101,8 @@ $common_headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 
 $admin_headers  = $common_headers;
 $admin_headers .= "From: {$brand_from_name} <{$brand_from_email}>\r\n";
-$admin_headers .= "Reply-To: {$name} <{$email}>\r\n";
+$reply_to = filter_var($email, FILTER_VALIDATE_EMAIL) ? $email : $brand_from_email;
+$admin_headers .= "Reply-To: {$brand_from_name} <{$reply_to}>\r\n";
 
 $user_headers   = $common_headers;
 $user_headers  .= "From: {$brand_from_name} <{$brand_from_email}>\r\n";
@@ -99,7 +112,7 @@ $envelope_sender = "-f {$brand_from_email}";
 
 $admin_ok = @$__abi_mail_ok = mail($admin_email, $subject_admin, $admin_html, $admin_headers, $envelope_sender);
 
-$__abi_name = isset($_POST['name']) ? $_POST['name'] : '';
+$__abi_name = isset($_POST['contact']) ? $_POST['contact'] : (isset($_POST['name']) ? $_POST['name'] : '');
 if (isset($_POST['lang'])) {
   $__abi_lang = ($_POST['lang'] === 'ro') ? 'ro' : 'en';
 } else {
@@ -113,13 +126,16 @@ if (!headers_sent()) {
 }
 if ($__abi_mail_ok) {
   if (!headers_sent()) {
-    $__abi_name = isset($_POST['name']) ? $_POST['name'] : '';
+    $__abi_name = isset($_POST['contact']) ? $_POST['contact'] : (isset($_POST['name']) ? $_POST['name'] : '');
     header('Location: /thankyou.html?name=' . urlencode($__abi_name));
     exit;
   }
 }
 
-$user_ok  = @mail($email, $subject_user, $user_html, $user_headers, $envelope_sender);
+$user_ok = true;
+if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  $user_ok = @mail($email, $subject_user, $user_html, $user_headers, $envelope_sender);
+}
 
 $success = $admin_ok && $user_ok;
 http_response_code($success ? 200 : 500);

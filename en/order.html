@@ -13,9 +13,7 @@
   .logo-link img { height: 50px; }
   .banner-line { font-size: 0.95rem; color: #444; font-weight: 500; }
 
-  .wrapper { display: grid; grid-template-columns: minmax(280px, 1.1fr) minmax(320px, 0.9fr); gap: 28px; padding: 28px 20px 48px; align-items: start; }
-  .product-preview { width: 100%; height: 70vh; position: sticky; top: 14px; align-self: start; background: #111; border-radius: 0; display: grid; place-items: center; }
-  .product-preview img { width: 100%; height: 100%; object-fit: contain; border-radius: 0; transition: opacity .25s ease; background: #111; }
+  .wrapper { max-width: 720px; margin: 0 auto; padding: 28px 20px 48px; }
 
   .stack { display: grid; gap: 18px; }
   .card { border: 1px solid #e6e6e6; border-radius: 0; padding: 22px; background: #fff; }
@@ -23,40 +21,17 @@
   .sub { color: #555; font-size: .95rem; margin-bottom: 14px; }
   .badge { display: inline-block; font-size: .75rem; font-weight: 600; padding: 4px 10px; border-radius: 999px; letter-spacing: .3px; margin-bottom: 10px; }
   .badge.primary { background: #eef3ff; color: #2140d4; border: 1px solid #dbe6ff; }
-  .badge.neutral { background: #f6f7f8; color: #444; border: 1px solid #e6e7e9; }
-
-  form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .full { grid-column: 1 / -1; }
+  form { display: grid; grid-template-columns: 1fr; gap: 14px; }
   label { font-weight: 600; font-size: .95rem; }
-  input, select, textarea { width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; }
-  textarea { resize: vertical; }
+  input, textarea { width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; }
+  textarea { resize: vertical; min-height: 120px; }
 
   .order-btn { margin-top: 6px; padding: 14px 16px; font-size: 1rem; color: #fff; background: #000; border: none; border-radius: 10px; cursor: pointer; transition: transform .05s ease; }
   .order-btn:active { transform: translateY(1px); }
   .help { font-size: .85rem; color: #555; margin-top: 8px; }
 
-  .color-options { display: flex; gap: 12px; margin: 8px 0 6px; }
-  .color-swatch { width: 28px; height: 28px; border-radius: 50%; border: 2px solid #999; cursor: pointer; transition: transform .15s; }
-  .color-swatch:hover { transform: scale(1.08); }
-  .black { background: #000; }
-  .grey { background: #666; }
-  .white { background: #fff; }
-
-  .estimator small { display: block; margin-bottom: 6px; color: #666; }
-  .estimator .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .estimator .row + .row { margin-top: 12px; }
-
-  .price-summary { margin-top: 16px; font-size: 1rem; border-top: 1px dashed #ddd; padding-top: 12px; }
-  .price-summary div { display: flex; justify-content: space-between; margin-bottom: 6px; }
-  .price-summary div.total { font-weight: 700; }
-  .disclaimer { font-size: .85rem; color: #555; margin-top: 8px; font-style: italic; }
-
   @media (max-width: 980px) {
-    .wrapper { grid-template-columns: 1fr; 
-    .product-preview img { max-height: 40vh; object-fit: contain; }
-  }
-    .product-preview { height: 45vh; position: sticky; top: 10px; z-index: 2; }
-    form { grid-template-columns: 1fr; }
+    .wrapper { padding: 24px 16px 40px; }
   }
 
     .lang-switch{margin-left:16px; display:flex; align-items:center; gap:8px; font-weight:600}
@@ -228,177 +203,30 @@
 </header>
 
 <div class="wrapper">
-  <!-- LEFT: Visual Preview -->
-  <div class="product-preview">
-    <img id="productImg" src="../assets/images/exo_black.png" alt="Exoskeleton preview" />
-  </div>
-
-  <!-- RIGHT: Contact-first + Estimator -->
   <div class="stack">
-
-    <!-- Contact Request Card (Primary) -->
     <section class="card">
       <span class="badge primary">Contact request</span>
       <h2>Get one</h2>
-      <p class="sub">Tell us how to reach you. No payment now. We’ll contact you to confirm availability, shipping and a final quote.</p>
+      <p class="sub">Leave your preferred contact and your WhatsApp number. We’ll get back to you shortly with the next steps.</p>
 
       <form id="contactForm" action="/send_order.php" method="POST" autocomplete="on">
-        <div>
-          <label>Full Name
-            <input name="name" required />
-          </label>
-        </div>
         <input type="hidden" name="lang" value="en">
         <div>
-          <label>Email Address
-            <input type="email" name="email" required />
+          <label>Contact
+            <input name="contact" required placeholder="Name, email, or company" />
           </label>
         </div>
         <div>
-          <label>Phone Number
-            <input type="tel" name="phone" required />
+          <label>WhatsApp
+            <input type="tel" name="whatsapp" required placeholder="Your WhatsApp number" />
           </label>
         </div>
-        <div>
-          <label>Country
-            <input name="country" required />
-          </label>
-        </div>
-        <div class="full">
-          <label>Additional Notes
-            <textarea name="notes" rows="4" placeholder="Your goals, requirements, or questions…"></textarea>
-          </label>
-        </div>
-
-        <!-- optional: include estimator snapshot inside the message -->
-        <input type="hidden" name="estimator_snapshot" id="estimator_snapshot" />
-
-        <button type="submit" id="getOneBtn" class="order-btn">Get one</button>
-        <p class="help">We’ll reply within 1–2 business days to schedule a call and confirm details.</p>
+        <button type="submit" id="getOneBtn" class="order-btn">Send request</button>
+        <p class="help">We’ll reply within 1–2 business days.</p>
       </form>
-    </section>
-
-    <!-- Price Estimator Card (Secondary / Informative only) -->
-    <section class="card estimator" aria-live="polite">
-      <span class="badge neutral">Informative only – not a quote</span>
-      <h2>Price estimator</h2>
-      <p class="sub">Explore common options to understand how configuration might influence pricing. Your selections do <strong>not</strong> place an order.</p>
-
-      <!-- Colour -->
-      <label class="full">Preferred Colour</label>
-      <div class="color-options" role="radiogroup" aria-label="Colour options">
-        <span class="color-swatch black" data-img="../assets/images/exo_black.png" data-btn="#000" role="radio" aria-label="Black" tabindex="0"></span>
-        <span class="color-swatch grey"  data-img="../assets/images/exo_grey.png"  data-btn="#666" role="radio" aria-label="Grey" tabindex="0"></span>
-        <span class="color-swatch white" data-img="../assets/images/exo_white.png" data-btn="#bbb" role="radio" aria-label="White" tabindex="0"></span>
-      </div>
-
-      <!-- Config rows (NO name attributes so they are not submitted) -->
-      <div class="row">
-        <div>
-          <label>Crutch Option
-            <select id="crutchSelect" required>
-              <option value="none"   data-img="../assets/images/Button for suport system.png" data-cost="0">Button for Support System (no crutch)</option>
-              <option value="simple" data-img="../assets/images/ergo Crutches.jpg" data-cost="200">Simple Crutches (+$200)</option>
-              <option value="elbow"  data-img="../assets/images/crutches M+D.png" data-cost="350">Elbow Style Crutches (+$350)</option>
-            </select>
-          </label>
-        </div>
-        <div>
-          <label>Feet Support
-            <select id="feetSelect" required>
-              <option value="in-shoe" data-img="../assets/images/inner_shue.png" data-cost="0">In-shoe Support</option>
-              <option value="outer"   data-img="../assets/images/outer_shue.png" data-cost="0">Outer Shoe Support</option>
-            </select>
-          </label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div>
-          <label>Extra Sensors
-            <select id="sensorSelect" required>
-              <option value="no"  data-cost="0">Without Extra Sensors</option>
-              <option value="yes" data-cost="5000">With Extra Sensors (+$5,000)</option>
-            </select>
-          </label>
-        </div>
-        <div>
-          <label>Extra Battery
-            <select id="batterySelect" required>
-              <option value="no"  data-cost="0">No Extra Battery</option>
-              <option value="yes" data-cost="500">Add Extra Battery (+$500)</option>
-            </select>
-          </label>
-        </div>
-      </div>
-
-      <!-- Price summary (informative) -->
-      <div class="price-summary" aria-label="Estimated price summary">
-        <div><span>Base Price</span><span id="basePrice">$32,000</span></div>
-        <div><span>Extras</span><span id="extrasPrice">$0</span></div>
-        <div class="total"><span>Total*</span><span id="totalPrice">$32,000</span></div>
-      </div>
-      <p class="disclaimer">* Shipping varies by destination. These numbers are informational and will be confirmed during our follow‑up.</p>
     </section>
   </div>
 </div>
-
-<script>
-  const productImg = document.getElementById('productImg');
-  const base = 32000;
-  const priceEls = {
-    extras: document.getElementById('extrasPrice'),
-    total: document.getElementById('totalPrice')
-  };
-  const selects = ['crutchSelect','feetSelect','sensorSelect','batterySelect'];
-
-  function fadeSwap(src){
-    productImg.style.opacity = 0;
-    setTimeout(()=>{ productImg.src = src; productImg.style.opacity = 1; }, 150);
-  }
-
-  // Colour swatches change preview only (and give the CTA button a vibe)
-  document.querySelectorAll('.color-swatch').forEach(sw=>{
-    sw.addEventListener('click', ()=>{ fadeSwap(sw.dataset.img); });
-    sw.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); sw.click(); }});
-  });
-
-  // Update preview (if option has an image) and recompute totals
-  selects.forEach(id=>{
-    const el = document.getElementById(id);
-    el.addEventListener('change', e=>{
-      const img = e.target.selectedOptions[0].dataset.img;
-      if(img) fadeSwap(img);
-      updateTotal();
-    });
-  });
-
-  function updateTotal(){
-    let extras = 0;
-    selects.forEach(id=>{ extras += Number(document.getElementById(id).selectedOptions[0].dataset.cost || 0); });
-    priceEls.extras.textContent = '$' + extras.toLocaleString();
-    priceEls.total.textContent  = '$' + (base + extras).toLocaleString();
-  }
-  updateTotal();
-
-  // On submit, attach an estimator snapshot (purely informational)
-  const form = document.getElementById('contactForm');
-  form.addEventListener('submit', ()=>{
-    const snapshot = {
-      colourPreview: productImg.src.split('/').pop(),
-      crutch: document.getElementById('crutchSelect').value,
-      feet: document.getElementById('feetSelect').value,
-      sensors: document.getElementById('sensorSelect').value,
-      extraBattery: document.getElementById('batterySelect').value,
-      estimate: {
-        base: '$' + base.toLocaleString(),
-        extras: priceEls.extras.textContent,
-        total: priceEls.total.textContent
-      }
-    };
-    document.getElementById('estimator_snapshot').value = JSON.stringify(snapshot, null, 2);
-  });
-</script>
 
 <footer class="site-footer">
   © AbiCybernetics – Trademark&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html">Privacy Policy</a>
