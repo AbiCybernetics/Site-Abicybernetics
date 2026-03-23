@@ -138,8 +138,22 @@
     .note{font-size:.92rem;color:#666}
     .section-tag{display:inline-block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#666;margin-bottom:2px}
     .feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:8px}
-    .feature-card{padding:18px;border-radius:0;border:1px solid var(--line);background:rgba(255,255,255,.55)}
-    .feature-card h3{margin:0 0 8px;font-family:'Poppins',sans-serif;font-size:1.08rem;line-height:1.25;color:var(--text)}
+    .feature-card,.funnel-card,.review-card,.contact-card,.faq-item{padding:18px;border-radius:0;border:1px solid var(--line);background:rgba(255,255,255,.55)}
+    .feature-card h3,.funnel-card h3,.review-card h3,.contact-card h3{margin:0 0 8px;font-family:'Poppins',sans-serif;font-size:1.08rem;line-height:1.25;color:var(--text)}
+    .funnel-grid,.review-grid,.contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:24px}
+    .funnel-card p,.review-card p,.contact-card p,.faq-item p{margin:0;color:var(--muted);line-height:1.72}
+    .review-card strong{display:block;margin-bottom:8px;font-size:1rem;color:var(--text)}
+    .review-meta{display:block;margin-top:14px;font-size:.92rem;color:#666}
+    .faq-list{display:grid;gap:14px;margin-top:24px}
+    .faq-item summary{cursor:pointer;list-style:none;font-weight:700;color:var(--text);display:flex;justify-content:space-between;gap:12px;align-items:center}
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-item summary::after{content:'+';font-size:1.4rem;line-height:1;color:#666}
+    .faq-item[open] summary::after{content:'−'}
+    .faq-item p{margin-top:14px}
+    .contact-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}
+    .contact-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px}
+    .contact-list{display:grid;gap:14px}
+    .contact-list a{text-decoration:none;font-weight:700;color:var(--text)}
 
     .cta{background:#000;color:#fff;padding:64px 20px 72px;text-align:center;border-top:1px solid rgba(255,255,255,.1)}
     .cta p{margin:0 0 18px;font-size:1.1rem;line-height:1.7;color:rgba(255,255,255,.8)}
@@ -155,7 +169,7 @@
       .hero{min-height:66vh}
       .hero-inner{padding:72px 0 64px}
       .content-band{padding:60px 0}
-      .split-grid,.split-grid.reverse,.feature-grid,.specs-grid{grid-template-columns:1fr}
+      .split-grid,.split-grid.reverse,.feature-grid,.specs-grid,.funnel-grid,.review-grid,.contact-grid{grid-template-columns:1fr}
     }
     @media (max-width:640px){
       .site-header{padding:12px 16px}
@@ -310,6 +324,115 @@
         <p>Abi este o platformă de exoschelet în evoluție, construită pentru pionierii care vor să contribuie la viitorul mobilității, cercetării și roboticii purtabile.</p>
         <p><strong>Timp de livrare:</strong> aproximativ 12 săptămâni de la comandă la expediere. <strong>Onboarding remote:</strong> inclus. <strong>Suport internațional:</strong> disponibil.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="content-band alt" id="detalii">
+    <div class="section-inner intro">
+      <div>
+        <span class="section-tag">Cere mai multe detalii</span>
+        <h2>Primește răspunsurile potrivite înainte să mergi mai departe.</h2>
+      </div>
+      <p>Dacă vrei clarificări despre specificații, livrare, onboarding sau compatibilitate, echipa noastră te poate ghida rapid spre următorul pas potrivit.</p>
+      <div class="funnel-grid">
+        <article class="funnel-card">
+          <h3>Pentru uz personal</h3>
+          <p>Află cum funcționează potrivirea, instalarea, suportul și utilizarea zilnică pentru rutina ta.</p>
+        </article>
+        <article class="funnel-card">
+          <h3>Pentru clinici &amp; laboratoare</h3>
+          <p>Cere o imagine mai clară despre implementare, logistică și opțiunile de colaborare pentru echipa ta.</p>
+        </article>
+        <article class="funnel-card">
+          <h3>Pentru early adopters</h3>
+          <p>Vezi cum Abi susține cercetarea, testarea și feedback-ul continuu pentru pionierii roboticii purtabile.</p>
+        </article>
+      </div>
+      <div class="contact-actions">
+        <a href="mailto:office@abicybernetics.com?subject=Cerere%20mai%20multe%20detalii%20despre%20Abi" class="btn">Cere mai multe detalii</a>
+        <a href="https://wa.me/40728044104" class="btn-secondary" target="_blank" rel="noopener">Scrie pe WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-band muted" id="review-uri">
+    <div class="section-inner intro">
+      <div>
+        <span class="section-tag">Review-uri</span>
+        <h2>Ce apreciază oamenii în experiența Abi.</h2>
+      </div>
+      <p>Aceste mesaje de tip review evidențiază rapid ceea ce contează într-un funnel bun: suport clar, adaptabilitate și încredere în onboarding.</p>
+      <div class="review-grid">
+        <article class="review-card">
+          <strong>"Suport clar încă de la prima conversație."</strong>
+          <p>Vizitatorii trebuie să simtă că nu rămân singuri după comandă. Abi pune accent pe ghidaj direct și răspunsuri practice.</p>
+          <span class="review-meta">Onboarding orientat pe suport</span>
+        </article>
+        <article class="review-card">
+          <strong>"Platforma pare construită pentru adaptare reală."</strong>
+          <p>Modularitatea, reglajele și arhitectura deschisă fac sistemul relevant pentru utilizatori individuali, clinici și medii de cercetare.</p>
+          <span class="review-meta">Adaptabilitate &amp; flexibilitate</span>
+        </article>
+        <article class="review-card">
+          <strong>"Opțiunile rapide de contact fac pasul următor mult mai ușor."</strong>
+          <p>Accesul direct la email și WhatsApp reduce fricțiunea și transformă interesul în conversații reale cu echipa.</p>
+          <span class="review-meta">Traseu de conversie fără fricțiune</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-band alt" id="faq">
+    <div class="section-inner intro">
+      <div>
+        <span class="section-tag">FAQ</span>
+        <h2>Întrebări frecvente înainte de comandă.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Pot cere informații înainte să plasez o comandă?</summary>
+          <p>Da. Poți folosi emailul sau WhatsApp pentru detalii tehnice, onboarding, estimări de livrare sau pentru a verifica dacă Abi se potrivește scenariului tău.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Cât durează livrarea?</summary>
+          <p>Estimarea curentă afișată pe homepage este de aproximativ 12 săptămâni de la comandă la expediere, cu onboarding remote inclus.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Abi este un dispozitiv medical certificat?</summary>
+          <p>Nu. Abi este prezentat ca o platformă deschisă, în evoluție, destinată utilizării personale, early adopters, cercetătorilor și pasionaților de tehnologie.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Cum contactez echipa cel mai rapid?</summary>
+          <p>Poți trimite email la <a href="mailto:office@abicybernetics.com">office@abicybernetics.com</a> sau poți scrie direct pe WhatsApp pentru o conversație mai rapidă.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-band muted" id="contact">
+    <div class="section-inner contact-grid">
+      <div class="split-copy closing">
+        <span class="section-tag">Ia legătura</span>
+        <h2>Vorbește direct cu echipa AbiCybernetics.</h2>
+        <p>Dacă vrei să discuți despre preț, potrivirea produsului, onboarding sau oportunități de parteneriat, contactează-ne direct și te ajutăm cu următorul pas.</p>
+        <div class="contact-actions">
+          <a href="mailto:office@abicybernetics.com?subject=Hai%20sa%20vorbim%20despre%20Abi" class="btn">Trimite email</a>
+          <a href="https://wa.me/40728044104" class="btn-secondary" target="_blank" rel="noopener">Deschide WhatsApp</a>
+        </div>
+      </div>
+      <aside class="contact-card">
+        <h3>Date de contact</h3>
+        <div class="contact-list">
+          <div>
+            <strong>Email</strong><br>
+            <a href="mailto:office@abicybernetics.com">office@abicybernetics.com</a>
+          </div>
+          <div>
+            <strong>WhatsApp</strong><br>
+            <a href="https://wa.me/40728044104" target="_blank" rel="noopener">+40 728 044 104</a>
+          </div>
+        </div>
+      </aside>
     </div>
   </section>
 </main>
