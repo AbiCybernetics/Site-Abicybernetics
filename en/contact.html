@@ -214,23 +214,36 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      min-width: 180px;
       padding: 14px 22px;
-      border: 0;
+      border: 1px solid rgba(255, 255, 255, 0.85);
       border-radius: 999px;
       font: inherit;
       font-weight: 700;
       text-decoration: none;
       cursor: pointer;
-      color: #03111b;
-      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-      box-shadow: 0 18px 34px rgba(42, 181, 247, 0.28);
+      color: #050505;
+      background: #ffffff;
+      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.22);
+      transition: transform .2s ease, box-shadow .2s ease;
     }
-    .secondary-link {
-      color: var(--text);
-      font-weight: 600;
-      text-decoration: none;
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 38px rgba(0, 0, 0, 0.28);
     }
-    .secondary-link:hover { text-decoration: underline; }
+    .btn:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 2px;
+    }
+    .bot-field {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
     .hint { margin-top: 14px; font-size: .94rem; }
     .map-panel { padding: 24px; }
     .map-frame {
@@ -317,31 +330,35 @@
       </article>
 
       <article class="panel">
-        <h2>Send an email</h2>
-        <p>Complete the message here. When you submit, your email app opens with the subject and message filled in.</p>
-        <form action="mailto:office@abicybernetics.com" method="post" enctype="text/plain">
+        <h2>Send a secure message</h2>
+        <p>Your message is sent securely to our team with server-side validation and spam protection.</p>
+        <form action="/api/send_contact.php" method="post">
+          <input type="hidden" name="lang" value="en" />
+          <input type="hidden" name="submitted_at" id="contact-submitted-at-en" value="0" />
+          <label class="bot-field" aria-hidden="true">
+            Company
+            <input type="text" name="company" tabindex="-1" autocomplete="off" />
+          </label>
           <label>
             Name
-            <input type="text" name="Name" placeholder="Your name" required />
+            <input type="text" name="name" placeholder="Your name" autocomplete="name" maxlength="120" required />
           </label>
           <label>
             Email
-            <input type="email" name="Email" placeholder="name@company.com" required />
+            <input type="email" name="email" placeholder="name@company.com" autocomplete="email" inputmode="email" maxlength="160" required />
           </label>
           <label>
             Subject
-            <input type="text" name="Subject" placeholder="Message subject" required />
+            <input type="text" name="subject" placeholder="Message subject" maxlength="160" required />
           </label>
           <label>
             Message
-            <textarea name="Message" placeholder="Write your message here" required></textarea>
+            <textarea name="message" placeholder="Write your message here" minlength="10" maxlength="5000" required></textarea>
           </label>
           <div class="button-row">
-            <button type="submit" class="btn">Open email draft</button>
-            <a class="secondary-link" href="mailto:office@abicybernetics.com">or send an email directly</a>
+            <button type="submit" class="btn">Submit</button>
           </div>
         </form>
-        <p class="hint">If you use webmail or do not have a desktop email app configured, use the direct email link above.</p>
       </article>
     </section>
 
@@ -367,6 +384,10 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     const navToggle = document.querySelector('.nav-toggle');
     const navDrawer = document.querySelector('.nav-drawer');
+    const submittedAtField = document.getElementById('contact-submitted-at-en');
+    if (submittedAtField) {
+      submittedAtField.value = String(Math.floor(Date.now() / 1000));
+    }
     if (navToggle && navDrawer) {
       navToggle.addEventListener('click', () => {
         const open = navToggle.getAttribute('aria-expanded') === 'true';

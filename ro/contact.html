@@ -214,23 +214,36 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      min-width: 180px;
       padding: 14px 22px;
-      border: 0;
+      border: 1px solid rgba(255, 255, 255, 0.85);
       border-radius: 999px;
       font: inherit;
       font-weight: 700;
       text-decoration: none;
       cursor: pointer;
-      color: #03111b;
-      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-      box-shadow: 0 18px 34px rgba(42, 181, 247, 0.28);
+      color: #050505;
+      background: #ffffff;
+      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.22);
+      transition: transform .2s ease, box-shadow .2s ease;
     }
-    .secondary-link {
-      color: var(--text);
-      font-weight: 600;
-      text-decoration: none;
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 22px 38px rgba(0, 0, 0, 0.28);
     }
-    .secondary-link:hover { text-decoration: underline; }
+    .btn:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 2px;
+    }
+    .bot-field {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
     .hint { margin-top: 14px; font-size: .94rem; }
     .map-panel { padding: 24px; }
     .map-frame {
@@ -322,31 +335,35 @@
       </article>
 
       <article class="panel">
-        <h2>Trimite un email</h2>
-        <p>Completează mesajul direct în pagină. La trimitere se va deschide aplicația ta de email cu subiectul și mesajul completate.</p>
-        <form action="mailto:office@abicybernetics.com" method="post" enctype="text/plain">
+        <h2>Trimite un mesaj securizat</h2>
+        <p>Mesajul tău este trimis în siguranță către echipa noastră, cu validare pe server și protecție anti-spam.</p>
+        <form action="/api/send_contact.php" method="post">
+          <input type="hidden" name="lang" value="ro" />
+          <input type="hidden" name="submitted_at" id="contact-submitted-at-ro" value="0" />
+          <label class="bot-field" aria-hidden="true">
+            Companie
+            <input type="text" name="company" tabindex="-1" autocomplete="off" />
+          </label>
           <label>
             Nume
-            <input type="text" name="Nume" placeholder="Numele tău" required />
+            <input type="text" name="name" placeholder="Numele tău" autocomplete="name" maxlength="120" required />
           </label>
           <label>
             Email
-            <input type="email" name="Email" placeholder="nume@companie.com" required />
+            <input type="email" name="email" placeholder="nume@companie.com" autocomplete="email" inputmode="email" maxlength="160" required />
           </label>
           <label>
             Subiect
-            <input type="text" name="Subiect" placeholder="Subiectul mesajului" required />
+            <input type="text" name="subject" placeholder="Subiectul mesajului" maxlength="160" required />
           </label>
           <label>
             Mesaj
-            <textarea name="Mesaj" placeholder="Scrie aici mesajul tău" required></textarea>
+            <textarea name="message" placeholder="Scrie aici mesajul tău" minlength="10" maxlength="5000" required></textarea>
           </label>
           <div class="button-row">
-            <button type="submit" class="btn">Deschide emailul</button>
-            <a class="secondary-link" href="mailto:office@abicybernetics.com">sau scrie direct pe email</a>
+            <button type="submit" class="btn">Trimite</button>
           </div>
         </form>
-        <p class="hint">Dacă folosești webmail sau nu ai un client de email configurat, poți folosi linkul direct de mai sus.</p>
       </article>
     </section>
 
@@ -372,6 +389,10 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     const navToggle = document.querySelector('.nav-toggle');
     const navDrawer = document.querySelector('.nav-drawer');
+    const submittedAtField = document.getElementById('contact-submitted-at-ro');
+    if (submittedAtField) {
+      submittedAtField.value = String(Math.floor(Date.now() / 1000));
+    }
     if (navToggle && navDrawer) {
       navToggle.addEventListener('click', () => {
         const open = navToggle.getAttribute('aria-expanded') === 'true';
