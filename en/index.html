@@ -116,8 +116,24 @@
     .btn{border:1px solid #fff;color:#000;background:#fff}
     .btn-secondary{border:1px solid rgba(255,255,255,.22);color:#fff;background:rgba(255,255,255,.04)}
 
-    main{padding:0 0 80px}
-    .content-band{background:var(--surface);color:var(--text);padding:84px 0}
+    main{padding:28px 0 96px;display:grid;gap:30px}
+    main > section{position:relative}
+    main > section + section::before{
+      content:"";
+      position:absolute;
+      left:50%;
+      top:-15px;
+      width:min(var(--max),calc(100vw - 88px));
+      height:1px;
+      transform:translateX(-50%);
+      background:linear-gradient(90deg,transparent 0%,rgba(38,132,255,.16) 20%,rgba(59,153,252,.92) 50%,rgba(38,132,255,.16) 80%,transparent 100%);
+      background-size:200% 100%;
+      animation:section-line-ltr 4.8s ease-in-out infinite;
+      box-shadow:0 0 10px rgba(59,153,252,.35);
+      pointer-events:none;
+    }
+    main > section:nth-of-type(even)::before{animation-name:section-line-rtl}
+    .content-band{background:var(--surface);color:var(--text);padding:92px 0}
     .content-band.alt{background:var(--surface-alt)}
     .content-band.muted{background:var(--surface-muted)}
     .section-inner{width:min(var(--max),calc(100vw - 40px));margin:0 auto}
@@ -141,7 +157,7 @@
     .feature-card{padding:18px;border-radius:0;border:1px solid var(--line);background:rgba(255,255,255,.55)}
     .feature-card h3{margin:0 0 8px;font-family:'Poppins',sans-serif;font-size:1.08rem;line-height:1.25;color:var(--text)}
 
-    .cta{background:#000;color:#fff;padding:64px 20px 72px;text-align:center;border-top:1px solid rgba(255,255,255,.1)}
+    .cta{background:#000;color:#fff;padding:72px 20px 80px;text-align:center;border-top:1px solid rgba(255,255,255,.1)}
     .cta p{margin:0 0 18px;font-size:1.1rem;line-height:1.7;color:rgba(255,255,255,.8)}
     footer{padding:24px 20px 30px;text-align:center;color:rgba(255,255,255,.66);font-size:.92rem;background:#000}
     footer a{text-decoration:none;color:rgba(255,255,255,.66)}
@@ -149,16 +165,31 @@
     .cookie-banner p{flex:1 1 300px;color:rgba(244,246,248,.82);line-height:1.65;font-size:.95rem}
     .cookie-banner button{padding:12px 18px;border:0;border-radius:999px;background:var(--white);color:#111;font-weight:800;cursor:pointer}
 
+    @keyframes section-line-ltr{
+      0%{background-position:200% 50%;opacity:.45}
+      50%{background-position:100% 50%;opacity:1}
+      100%{background-position:0% 50%;opacity:.45}
+    }
+    @keyframes section-line-rtl{
+      0%{background-position:0% 50%;opacity:.45}
+      50%{background-position:100% 50%;opacity:1}
+      100%{background-position:200% 50%;opacity:.45}
+    }
+
     @media (max-width:900px){
       .nav-desktop,.lang-switch.nav-desktop{display:none}
       .nav-toggle{display:block}
       .hero{min-height:66vh}
       .hero-inner{padding:72px 0 64px}
-      .content-band{padding:60px 0}
+      main{gap:24px;padding:24px 0 88px}
+      main > section + section::before{top:-12px;width:calc(100vw - 56px)}
+      .content-band{padding:68px 0}
       .split-grid,.split-grid.reverse,.feature-grid,.specs-grid{grid-template-columns:1fr}
     }
     @media (max-width:640px){
       .site-header{padding:12px 16px}
+      main{gap:20px;padding:20px 0 80px}
+      main > section + section::before{top:-10px;width:calc(100vw - 40px)}
       .hero-inner,.section-inner{width:calc(100vw - 28px)}
       .hero h1{font-size:clamp(2.3rem,11vw,3.3rem)}
       .intro p,.split-copy p,.split-copy li,.closing p,.hero p,.feature-card p{font-size:.97rem}
