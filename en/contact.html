@@ -109,6 +109,15 @@
     .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.18)}
     .bot-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
     .map-frame{width:100%;min-height:420px;border:0;border-radius:0;display:block}
+    .photo-panel{display:grid;gap:14px}
+    .photo-card{
+      margin:0;
+      border:1px solid rgba(14,35,71,.16);
+      background:rgba(255,255,255,.6);
+      padding:14px;
+    }
+    .photo-card img{display:block;width:100%;height:auto;border:1px solid rgba(14,35,71,.2)}
+    .photo-card figcaption{margin-top:10px;color:var(--muted);line-height:1.6}
 
     .site-footer{padding:24px 20px 30px;text-align:center;color:rgba(255,255,255,.66);font-size:.92rem;background:#000;border-top:1px solid rgba(255,255,255,.1)}
     .site-footer a{text-decoration:none;color:rgba(255,255,255,.66)}
@@ -215,6 +224,15 @@
       <h2>Map</h2>
       <p class="hint" style="margin: 0 0 18px;">Our location. Near the beautiful mountains of Romania.</p>
       <div class="map-frame" id="contact-map-en" role="region" aria-label="AbiCybernetics map"></div>
+    </section>
+
+    <section class="map-panel photo-panel" aria-label="AbiCybernetics contact photo">
+      <h2>Photo</h2>
+      <p class="hint">A quick look at our rehabilitation technology in action.</p>
+      <figure class="photo-card">
+        <img src="/assets/images/mobility suport.JPG" alt="User wearing the AbiCybernetics exoskeleton support system" loading="lazy" decoding="async" />
+        <figcaption>AbiCybernetics mobility support system.</figcaption>
+      </figure>
     </section>
   </main>
 
