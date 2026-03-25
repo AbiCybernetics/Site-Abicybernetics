@@ -170,7 +170,7 @@
           </li>
           <li>
             <strong>Location</strong>
-            <span>Hațeg, Romania</span>
+            <span>Bucharest City Center, Romania</span>
           </li>
           <li>
             <strong>Business hours</strong>
@@ -213,7 +213,7 @@
 
     <section class="map-panel" aria-label="AbiCybernetics location map">
       <h2>Map</h2>
-      <p class="hint" style="margin: 0 0 18px;">Our location. Near the beautiful mountains of Romania.</p>
+      <p class="hint" style="margin: 0 0 18px;">Our location in Bucharest city center.</p>
       <div class="map-frame" id="contact-map-en" role="region" aria-label="AbiCybernetics map"></div>
     </section>
   </main>
@@ -234,7 +234,7 @@
 
     const mapElement = document.getElementById('contact-map-en');
     if (mapElement && typeof L !== 'undefined') {
-      const officeCoordinates = [45.6077, 22.9504];
+      const officeCoordinates = [44.4268, 26.1025];
       const contactMap = L.map(mapElement, {
         zoomControl: true,
         scrollWheelZoom: false
@@ -246,7 +246,7 @@
       }).addTo(contactMap);
 
       L.marker(officeCoordinates).addTo(contactMap)
-        .bindPopup('AbiCybernetics · Hațeg, Romania')
+        .bindPopup('AbiCybernetics · Bucharest City Center, Romania')
         .openPopup();
     }
     if (navToggle && navDrawer) {
