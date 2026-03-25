@@ -114,10 +114,17 @@
     .photo-card{
       margin:0;
       border:1px solid rgba(14,35,71,.16);
-      background:rgba(255,255,255,.6);
+      background:#eef3fa;
       padding:14px;
     }
-    .photo-card img{display:block;width:100%;height:auto;border:1px solid rgba(14,35,71,.2)}
+    .photo-card img{
+      display:block;
+      width:100%;
+      aspect-ratio:4/3;
+      object-fit:cover;
+      border:1px solid rgba(14,35,71,.2);
+      background:#dfe8f4;
+    }
     .photo-card figcaption{margin-top:10px;color:var(--muted);line-height:1.6}
 
     .site-footer{padding:24px 20px 30px;text-align:center;color:rgba(255,255,255,.66);font-size:.92rem;background:#000;border-top:1px solid rgba(255,255,255,.1)}
