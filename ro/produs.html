@@ -199,7 +199,7 @@
 
 <style id="index-visual-system-overrides">
   :root{
-    --page-bg:#040915;
+    --page-bg:#ffffff;
     --surface:#ffffff;
     --surface-alt:#ffffff;
     --surface-muted:#ffffff;
@@ -208,12 +208,13 @@
     --line:rgba(143,179,255,.34);
     --max:1180px;
   }
-  body{background:var(--page-bg) !important;color:#fff;font-family:'Inter',sans-serif;}
+  body{background:var(--page-bg) !important;color:#000;font-family:'Inter',sans-serif;}
   .site-header{background:#000 !important;border-bottom:1px solid rgba(255,255,255,.12) !important;backdrop-filter:blur(12px);}
   .site-header .nav-desktop a,.site-header .lang-switch a,.site-header .nav-mobile a{border-radius:999px;}
   .hero::after{background:linear-gradient(90deg,rgba(0,0,0,.44) 0%,rgba(0,0,0,.24) 42%,rgba(0,0,0,.34) 100%) !important;}
   main{padding:0 0 80px;}
-  .section,.content-band,.page-shell,.wrapper{width:min(var(--max),calc(100vw - 40px));margin:0 auto;}
+  .section,.page-shell,.wrapper{width:min(var(--max),calc(100vw - 40px));margin:0 auto;}
+  .content-band{width:100%;margin:0;}
   .section,.content-band,.page-shell{padding:84px 0 !important;}
   .section,.content-band,.card,.list,.content-grid > article,.content-grid > div,.contact-card,.video-card,.faq-item,.feature-card,.funnel-card,.review-card{
     border-radius:0 !important;
@@ -238,7 +239,8 @@
   .site-footer a,footer a{color:rgba(255,255,255,.66) !important;}
   @media (max-width:900px){
     .section,.content-band,.page-shell{padding:60px 0 !important;}
-    .section,.content-band,.page-shell,.wrapper{width:calc(100vw - 28px);}
+    .section,.page-shell,.wrapper{width:calc(100vw - 28px);}
+    .content-band{width:100%;}
   }
 </style>
 
@@ -318,14 +320,8 @@
     <div class="section-inner split-grid reverse">
       <div class="split-copy">
         <span class="section-tag">Platformă modulară</span>
-        <h2>Platformă modulară pentru senzori</h2>
-        <p>Dispozitivul vine echipat cu mai mulți senzori care detectează feedback-ul utilizatorului și se adaptează în consecință. Modelul de mers este, de asemenea, foarte ajustabil, pentru a se potrivi nevoilor tale.</p>
-        <ul>
-          <li><strong>EEG (electroencefalografie)</strong> – interpretează semnalele cerebrale și anticipează intenția utilizatorului.</li>
-          <li><strong>EMG (electromiografie)</strong> – oferă feedback muscular și detectează spasmele utilizatorului.</li>
-          <li><strong>Senzori laser</strong> – percep mediul și se adaptează automat la teren.</li>
-          <li><strong>Senzori de înclinație</strong> – ajustează mersul în funcție de unghiul solului.</li>
-        </ul>
+        <h2>Senzori integrați</h2>
+        <p>Dispozitivul este echipat cu mai mulți senzori care captează feedback-ul utilizatorului și se adaptează în consecință. Profilul de mers este foarte ajustabil pentru a se potrivi nevoilor tale.</p>
       </div>
       <div class="split-media">
         <img src="/assets/images/sensors.png" alt="Detaliu structural al exoscheletului">
@@ -336,7 +332,7 @@
   <section class="content-band muted split-section" id="materials">
     <div class="section-inner split-grid">
       <div class="split-media">
-        <img src="/assets/images/aluminium.jpg" alt="Modul ergonomic al exoscheletului">
+        <img src="/assets/images/exoskeleton%20materials.png" alt="Modul ergonomic al exoscheletului">
       </div>
       <div class="split-copy">
         <span class="section-tag">Ergonomie</span>
