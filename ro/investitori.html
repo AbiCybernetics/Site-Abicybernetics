@@ -4,213 +4,118 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Investitori | AbiCybernetics</title>
-  <meta name="description" content="Informații pentru investitori: puncte forte, oportunitatea de piață, noutăți, prezentări și contact.">
+  <meta name="description" content="Informații pentru investitori AbiCybernetics: puncte forte, oportunitate de piață, noutăți, prezentări și contact.">
+  <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://abicybernetics.com/ro/investitori.html"/>
   <link rel="alternate" hreflang="ro" href="https://abicybernetics.com/ro/investitori.html"/>
   <link rel="alternate" hreflang="en" href="https://abicybernetics.com/en/investors.html"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="x-default" href="https://abicybernetics.com/en/investors.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Investitori | AbiCybernetics" />
+  <meta property="og:description" content="Explorează punctele forte de investiție AbiCybernetics, oportunitatea și cele mai noi actualizări." />
+  <meta property="og:url" content="https://abicybernetics.com/ro/investitori.html" />
+  <meta property="og:image" content="https://abicybernetics.com/assets/video/banner-poster.JPG" />
+  <meta property="og:locale" content="ro_RO" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Investitori | AbiCybernetics" />
+  <meta name="twitter:description" content="Pagina pentru investitori AbiCybernetics cu secțiuni-cheie despre oportunitate și actualizări." />
+  <meta name="twitter:image" content="https://abicybernetics.com/assets/video/banner-poster.JPG" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H52JMWTFJM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H52JMWTFJM');
+  </script>
   <style>
-    :root{--text:#000;--muted:#666;--border:#ddd;--bg:#fff;--accent:#000;--highlight:#ffbf47;}
+    :root{
+      --page-bg:#ffffff;
+      --muted:#3f5d8f;
+      --max:1180px;
+    }
     *{box-sizing:border-box}
-    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);margin:0}
-    header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid var(--border)}
-    .logo-link img{height:50px}
-    nav{margin-left:auto}
-    nav a{margin:0 10px;text-decoration:none;color:#333;font-weight:600}
-    .lang-switch{margin-left:16px; display:flex; align-items:center; gap:8px; font-weight:600}
-    .lang-switch a{color:#333; text-decoration:none; padding:6px 10px; border:1px solid #ddd; border-radius:10px}
-    .lang-switch a.active-lang{background:#000; color:#fff; border-color:#000}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:'Inter',sans-serif;background:var(--page-bg);color:#000;overflow-x:hidden}
+    a{color:inherit}
 
-    /* HERO: reuse video for visual consistency */
-    .hero{position:relative;min-height:360px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
-    .hero video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:0;object-fit:cover}
-    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.35));z-index:1}
-    .hero-inner{position:relative;z-index:2;padding:0 16px}
-    .hero h1{font-family:'Poppins',sans-serif;font-size:2.2rem;letter-spacing:-.3px;margin:0 0 8px}
-    .hero p{max-width:900px;margin:0 auto;line-height:1.55}
+    .site-header{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:18px;padding:14px 20px;background:#fff;border-bottom:1px solid rgba(0,0,0,.12);backdrop-filter:blur(12px)}
+    .site-header .logo-link{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .nav-desktop{margin-left:auto;display:flex;align-items:center;gap:16px}
+    .nav-desktop a,.lang-switch a,.nav-mobile a{text-decoration:none;color:#000;font-weight:600;padding:8px 10px;border-radius:999px}
+    .nav-desktop a:hover,.lang-switch a:hover,.nav-mobile a:hover{background:rgba(0,0,0,.08)}
+    .lang-switch{display:flex;align-items:center;gap:8px;margin-left:8px}
+    .lang-switch a{border:1px solid rgba(0,0,0,.14)}
+    .lang-switch a.active-lang{background:#000;color:#fff;border-color:#000}
+    .nav-toggle{display:none;margin-left:auto;background:none;border:none;width:42px;height:42px;position:relative;cursor:pointer}
+    .nav-toggle span{position:absolute;left:9px;right:9px;height:2px;background:#000;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+    .nav-toggle span:nth-child(1){top:13px}.nav-toggle span:nth-child(2){top:20px}.nav-toggle span:nth-child(3){top:27px}
+    .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+    .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .nav-drawer{position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid rgba(0,0,0,.12)}
+    .nav-mobile{display:flex;flex-direction:column;padding:12px 20px 18px;gap:8px}
+    .lang-switch.mobile{margin:8px 0 0}
 
-    .section{padding:48px 20px;max-width:1100px;margin:auto}
-    .section h2{font-family:'Poppins',sans-serif;margin:0 0 14px}
-    .muted{color:var(--muted)}
+    .hero{position:relative;min-height:66vh;display:flex;align-items:center;overflow:hidden;background:#fff}
+    .hero video{display:none}
+    .hero::after{content:none}
+    .hero-inner{position:relative;z-index:1;width:min(var(--max),calc(100vw - 40px));margin:0 auto;padding:88px 0 80px}
+    .hero h1{margin:0;font-family:'Poppins',sans-serif;font-size:clamp(2.6rem,6vw,4.2rem);line-height:1.05;color:#000}
+    .hero p{margin-top:16px;max-width:62ch;color:var(--muted);line-height:1.78}
 
-    .highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{border:1px solid var(--border);border-radius:0;padding:16px;background:#fff}
-    .card h3{font-family:'Poppins',sans-serif;margin:0 0 8px;font-size:1.1rem}
+    main{padding:0 0 80px}
+    .section{width:min(var(--max),calc(100vw - 40px));margin:0 auto;padding:84px 0}
+    .section + .section{padding-top:0}
+    .section h2{margin:0 0 18px;font-family:'Poppins',sans-serif;font-size:clamp(1.9rem,4vw,3rem);line-height:1.08;color:#000}
+    .muted{margin:0;color:var(--muted);line-height:1.72}
 
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
-    .list{border:1px solid var(--border);border-radius:0;padding:14px}
-    .list ul{margin:8px 0 0 16px}
-    .list li{margin:6px 0}
+    .highlights,.grid-2{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .card,.list{
+      padding:22px;
+      border-radius:0;
+      border:1px solid rgba(155,194,248,.4);
+      background:rgba(235,245,255,.22);
+      box-shadow:0 16px 36px rgba(1,8,22,.34);
+      color:#000;
+      transition:transform .35s ease, box-shadow .35s ease;
+    }
+    .card:hover,.list:hover{transform:translateY(-4px);box-shadow:0 22px 42px rgba(3,12,34,.42)}
+    .card h3,.list h3{margin:0 0 8px;font-family:'Poppins',sans-serif;font-size:1.08rem;line-height:1.25;color:#000}
+    .card p,.list li{margin:0;color:var(--muted);line-height:1.72}
+    .list ul{margin:8px 0 0 18px;padding:0;display:grid;gap:10px}
 
-    .cta{display:flex;flex-direction:column;align-items:center;text-align:center;padding:42px 20px;background:#f7f7f7}
-    .btn{display:inline-block;padding:12px 24px;background:#000;color:#fff;text-decoration:none;border-radius:10px;font-weight:600}
+    .cta{background:#fff;color:#000;padding:64px 20px 72px;text-align:center;border-top:1px solid rgba(0,0,0,.1)}
+    .cta p{margin:0 0 18px;font-size:1.1rem;line-height:1.7;color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 28px;border-radius:999px;text-decoration:none;font-weight:700;border:1px solid #000;color:#fff;background:#000;transition:transform .26s ease, box-shadow .26s ease}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.18)}
 
-    footer{background:#fff;text-align:center;padding:20px;color:var(--muted);font-size:.9em;border-top:1px solid var(--border)}
+    .site-footer{padding:24px 20px 30px;text-align:center;color:rgba(0,0,0,.66);font-size:.92rem;background:#fff}
+    .site-footer a{text-decoration:none;color:rgba(0,0,0,.66)}
 
     @media (max-width:900px){
-      .highlights{grid-template-columns:1fr}
-      .grid-2{grid-template-columns:1fr}
+      .nav-desktop,.lang-switch.nav-desktop{display:none}
+      .nav-toggle{display:block}
+      .hero{min-height:58vh}
+      .hero-inner{padding:72px 0 64px}
+      .section{padding:60px 0}
+      .highlights,.grid-2{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .site-header{padding:12px 16px}
+      .hero-inner,.section{width:calc(100vw - 28px)}
     }
   </style>
-
-<style id="shared-header-style">
-  header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid #e5e5e5;position:relative;z-index:100}
-  header .logo-link{display:flex;align-items:center}
-  header nav{margin-left:auto;display:flex;align-items:center;gap:16px}
-  header nav a{margin:0 4px;text-decoration:none;color:#333;font-weight:600}
-  .lang-switch{margin-left:16px;display:flex;align-items:center;gap:8px;font-weight:600}
-  .lang-switch a{color:#333;text-decoration:none;padding:6px 10px;border:1px solid #ddd;border-radius:10px}
-  .lang-switch a.active-lang{background:#000;color:#fff;border-color:#000}
-</style>
-
-
-<style id="mobile-nav-global-ro">
-  /* Base header */
-  .site-header{width:100%;background:#fff;padding:10px 20px;display:flex;align-items:center;border-bottom:1px solid #e5e5e5;position:relative;z-index:100}
-  .site-header .logo-link{display:flex;align-items:center}
-  .nav-desktop{margin-left:auto;display:flex;align-items:center;gap:16px}
-  .nav-desktop a{margin:0 4px;text-decoration:none;color:#333;font-weight:600}
-  .lang-switch{margin-left:16px;display:flex;align-items:center;gap:8px;font-weight:600}
-  .lang-switch a{color:#333;text-decoration:none;padding:6px 10px;border:1px solid #ddd;border-radius:10px}
-  .lang-switch a.active-lang{background:#000;color:#fff;border-color:#000}
-
-  /* Hamburger */
-  .nav-toggle{display:none;margin-left:auto;background:none;border:none;width:40px;height:40px;position:relative;cursor:pointer}
-  .nav-toggle span{position:absolute;left:12px;right:12px;height:2px;background:#111;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
-  .nav-toggle span:nth-child(1){top:12px}
-  .nav-toggle span:nth-child(2){top:19px}
-  .nav-toggle span:nth-child(3){top:26px}
-  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
-  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
-  /* Drawer */
-  .nav-drawer{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid #eee;box-shadow:0 6px 20px rgba(0,0,0,.08)}
-  .nav-mobile{display:flex;flex-direction:column;padding:10px 16px;gap:8px}
-  .nav-mobile a{text-decoration:none;color:#333;font-weight:600;padding:10px 6px;border-radius:8px}
-  .nav-mobile a:hover{background:#f7f7f7}
-  .lang-switch.mobile{margin:8px 0 6px 0}
-
-  /* Responsive */
-  @media (max-width: 900px){
-    .nav-desktop{display:none}
-    .nav-toggle{display:block}
-  }
-</style>
-
-<style id="shared-global-header-footer">
-  .site-header{position:sticky;top:0;z-index:120;display:flex;align-items:center;gap:18px;padding:14px 20px;background:rgba(5,5,5,.92);border-bottom:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px)}
-  .site-header .logo-link{display:flex;align-items:center;gap:12px;text-decoration:none}
-  .site-header .nav-desktop{margin-left:auto;display:flex;align-items:center;gap:16px}
-  .site-header .nav-desktop a,.site-header .lang-switch a,.site-header .nav-mobile a{text-decoration:none;color:#f2f2f2;font-weight:600;padding:8px 10px;border-radius:999px}
-  .site-header .nav-desktop a:hover,.site-header .lang-switch a:hover,.site-header .nav-mobile a:hover{background:rgba(255,255,255,.08)}
-  .site-header .lang-switch{display:flex;align-items:center;gap:8px;margin-left:8px;font-weight:600}
-  .site-header .lang-switch a{border:1px solid rgba(255,255,255,.14)}
-  .site-header .lang-switch a.active-lang{background:#fff;color:#000;border-color:#fff}
-  .site-header .nav-toggle{display:none;margin-left:auto;background:none;border:none;width:42px;height:42px;position:relative;cursor:pointer}
-  .site-header .nav-toggle span{position:absolute;left:9px;right:9px;height:2px;background:#fff;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
-  .site-header .nav-toggle span:nth-child(1){top:13px}
-  .site-header .nav-toggle span:nth-child(2){top:20px}
-  .site-header .nav-toggle span:nth-child(3){top:27px}
-  .site-header .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-  .site-header .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
-  .site-header .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  .site-header .nav-drawer{position:absolute;left:0;right:0;top:100%;background:#0c0c0c;border-bottom:1px solid rgba(255,255,255,.12)}
-  .site-header .nav-mobile{display:flex;flex-direction:column;padding:12px 20px 18px;gap:8px}
-  .site-header .lang-switch.mobile{margin:8px 0 0}
-  .site-footer{padding:24px 20px 30px;text-align:center;color:rgba(255,255,255,.66);font-size:.92rem;background:#000;border-top:1px solid rgba(255,255,255,.1)}
-  .site-footer a{text-decoration:none;color:rgba(255,255,255,.66)}
-  @media (max-width:900px){
-    .site-header .nav-desktop,.site-header .lang-switch.nav-desktop{display:none}
-    .site-header .nav-toggle{display:block}
-  }
-</style>
-
-
-<style id="soft-blue-box-theme">
-  :root{
-    --box-blue-bg: linear-gradient(140deg, rgba(255,255,255,.95), rgba(237,241,255,.92));
-    --box-blue-line: #d4d4cf;
-    --box-blue-shadow: 8px 8px 0 rgba(24,208,255,.16);
-    --box-blue-shadow-hover: 12px 14px 0 rgba(24,208,255,.14);
-  }
-  .card,
-  .panel,
-  .video-card,
-  .intro,
-  .map-panel{
-    border-color: var(--box-blue-line) !important;
-    background: var(--box-blue-bg) !important;
-    box-shadow: var(--box-blue-shadow) !important;
-    transition: transform .35s ease, box-shadow .35s ease;
-  }
-  .card:hover,
-  .panel:hover,
-  .video-card:hover,
-  .intro:hover,
-  .map-panel:hover{
-    transform: translateY(-4px);
-    box-shadow: var(--box-blue-shadow-hover) !important;
-  }
-  .video-card h3,
-  .video-card p{
-    color:#111 !important;
-  }
-</style>
-
-
-<style id="index-visual-system-overrides">
-  :root{
-    --page-bg:#040915;
-    --surface:#ffffff;
-    --surface-alt:#ffffff;
-    --surface-muted:#ffffff;
-    --text:#0e2347;
-    --muted:#3f5d8f;
-    --line:rgba(143,179,255,.34);
-    --max:1180px;
-  }
-  body{background:var(--page-bg) !important;color:#fff;font-family:'Inter',sans-serif;}
-  .site-header{background:#000 !important;border-bottom:1px solid rgba(255,255,255,.12) !important;backdrop-filter:blur(12px);}
-  .site-header .nav-desktop a,.site-header .lang-switch a,.site-header .nav-mobile a{border-radius:999px;}
-  .hero::after{background:linear-gradient(90deg,rgba(0,0,0,.44) 0%,rgba(0,0,0,.24) 42%,rgba(0,0,0,.34) 100%) !important;}
-  main{padding:0 0 80px;}
-  .section,.content-band,.page-shell,.wrapper{width:min(var(--max),calc(100vw - 40px));margin:0 auto;}
-  .section,.content-band,.page-shell{padding:84px 0 !important;}
-  .section,.content-band,.card,.list,.content-grid > article,.content-grid > div,.contact-card,.video-card,.faq-item,.feature-card,.funnel-card,.review-card{
-    border-radius:0 !important;
-    border:1px solid rgba(155,194,248,.4) !important;
-    box-shadow:0 16px 36px rgba(1,8,22,.34) !important;
-  }
-  .section,.content-band,.card,.list,.content-grid > article,.content-grid > div,.contact-card,.feature-card,.funnel-card,.review-card,.faq-item{
-    background:rgba(235,245,255,.22) !important;
-    color:#000 !important;
-  }
-  .section h1,.section h2,.section h3,.content-band h1,.content-band h2,.content-band h3,.card h1,.card h2,.card h3,.list h2,.list h3,.page-shell h1,.page-shell h2,.page-shell h3,.wrapper h1,.wrapper h2{
-    color:#000 !important;
-    font-family:'Poppins',sans-serif;
-  }
-  .section p,.section li,.content-band p,.content-band li,.card p,.list li,.page-shell p,.wrapper p,.sub,.muted,.note{color:#000 !important;}
-  .btn,.order-btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 28px;border-radius:999px !important;text-decoration:none;font-weight:700; border:1px solid #fff;}
-  .btn{background:#fff !important;color:#000 !important;}
-  .order-btn{background:#000 !important;color:#fff !important;border-color:#000 !important;}
-  .cta{background:#000 !important;color:#fff !important;border-top:1px solid rgba(255,255,255,.1);}
-  .cta p{color:rgba(255,255,255,.8) !important;}
-  .site-footer,footer{background:#000 !important;color:rgba(255,255,255,.66) !important;border-top:1px solid rgba(255,255,255,.1);}
-  .site-footer a,footer a{color:rgba(255,255,255,.66) !important;}
-  @media (max-width:900px){
-    .section,.content-band,.page-shell{padding:60px 0 !important;}
-    .section,.content-band,.page-shell,.wrapper{width:calc(100vw - 28px);}
-  }
-</style>
-
 </head>
 <body>
-
 <header class="site-header">
-  <a href="index.html" class="logo-link"><img src="/assets/icons/Logo abicybernetics.png" alt="AbiCybernetics Logo" style="height:50px" decoding="async"></a>
+  <a href="index.html" class="logo-link"><img src="/assets/icons/Logo abicybernetics.png" alt="Logo AbiCybernetics" style="height:50px" decoding="async"></a>
   <button class="nav-toggle" aria-label="Deschide meniul" aria-expanded="false"><span></span><span></span><span></span></button>
-  <nav class="nav-desktop" aria-label="Navigație principală">
+  <nav class="nav-desktop" aria-label="Principal">
     <a href="index.html">Acasă</a>
     <a href="produs.html">Produs</a>
     <a href="investitori.html">Investitori</a>
@@ -221,7 +126,7 @@
     <a href="investitori.html" class="active-lang">RO</a>
   </div>
   <div class="nav-drawer" hidden>
-    <nav class="nav-mobile" aria-label="Meniu mobil">
+    <nav class="nav-mobile" aria-label="Mobil">
       <a href="index.html">Acasă</a>
       <a href="produs.html">Produs</a>
       <a href="investitori.html">Investitori</a>
@@ -234,8 +139,6 @@
   </div>
 </header>
 
-
-
 <section class="hero" role="banner" aria-label="Investitori">
   <video autoplay muted loop playsinline webkit-playsinline preload="metadata">
     <source src="../assets/video/video mers exterior.mp4#t=0.1" type="video/mp4">
@@ -246,36 +149,35 @@
   </div>
 </section>
 
-
 <main>
   <section class="section" id="highlights">
     <h2>Puncte forte pentru investiție</h2>
     <div class="highlights">
       <div class="card">
-        <h3>Robotică de vârf</h3>
-        <p class="muted">Roboți purtabili pentru reabilitare și mobilitate — cu potențial de extindere către asistență de forță industrială.</p>
+        <h3>Robotică de înalt nivel</h3>
+        <p class="muted">Robotică purtabilă pentru reabilitare și mobilitate, cu potențial de extindere către asistență industrială a forței.</p>
       </div>
       <div class="card">
-        <h3>Platformă modulară a senzoristicii</h3>
-        <p class="muted">Explorăm limitele în senzorizarea exoscheletelor.</p>
+        <h3>Platformă modulară de senzori</h3>
+        <p class="muted">Depășim limitele în senzorizarea exoscheletelor și performanța adaptivă.</p>
       </div>
       <div class="card">
         <h3>Inginerie premium</h3>
-        <p class="muted">Motto-ul nostru este calitatea care asigură satisfacția clientului.</p>
+        <p class="muted">Ne concentrăm pe inginerie de calitate care asigură rezultate relevante pentru clienți.</p>
       </div>
     </div>
-    <p class="muted" style="margin-top:8px">* Platformă în stadiu de concept; nu este un dispozitiv medical certificat. Această pagină nu constituie o ofertă de vânzare de valori mobiliare.</p>
+    <p class="muted" style="margin-top:16px">* Platformă în stadiu de concept; nu este un dispozitiv medical certificat. Această pagină nu constituie o ofertă de vânzare de valori mobiliare.</p>
   </section>
 
   <section class="section" id="market">
-    <h2>Oportunitatea de piață</h2>
+    <h2>Oportunitatea pieței</h2>
     <div class="grid-2">
       <div class="list">
         <h3>Reabilitare medicală</h3>
         <ul>
-          <li>Leziuni de măduvă spinării (SCI) — antrenament asistat la stat în picioare și mers</li>
-          <li>Accident vascular cerebral & leziuni cerebrale — suport pentru neuroreabilitare</li>
-          <li>SM și alte tulburări de mobilitate — asistență pentru postură și mers</li>
+          <li>Leziuni ale măduvei spinării (SCI) — asistență la ridicare și antrenament al mersului</li>
+          <li>Accident vascular cerebral și leziuni cerebrale — suport pentru neuroreabilitare</li>
+          <li>SM și tulburări de mobilitate — asistență pentru postură și mers</li>
         </ul>
       </div>
       <div class="list">
@@ -290,27 +192,26 @@
   </section>
 
   <section class="section" id="news">
-    <h2>Noutăți & Actualizări</h2>
+    <h2>Noutăți & actualizări</h2>
     <div class="grid-2">
       <div class="list">
         <h3>Comunicate de presă</h3>
         <ul>
-         în curând.
+          <li>În curând.</li>
         </ul>
       </div>
       <div class="list">
-        <h3>Prezentări & Evenimente</h3>
+        <h3>Prezentări & evenimente</h3>
         <ul>
-        în curând.
+          <li>În curând.</li>
         </ul>
       </div>
     </div>
-    <p class="muted" style="margin-top:8px">Pentru referință privind structura obișnuită a secțiunilor IR, consultați site-ul IR al Ekso Bionics cu comunicate, prezentări, rapoarte financiare și depuneri. </p>
   </section>
 </main>
 
 <section class="cta">
-  <p>Dorești să afli mai multe despre parteneriat sau investiție?</p>
+  <p>Vrei să afli mai multe despre parteneriat sau investiție?</p>
   <a href="/ro/contact.html" class="btn">Contact pentru relația cu investitorii</a>
 </section>
 
@@ -318,25 +219,20 @@
   © AbiCybernetics – Trademark&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html">Politica de confidențialitate</a>
 </footer>
 
-<script id="mobile-nav-script-ro">
+<script>
   (function(){
     var btn = document.querySelector('.nav-toggle');
     var drawer = document.querySelector('.nav-drawer');
     if(!btn || !drawer) return;
     btn.addEventListener('click', function(){
       var expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', !expanded);
-      if(expanded){
-        drawer.setAttribute('hidden', '');
-      } else {
-        drawer.removeAttribute('hidden');
-      }
+      btn.setAttribute('aria-expanded', String(!expanded));
+      drawer.hidden = expanded;
     });
-    // Close drawer on link click
     drawer.addEventListener('click', function(e){
       if(e.target.tagName === 'A'){
         btn.setAttribute('aria-expanded','false');
-        drawer.setAttribute('hidden','');
+        drawer.hidden = true;
       }
     });
   })();
