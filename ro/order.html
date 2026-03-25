@@ -25,6 +25,7 @@
   label { font-weight: 600; font-size: .95rem; }
   input, textarea { width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; }
   textarea { resize: vertical; min-height: 120px; }
+  .bot-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
   .order-btn { margin-top: 6px; padding: 14px 16px; font-size: 1rem; color: #fff; background: #000; border: none; border-radius: 10px; cursor: pointer; transition: transform .05s ease; }
   .order-btn:active { transform: translateY(1px); }
@@ -208,7 +209,7 @@
 
 <style id="index-visual-system-overrides">
   :root{
-    --page-bg:#040915;
+    --page-bg:#ffffff;
     --surface:#ffffff;
     --surface-alt:#ffffff;
     --surface-muted:#ffffff;
@@ -217,7 +218,7 @@
     --line:rgba(143,179,255,.34);
     --max:1180px;
   }
-  body{background:var(--page-bg) !important;color:#fff;font-family:'Inter',sans-serif;}
+  body{background:var(--page-bg) !important;color:#111;font-family:'Inter',sans-serif;}
   .site-header{background:#000 !important;border-bottom:1px solid rgba(255,255,255,.12) !important;backdrop-filter:blur(12px);}
   .site-header .nav-desktop a,.site-header .lang-switch a,.site-header .nav-mobile a{border-radius:999px;}
   .hero::after{background:linear-gradient(90deg,rgba(0,0,0,.44) 0%,rgba(0,0,0,.24) 42%,rgba(0,0,0,.34) 100%) !important;}
@@ -287,16 +288,26 @@
       <h2>Solicită unul</h2>
       <p class="sub">Lasă datele de contact și numărul de WhatsApp. Revenim rapid cu pașii următori.</p>
 
-      <form id="contactForm" action="/send_order.php" method="POST" autocomplete="on">
-        <input type="hidden" name="lang" value="ro">
+      <form id="contactForm" action="/send_order.php" method="post" autocomplete="on">
+        <input type="hidden" name="lang" value="ro" />
+        <input type="hidden" name="submitted_at" id="order-submitted-at-ro" value="0" />
+        <label class="bot-field" aria-hidden="true">
+          Companie
+          <input type="text" name="company" tabindex="-1" autocomplete="off" />
+        </label>
         <div>
           <label>Contact
-            <input name="contact" required placeholder="Nume, email sau companie" />
+            <input type="text" name="contact" required placeholder="Nume, email sau companie" maxlength="160" autocomplete="name" />
           </label>
         </div>
         <div>
           <label>WhatsApp
-            <input type="tel" name="whatsapp" required placeholder="Numărul tău de WhatsApp" />
+            <input type="tel" name="whatsapp" required placeholder="Numărul tău de WhatsApp" maxlength="40" inputmode="tel" autocomplete="tel" />
+          </label>
+        </div>
+        <div>
+          <label>Mesaj
+            <textarea name="message" placeholder="Spune-ne pe scurt de ce ai nevoie" minlength="10" maxlength="2000" required></textarea>
           </label>
         </div>
         <button type="submit" id="getOneBtn" class="order-btn">Trimite cererea</button>
@@ -339,6 +350,12 @@
   (function(){
     var btn = document.querySelector('.nav-toggle');
     var drawer = document.querySelector('.nav-drawer');
+    var submittedAtField = document.getElementById('order-submitted-at-ro');
+
+    if(submittedAtField){
+      submittedAtField.value = String(Math.floor(Date.now() / 1000));
+    }
+
     if(!btn || !drawer) return;
     btn.addEventListener('click', function(){
       var expanded = btn.getAttribute('aria-expanded') === 'true';
