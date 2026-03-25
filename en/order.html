@@ -286,7 +286,7 @@
     <section class="card">
       <span class="badge primary">Contact request</span>
       <h2>Get one</h2>
-      <p class="sub">Leave your preferred contact and your WhatsApp number. We’ll get back to you shortly with the next steps.</p>
+      <p class="sub">Leave your details and message. We’ll get back to you shortly with the next steps.</p>
 
       <form id="contactForm" action="/send_order.php" method="post" autocomplete="on">
         <input type="hidden" name="lang" value="en" />
@@ -297,16 +297,21 @@
         </label>
         <div>
           <label>Name
-            <input type="text" name="Name" required placeholder="Your name" maxlength="160" autocomplete="name" />
+            <input type="text" name="name" required placeholder="Your name" maxlength="160" autocomplete="name" />
           </label>
         </div>
         <div>
-          <label>Contact
-            <input type="tel" name="Contact" required placeholder="Phone or email" maxlength="40" inputmode="tel" autocomplete="tel" />
+          <label>Email address
+            <input type="email" name="email" required placeholder="you@example.com" maxlength="160" autocomplete="email" />
           </label>
         </div>
         <div>
-          <label>Notes
+          <label>Phone number (optional)
+            <input type="tel" name="phone" placeholder="Your phone number" maxlength="40" inputmode="tel" autocomplete="tel" />
+          </label>
+        </div>
+        <div>
+          <label>Message
             <textarea name="message" placeholder="Tell us how we can help" minlength="10" maxlength="2000" required></textarea>
           </label>
         </div>
