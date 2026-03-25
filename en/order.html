@@ -25,6 +25,7 @@
   label { font-weight: 600; font-size: .95rem; }
   input, textarea { width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; }
   textarea { resize: vertical; min-height: 120px; }
+  .bot-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
 
   .order-btn { margin-top: 6px; padding: 14px 16px; font-size: 1rem; color: #fff; background: #000; border: none; border-radius: 10px; cursor: pointer; transition: transform .05s ease; }
   .order-btn:active { transform: translateY(1px); }
@@ -287,16 +288,26 @@
       <h2>Get one</h2>
       <p class="sub">Leave your preferred contact and your WhatsApp number. We’ll get back to you shortly with the next steps.</p>
 
-      <form id="contactForm" action="/send_order.php" method="POST" autocomplete="on">
-        <input type="hidden" name="lang" value="en">
+      <form id="contactForm" action="/send_order.php" method="post" autocomplete="on">
+        <input type="hidden" name="lang" value="en" />
+        <input type="hidden" name="submitted_at" id="order-submitted-at-en" value="0" />
+        <label class="bot-field" aria-hidden="true">
+          Company
+          <input type="text" name="company" tabindex="-1" autocomplete="off" />
+        </label>
         <div>
           <label>Contact
-            <input name="contact" required placeholder="Name, email, or company" />
+            <input type="text" name="contact" required placeholder="Name, email, or company" maxlength="160" autocomplete="name" />
           </label>
         </div>
         <div>
           <label>WhatsApp
-            <input type="tel" name="whatsapp" required placeholder="Your WhatsApp number" />
+            <input type="tel" name="whatsapp" required placeholder="Your WhatsApp number" maxlength="40" inputmode="tel" autocomplete="tel" />
+          </label>
+        </div>
+        <div>
+          <label>Notes
+            <textarea name="message" placeholder="Tell us what you need" minlength="10" maxlength="2000" required></textarea>
           </label>
         </div>
         <button type="submit" id="getOneBtn" class="order-btn">Send request</button>
@@ -339,6 +350,12 @@
   (function(){
     var btn = document.querySelector('.nav-toggle');
     var drawer = document.querySelector('.nav-drawer');
+    var submittedAtField = document.getElementById('order-submitted-at-en');
+
+    if(submittedAtField){
+      submittedAtField.value = String(Math.floor(Date.now() / 1000));
+    }
+
     if(!btn || !drawer) return;
     btn.addEventListener('click', function(){
       var expanded = btn.getAttribute('aria-expanded') === 'true';
