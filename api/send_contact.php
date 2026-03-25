@@ -68,8 +68,7 @@ if ($submittedAt <= 0 || $submittedAt > $currentTime || ($currentTime - $submitt
 $lang = post_field('lang') === 'ro' ? 'ro' : 'en';
 $name = strip_tags(post_field('name'));
 $email = filter_var(post_field('email'), FILTER_SANITIZE_EMAIL);
-$subject = trim(preg_replace('/[
-]+/', ' ', strip_tags(post_field('subject'))));
+$phone = trim(preg_replace('/\s+/', ' ', strip_tags(post_field('phone'))));
 $message = trim(post_field('message'));
 
 if ($name === '' || mb_strlen($name) > 120) {
@@ -80,8 +79,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL) || mb_strlen($email) > 160) {
     fail_request(400, $lang === 'ro' ? 'Adresa de email nu este validă.' : 'A valid email address is required.');
 }
 
-if ($subject === '' || mb_strlen($subject) > 160) {
-    fail_request(400, $lang === 'ro' ? 'Subiectul este obligatoriu.' : 'Subject is required.');
+if ($phone !== '' && mb_strlen($phone) > 40) {
+    fail_request(400, $lang === 'ro' ? 'Numărul de telefon este prea lung.' : 'Phone number is too long.');
 }
 
 if ($message === '' || mb_strlen($message) < 10 || mb_strlen($message) > 5000) {
@@ -92,14 +91,14 @@ $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
 $userAgent = htmlspecialchars((string) ($_SERVER['HTTP_USER_AGENT'] ?? 'unknown'), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 $timestamp = (new DateTime('now', new DateTimeZone('Europe/Bucharest')))->format('Y-m-d H:i:s T');
 
-$subjectAdmin = 'New Contact Form Message — ' . $subject;
+$subjectAdmin = 'New Contact Form Message — ' . $name;
 $subjectUser = $lang === 'ro'
     ? 'Am primit mesajul tău — AbiCybernetics'
     : 'We received your message — AbiCybernetics';
 
 $adminName = safe_html($name);
 $adminEmailSafe = safe_html($email);
-$adminSubjectSafe = safe_html($subject);
+$adminPhoneSafe = safe_html($phone !== '' ? $phone : ($lang === 'ro' ? 'Nefurnizat' : 'Not provided'));
 $adminMessage = safe_html($message);
 $adminIp = safe_html($ip);
 
@@ -111,7 +110,7 @@ $adminHtml = <<<HTML
   <h2>New Contact Form Submission</h2>
   <p><strong>Name:</strong> {$adminName}</p>
   <p><strong>Email:</strong> {$adminEmailSafe}</p>
-  <p><strong>Subject:</strong> {$adminSubjectSafe}</p>
+  <p><strong>Phone:</strong> {$adminPhoneSafe}</p>
   <p><strong>Message:</strong><br>{$adminMessage}</p>
   <hr>
   <p style="font-size:12px;color:#555;">Submitted: {$timestamp}</p>
@@ -128,7 +127,7 @@ $userIntro = $lang === 'ro'
 $userFollowup = $lang === 'ro'
     ? 'Dacă ai nevoie de un răspuns rapid, ne poți suna la +40 728 044 104.'
     : 'If you need a quicker response, you can call us at +40 728 044 104.';
-$userSubjectLabel = $lang === 'ro' ? 'Subiectul tău' : 'Your subject';
+$userPhoneLabel = $lang === 'ro' ? 'Telefon' : 'Phone';
 
 $userHtml = <<<HTML
 <!doctype html>
@@ -139,7 +138,7 @@ $userHtml = <<<HTML
     <h1 style="margin:0 0 12px;font-size:24px;">{$brandName}</h1>
     <p style="margin:0 0 12px;line-height:1.6;">{$userIntro}</p>
     <p style="margin:0 0 12px;line-height:1.6;">{$userFollowup}</p>
-    <p style="margin:0;line-height:1.6;"><strong>{$userSubjectLabel}:</strong> {$adminSubjectSafe}</p>
+    <p style="margin:0;line-height:1.6;"><strong>{$userPhoneLabel}:</strong> {$adminPhoneSafe}</p>
   </div>
 </body>
 </html>
