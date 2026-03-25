@@ -540,9 +540,21 @@
 <script>
   (function () {
     if (!('IntersectionObserver' in window)) return;
-    var revealTargets = document.querySelectorAll(
-      '.intro, .split-grid, .funnel-grid, .review-grid, .faq-list, .contact-grid, .cta, .spec-card, .feature-card'
+
+    var firstTwoSections = Array.prototype.slice.call(
+      document.querySelectorAll('main > section'),
+      0,
+      2
     );
+
+    var revealTargets = Array.prototype.filter.call(
+      document.querySelectorAll('.intro, .split-grid, .funnel-grid, .review-grid, .faq-list, .contact-grid, .cta, .spec-card, .feature-card'),
+      function (el) {
+        var parentSection = el.closest('section');
+        return parentSection && firstTwoSections.indexOf(parentSection) !== -1;
+      }
+    );
+
     revealTargets.forEach(function (el) { el.classList.add('reveal'); });
 
     var observer = new IntersectionObserver(function (entries) {
