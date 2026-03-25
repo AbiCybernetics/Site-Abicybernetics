@@ -286,7 +286,7 @@
     <section class="card">
       <span class="badge primary">Cerere de contact</span>
       <h2>Solicită unul</h2>
-      <p class="sub">Lasă datele de contact și numărul de WhatsApp. Revenim rapid cu pașii următori.</p>
+      <p class="sub">Lasă numele, adresa de email, telefonul (opțional) și mesajul. Revenim rapid cu pașii următori.</p>
 
       <form id="contactForm" action="/send_order.php" method="post" autocomplete="on">
         <input type="hidden" name="lang" value="ro" />
@@ -296,13 +296,18 @@
           <input type="text" name="company" tabindex="-1" autocomplete="off" />
         </label>
         <div>
-          <label>Name
-            <input type="text" name="name" required placeholder="Nume" maxlength="160" autocomplete="name" />
+          <label>Nume
+            <input type="text" name="name" required placeholder="Numele tău" maxlength="160" autocomplete="name" />
           </label>
         </div>
         <div>
-          <label>Contact
-            <input type="tel" name="contact" required placeholder="Număr sau adresă email" maxlength="40" inputmode="tel" autocomplete="tel" />
+          <label>Adresă de email
+            <input type="email" name="email" required placeholder="tu@exemplu.com" maxlength="160" autocomplete="email" />
+          </label>
+        </div>
+        <div>
+          <label>Număr de telefon (opțional)
+            <input type="tel" name="phone" placeholder="Numărul tău de telefon" maxlength="40" inputmode="tel" autocomplete="tel" />
           </label>
         </div>
         <div>
