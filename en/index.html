@@ -193,6 +193,15 @@
     .funnel-card p,.review-card p,.contact-card p,.faq-item p{margin:0;color:var(--muted);line-height:1.72}
     .review-card strong{display:block;margin-bottom:8px;font-size:1rem;color:#f3f7ff}
     .review-meta{display:block;margin-top:14px;font-size:.92rem;color:rgba(197,215,246,.76)}
+    .video-section{display:grid;gap:28px}
+    .video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:12px}
+    .video-card{background:#121212;border:1px solid rgba(255,255,255,.08);padding:18px;display:grid;gap:14px;box-shadow:0 16px 40px rgba(0,0,0,.12)}
+    .video-frame{position:relative;width:100%;padding-top:56.25%;background:#000;overflow:hidden}
+    .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .video-card h3{margin:0;font-family:'Poppins',sans-serif;font-size:1.3rem;line-height:1.15;color:#fff !important}
+    .video-link{display:inline-flex;align-items:center;gap:8px;width:max-content;padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);color:#fff !important;text-decoration:none;font-weight:600}
+    .video-link:hover{background:rgba(255,255,255,.1)}
+    .video-help{margin:0;color:#0b2a66;font-size:.92rem;line-height:1.7}
     .faq-list{display:grid;gap:14px;margin-top:24px}
     .faq-item summary{cursor:pointer;list-style:none;font-weight:700;color:#edf4ff;display:flex;justify-content:space-between;gap:12px;align-items:center}
     .faq-item summary::-webkit-details-marker{display:none}
@@ -242,7 +251,7 @@
       .hero{min-height:66vh}
       .hero-inner{padding:72px 0 64px}
       .content-band{padding:60px 0}
-      .split-grid,.split-grid.reverse,.feature-grid,.specs-grid,.funnel-grid,.review-grid,.contact-grid{grid-template-columns:1fr}
+      .split-grid,.split-grid.reverse,.feature-grid,.specs-grid,.funnel-grid,.review-grid,.contact-grid,.video-grid{grid-template-columns:1fr}
       #platform .split-copy{order:1}
       #platform .split-media{order:2}
       #why-abi .split-copy{order:1}
@@ -475,6 +484,28 @@ Easy to transport, intuitive to use, and built to perform — ready when you are
     </div>
   </section>
 
+  <section class="content-band alt" id="videos">
+    <div class="section-inner video-section">
+      <div>
+        <span class="section-tag">Video showcase</span>
+        <h2>Watch Abi in motion</h2>
+      </div>
+      <p class="video-help">See real movement demos from the Abi product page videos.</p>
+      <div class="video-grid">
+        <article class="video-card" data-youtube-url="https://www.youtube.com/watch?v=eFOD38laAoA" data-youtube-title="Abi product demo">
+          <div class="video-frame"></div>
+          <h3>Product walk-through</h3>
+          <a class="video-link" href="https://www.youtube.com/watch?v=eFOD38laAoA" target="_blank" rel="noreferrer">Open on YouTube</a>
+        </article>
+        <article class="video-card" data-youtube-url="https://www.youtube.com/watch?v=JNmMA3LiAS4" data-youtube-title="Abi mobility highlight">
+          <div class="video-frame"></div>
+          <h3>Mobility highlight clip</h3>
+          <a class="video-link" href="https://www.youtube.com/watch?v=JNmMA3LiAS4" target="_blank" rel="noreferrer">Open on YouTube</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="content-band muted" id="reviews">
     <div class="section-inner intro">
       <div>
@@ -611,6 +642,50 @@ Easy to transport, intuitive to use, and built to perform — ready when you are
         btn.setAttribute('aria-expanded','false');
         drawer.setAttribute('hidden','');
       }
+    });
+  })();
+</script>
+<script>
+  (function(){
+    var cards = document.querySelectorAll('[data-youtube-url]');
+
+    function getYouTubeId(url) {
+      try {
+        var parsed = new URL(url);
+        if (parsed.hostname.indexOf('youtu.be') !== -1) {
+          return parsed.pathname.replace(/^\/+/, '').split('/')[0];
+        }
+        if (parsed.pathname.indexOf('/shorts/') === 0) {
+          return parsed.pathname.split('/')[2];
+        }
+        if (parsed.searchParams.get('v')) {
+          return parsed.searchParams.get('v');
+        }
+        if (parsed.pathname.indexOf('/embed/') === 0) {
+          return parsed.pathname.split('/')[2];
+        }
+      } catch (error) {
+        return '';
+      }
+      return '';
+    }
+
+    cards.forEach(function(card){
+      var url = card.getAttribute('data-youtube-url');
+      var title = card.getAttribute('data-youtube-title') || 'AbiCybernetics video';
+      var frame = card.querySelector('.video-frame');
+      var videoId = getYouTubeId(url);
+
+      if(!frame || !videoId) return;
+
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?rel=0';
+      iframe.title = title;
+      iframe.loading = 'lazy';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.allowFullscreen = true;
+      frame.appendChild(iframe);
     });
   })();
 </script>
