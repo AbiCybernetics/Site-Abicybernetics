@@ -131,6 +131,25 @@
     .btn{border:1px solid #fff;color:#000;background:#fff}
     .btn-secondary{border:1px solid rgba(255,255,255,.22);color:#fff;background:rgba(255,255,255,.04)}
     .btn:hover,.btn-secondary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.18)}
+
+    .order-now-btn{
+      border-radius:0;
+      position:relative;
+      isolation:isolate;
+      animation:orderNowGlow 2.6s ease-in-out infinite;
+      box-shadow:0 0 0 1px rgba(255,255,255,.9),0 10px 24px rgba(6,34,86,.35);
+    }
+    .order-now-btn::after{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      border:1px solid rgba(255,255,255,.42);
+      pointer-events:none;
+      opacity:.8;
+      transition:opacity .28s ease;
+      z-index:-1;
+    }
+    .order-now-btn:hover::after{opacity:1}
     .specs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
     .spec-card{padding:22px;border-radius:0;border:1px solid rgba(155,194,248,.75);background:rgba(210,232,255,.38);box-shadow:0 18px 38px rgba(1,8,22,.35)}
     .spec-card strong{display:block;font-size:1.3rem;font-family:'Poppins',sans-serif;color:#f1f6ff}
@@ -212,6 +231,11 @@
       to{opacity:1;transform:translateY(0)}
     }
 
+    @keyframes orderNowGlow{
+      0%,100%{transform:translateY(0);box-shadow:0 0 0 1px rgba(255,255,255,.9),0 10px 24px rgba(6,34,86,.35)}
+      50%{transform:translateY(-1px);box-shadow:0 0 0 1px rgba(255,255,255,1),0 16px 30px rgba(12,52,120,.48)}
+    }
+
     @media (max-width:900px){
       .nav-desktop,.lang-switch.nav-desktop{display:none}
       .nav-toggle{display:block}
@@ -230,6 +254,8 @@
       .hero::before{animation:none}
       .hero h1{animation:none}
       .reveal{opacity:1;transform:none;transition:none}
+      .order-now-btn{animation:none}
+      .order-now-btn::after{opacity:.95}
       .btn,.btn-secondary,.spec-card,.feature-card,.funnel-card,.review-card,.contact-card,.faq-item,.split-media img,.split-media video,.intro-figure img{
         transition:none;
       }
@@ -348,7 +374,7 @@
       </div>
       <p>Designed to fit your body and your vision, Abi empowers explorers, innovators, and everyday pioneers to move beyond limitations with one compact, modular system.</p>
       <div class="intro-actions">
-        <a href="order.html" class="btn">Order now</a>
+        <a href="order.html" class="btn order-now-btn">Order now</a>
       </div>
       <div class="specs-grid">
         <article class="spec-card"><strong>160–190cm up to 120kg</strong><span>Comfortably adjusts to a wide range of users, heights, and needs.</span></article>
@@ -537,7 +563,7 @@ Easy to transport, intuitive to use, and built to perform — ready when you are
 
 <section class="cta">
   <p>We believe in your freedom. Order a fully functional lower-body exoskeleton for your home, clinic, or lab, and build the future of movement together with our team.</p>
-  <a href="order.html" class="btn">Order now</a>
+  <a href="order.html" class="btn order-now-btn">Order now</a>
 </section>
 
 <footer class="site-footer">
