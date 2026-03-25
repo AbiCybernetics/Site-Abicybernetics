@@ -159,6 +159,38 @@
   }
 </style>
 
+
+<style id="soft-blue-box-theme">
+  :root{
+    --box-blue-bg: linear-gradient(140deg, rgba(255,255,255,.95), rgba(237,241,255,.92));
+    --box-blue-line: #d4d4cf;
+    --box-blue-shadow: 8px 8px 0 rgba(24,208,255,.16);
+    --box-blue-shadow-hover: 12px 14px 0 rgba(24,208,255,.14);
+  }
+  .card,
+  .panel,
+  .video-card,
+  .intro,
+  .map-panel{
+    border-color: var(--box-blue-line) !important;
+    background: var(--box-blue-bg) !important;
+    box-shadow: var(--box-blue-shadow) !important;
+    transition: transform .35s ease, box-shadow .35s ease;
+  }
+  .card:hover,
+  .panel:hover,
+  .video-card:hover,
+  .intro:hover,
+  .map-panel:hover{
+    transform: translateY(-4px);
+    box-shadow: var(--box-blue-shadow-hover) !important;
+  }
+  .video-card h3,
+  .video-card p{
+    color:#111 !important;
+  }
+</style>
+
 </head>
 <body>
   <header class="site-header">
